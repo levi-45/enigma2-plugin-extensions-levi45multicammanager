@@ -1,0 +1,11 @@
+##"*************************"
+##"*         levi45        *"
+##"*************************"
+
+[account]
+user                          = dvbapiau
+pwd                           = dvbapiau
+keepalive                     = 1
+monlevel                      = 4
+au                            = 1
+group                         = 1,2,3,4,5,6,7,8,9,10,64

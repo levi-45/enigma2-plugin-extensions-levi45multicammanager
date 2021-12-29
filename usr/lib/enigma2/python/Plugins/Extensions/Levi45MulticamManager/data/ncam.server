@@ -1,0 +1,66 @@
+##"*************************"
+##"*         levi45        *"
+##"*************************"
+
+####################### SoftCams ############################
+[reader]
+label                         = constant.cw
+protocol                      = constcw
+device                        = /etc/tuxbox/config/constant.cw
+caid                          = 2600,0B00,0B02,0500,0963,06AD,0940
+group                         = 1
+disablecrccws_only_for        = 0E00:000000
+
+[reader]
+label                         = emulator
+protocol                      = emu
+device                        = /etc/tuxbox/config/SoftCam.key
+services                      = !afn
+disablecrccws_only_for        = 0E00:000000
+caid                          = 0500,0604,090F,0E00,1010,1801,2600,2602,2610,4AE1
+detect                        = cd
+ident                         = 0500:000000,007400,007800,021110,023800;0604:000000;090F:000000;0E00:000000;1010:000000;1801:000000,001101,002111,007301;2600:000000;2602:000000;2610:000000;4AE1:000011,000014,0000FE
+group                         = 1
+emmcache                      = 2,1,2,1
+emu_auproviders               = 0604:010200;0E00:000000;1010:000000;2610:000000;4AE1:000011,000014,0000FE
+
+####################### AFN Config settings ############################
+
+[reader]
+label                         = AFN
+description                   = AFN-EMU
+enable                        = 1
+protocol                      = emu
+device                        = emulator
+caid                          = 0E00
+detect                        = cd
+group                         = 1
+emmcache                      = 1,5,31,1
+emu_auproviders               = 0E00:000000
+auprovid                      = 000E00
+cacheex                       = 1
+cacheex_maxhop                = 1
+cacheex_allow_request         = 1
+services                      = afn
+disablecrccws_only_for        = 0E00:000000
+
+####################### Card ############################
+
+[reader]
+label                         = Card_Blanca
+enable                        = 0
+protocol                      = internal
+device                        = /dev/sci0
+services                      = canal+ esp
+caid                          = 1810
+ecmwhitelist                  = 1810@1F1F1F:89
+detect                        = cd
+nagra_read                    = 2
+mhz                           = 500
+cardmhz                       = 368
+ident                         = 1810:000000,004001,004101
+group                         = 3
+emmcache                      = 1,3,2,0
+
+####################### CCcam ############################
+

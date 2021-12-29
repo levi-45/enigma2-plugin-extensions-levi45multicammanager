@@ -1,0 +1,1034 @@
+##"*************************"
+##"*         levi45        *"
+##"*************************"
+
+0100:000000|Seca|Mediaguard
+0100:000001|*Tele+ Digital [S]|13.0E|*OLD*
+0100:000002|Orbit [S]|26.0E - 8.0W|*OLD*
+0100:000003|*Canal+ France [S]|19.2E|*OLD*
+0100:000004|CSN [S]|19.2E|French
+0100:000005|*Stream PPV [S]|13.0E|*OLD*
+0100:000006|*CSD [S]|19.2E|*OLD*
+0100:000009|*TPS [S]|13.0E|*OLD*
+0100:00000A|*Prova [S]|13.0E|*OLD*
+0100:00000B|*Premiere [S]||19.2E|*OLD*
+0100:00000C|*CSD Espana [S]|19.2E|*OLD*
+0100:00000D|*TVB Superchannel [S]|19.2E|*OLD*
+0100:00000E|*Canal+ Horizons [S]|24.5W|*OLD*
+0100:00000F|*AB Sat - Cinestar [S]|13.0E|*OLD*
+0100:000010|*Telepiù - D+ [S]|13.0E|*OLD*
+0100:000011|*Calcio+ [S]|13.0E|*OLD*
+0100:000012|*Equidia [S]|13.0E|*OLD*
+0100:000013|*Canal+ BE [S]|19.2E|*OLD*
+0100:000014|*TV Vlaanderen [S1]|19.2E|*OLD*
+0100:000019|*Canal Digitaal [S]|19.2E|*OLD*
+0100:00001A|*CSAT Parabole Reunion [S]|16.0E|*OLD*
+0100:00001B|*On Digital UK [S]|Cable|*OLD*
+0100:00001C|*Mediaset [S]|13.0E|*OLD*
+0100:00001D|*Cyfra+ M.O.S.C. [S]|13.0E|*OLD*
+0100:00001E|Unknown|Provider|Seca
+0100:00001F|Unknown|Provider|Seca
+0100:000020|*C+ Nordic [S]|0.8W|*OLD*
+0100:000021|*Astro Tv [S]|91.5E|*OLD*
+0100:000025|*AB SAT [S]|13.0E - 19.2E|*OLD*
+0100:000026|*Zee Tv [S]|105.0E|*OLD*
+0100:000029|*Canal+ Horizons - EuroSport [S]|24.5W|*OLD*
+0100:00002A|Telespazio Hungary [S]|4.0W|Hungarian
+0100:00002E|*Canal Digitaal Cable [S]|Cable|*OLD*
+0100:00002F|Orbit Network PPV [S]|26.0E - 8.0W|Arabic
+0100:000030|RAI TV [S]|13.0E|Italian
+0100:000031|*Kiosque [S]|19.2E|*OLD*
+0100:000033|*Taquilla [S]|19.2E|*OLD*
+0100:000034|*Palco [S]|13.0E|*OLD*
+0100:000035|Orbit Network PPV [S]|26.0E - 8.0W|Arabic
+0100:000036|Orbit Network PPV [S]|26.0E - 8.0W|Arabic
+0100:000037|*Stream [S]|13.0E|*OLD*
+0100:00003D|BIS - AB SAT [S2]|13.0 - 19.2E|French
+0100:00003E|BIS - AB SAT [S2]|13.0 - 19.2E|French
+0100:000064|*Digital+ [S2]|19.2E|*OLD*
+0100:000065|*Cyfra+ [S2]|13.0E|*OLD*
+0100:000066|*Digital+ - CSD Spain DTT [S2]|19.2E|*OLD*
+0100:000067|*Digital+ [S2]|13.0E|*OLD*
+0100:000068|Cyfra+ [S3]|13.0E|Polish
+0100:00006A|Canal Digitaal [Full+Spice+Dorcel] [S2]|19.2E - 23.5E|Dutch 
+0100:00006B|Canal Digitaal [Full+Spice+Dorcel] [S2]|19.2E - 23.5E|Dutch 
+0100:00006C|TV Vlaanderen [S2]|19.2E - 23.5E|Dutch 
+0100:00006D|TeléSAT BE [S2]|13.0E - 19.2E|Dutch
+0100:00006E|CanalSat Horizons [S2]|22.0W|French
+0100:00006F|CanalSat Horizons [S2]|22.0W|French
+0100:000070|*Sky Italia [S2]|13.0E|*OLD*
+0100:000071|*Sky Calcio [S2]|13.0E|*OLD*
+0100:000072|*Sky Italia [S2]|13.0E|*OLD*
+0100:000073|*Sky Italia [S2]|13.0E|*OLD*
+0100:000074|*TVB Superchannel [S2]|19.2E|*OLD*
+0100:000075|Unknown|Provider|Seca
+0100:000076|Canal Digitaal [S3]|Cable|Dutch
+0100:000077|*Ukjent1 [S2]|[?]|*OLD*
+0100:000078|*Ukjent2 [S2]|[?]|*OLD*
+0100:00007A|*SCT - Extasi - MCT [S2]|13.0E|*OLD*
+0100:00007B|*MCT [S2]|13.0E|*OLD*
+0100:000080|CSN [S2]|19.2E|French
+0100:000081|CanalSat [S2]|13.0E - 19.2E|French
+0100:000082|CanalSat [S2]|13.0E - 19.2E|French
+0100:000083|CanalSat [S2]|13.0E - 19.2E|French
+0100:000084|NC Numéricable [S2]|19.2E|French
+0100:000085|NC Numéricable [S2]|19.2E|French
+0100:000086|Equidia Pro [S2]|13.0E|French
+0100:000088|CSN - ABSat [S2]|19.2E|French
+0100:000089|NC Numéricable [S2]|19.2E|French
+0100:00008C|*Canal+ Satmode [S2]|19.2E|*OLD*
+0100:000090|Unknown|Provider|Seca
+0100:000091|CanalSat Reunion [S2]|16.0E|French
+0100:00009B|Be TV - Voo [S2]|Cable|French
+0100:00009C|TV Vlaanderen [S2]|Cable|Dutch
+0100:00009D|Be TV - Voo [S2]|Cable|French
+0100:00009E|TV Vlaanderen [S2]|Cable|Dutch
+0100:00009F|CanalSat Reunion-Caraibes [S2]|16.0E|French
+0100:0000A0|*AB Sat [S2]|13.0E - 19.2E|*OLD*
+0100:0000A1|*AB Sat [S2]|13.0E - 19.2E|*OLD*
+0100:0000A2|*AB Sat [S2]|13.0E - 19.2E|*OLD*
+0100:0000A3|*AB Sat [S2]|13.0E - 19.2E|*OLD*
+0100:0000A7|Top Up TV [S2]|DTT|English
+0100:0000AB|Astro TV [S2]|91.5E|Malaysian
+0100:0000AC|Astro TV [S2]|91.5E|Malaysian
+0100:0000AD|Astro TV [S2]|91.5E|Malaysian
+0100:0000AE|Astro TV [S2]|91.5E|Malaysian
+0100:0000AF|ZeeTV [S2]|105.5E|Hindi
+0100:0000B0|ZeeTV [S2]|105.5E|Hindi
+0100:0000B1|Mediaset [S2]|13.0E|Italian
+0100:0000B2|Mediaset [S2]|13.0E|Italian
+0100:0000D2|Unknown|Provider|Seca
+0100:00010A|Unknown|Provider|Seca
+0100:000147|*BBC [S2]|13.0E|*OLD*
+0100:000184|Unknown|Provider|Seca
+0100:0001D7|Unknown|Provider|Seca
+0100:000202|RAI TV [S2]|13.0E|Italian
+0100:0002E2|RAI TV [S2]|13.0E|Italian
+0100:000333|Unknown|Provider|Seca
+0100:000342|Unknown|Provider|Seca
+0100:00054E|Unknown|Provider|Seca
+0100:001B0B|Unknown|Provider|Seca
+0100:002020|Unknown|Provider|Seca
+0100:003311|CanalSat [S3]|13.0E - 19.2E|French 
+0100:003315|CanalSat [S3]|13.0E - 19.2E|French 
+0100:003317|CanalSat [S3]|13.0E - 19.2E|French 
+0100:00331B|CanalSat [S3]|19.2E|French 
+0100:00331D|CanalSat [S3]|19.2E|French 
+0100:003341|CanalSat [S3]|19.2E|French 
+0100:004001|*Digital+ [S3]|19.2E|*OLD*
+0100:009999|BeeGhepol [S3]|13.0E|French
+0100:004101|Digital+ [S3]|19.2E - 30.0W|Spanish
+0100:004106|Digital+ [S3]|19.2E - 30.0W|Spanish
+0100:004108|Digital+ [S3]|19.2E - 30.0W|Spanish
+0100:005001|Digital+ [S3]|19.2E - 30.0W|Spanish
+0100:005211|Meo TV [S3]|30.0W|Portuguese
+0100:005221|Meo TV [S3]|30.0W|Portuguese
+0100:005225|Meo TV [S3]|30.0W|Portuguese
+0100:00A821|NC Numéricable [S3]|13.0E - 19.2E|French
+0100:00A825|NC Numéricable [S3]|13.0E - 19.2E|French
+0100:00A829|NC Numéricable [S3]|13.0E - 19.2E|French
+0100:025E22|NC Numéricable [S3]|DTT|French
+0100:025E24|NC Numéricable [S3]|DTT|French
+
+############################################################
+######################### Viaccess #########################
+############################################################
+
+0500:000000|Viaccess|Caid
+0500:000B00|TV Slovenia+Kapodistria [V2.6]|13.0E|Slovenian
+0500:001500|*UltraBlue [V2.3]|13.0E|*OLD*
+0500:001540|*Telefónica [V2.3]|61.0W|*OLD*
+0500:001570|*Cine+ Digital [V2.3]|19.2E|*OLD*
+0500:0018C0|*Neovisne Tv Hayat [V2.3]|13.0E|*OLD*
+0500:001C10|*Globecast France [V2.3]|7.0E - 13.0E - 19.2E|*OLD*
+0500:002100|*NTV Plus [V2.3]|36.0E|*OLD*
+0500:002500|*Globecast France [V2.3]|13.0E - 19.2E|*OLD*
+0500:005500|*MTV [V2.3]|13.0E - 19.2E|*OLD*
+0500:007000|*AB Sat [V2.3]|13.0E - 19.2E|*OLD*
+0500:007010|*AB Sat [V2.3]|13.0E - 19.2E|*OLD*
+0500:007400|Mezzo [V2.3]|13.0E|French
+0500:007800|SIC International - CSN [V2.3]|16.0E - 19.2E|Portuguese - French
+0500:007010|*TPS France [V2.3]|13.0E - 19.2E|*OLD*
+0500:008000|CSN [ThalesCrypt]|19.2E|French
+0500:008100|CSN [ThalesCrypt]|19.2E|French
+0500:008300|CSN [ThalesCrypt]|19.2E|French
+0500:008400|*TPS - MCM Europe - CSN - ART [V2.3]|13.0E - 19.2E|*OLD*
+0500:008800|*Telia Comhem Sweden Cable [V2.3]|Cable|*OLD*
+0500:008C00|*TPS - Canal+ France [V2.3]|13.0E - 19.2E|*OLD*
+0500:008C10|*TPS - Canal+ France [V2.3]|13.0E - 19.2E|*OLD*
+0500:009400|*SGR Suisse [V2.3]|13.0E|*OLD*
+0500:009C00|*SVT [V2.3]|4.8E|*OLD*
+0500:009C10|*SVT [V2.3]|4.8E|*OLD*
+0500:009C20|*SVT [V2.3]|4.8E|*OLD*
+0500:009C30|*SVT [V2.3]|4.8E|*OLD*
+0500:009C40|*SVT [V2.3]|4.8E|*OLD*
+0500:00A000|*BBC [V2.3]|4.8E|*OLD*
+0500:00A800|*Tele Danmark Selector [V2.3]|Cable|*OLD*
+0500:00A810|*Tele Danmark Selector [V2.3]|Cable|*OLD*
+0500:00A820|*Tele Danmark Selector [V2.3]|Cable|*OLD*
+0500:00AC00|*HRT [V2.3]|13.0E|*OLD*
+0500:00B000|*TV Slovenia+Kapodistria [V2.3]|13.0E|*OLD*
+0500:00B400|*UBEST [V2.3]|*OLD*
+0500:00B800|*TVBS [V2.3]|88.0E|*OLD*
+0500:00C000|*C-Skynet [V2.3]|76.0E|*OLD*
+0500:00C010|*C-Skynet [V2.3]|76.0E|*OLD*
+0500:00C020|*C-Skynet [V2.3]|76.0E|*OLD*
+0500:00C030|*C-Skynet [V2.3]|76.0E|*OLD*
+0500:00C400|*RTV International [V2.3]|13.0E|*OLD*
+0500:00C410|*NTV Plus [V2.3]|36.0E|*OLD*
+0500:00C800|*Senda [V2.3]|Cable|*OLD*
+0500:00C810|*Senda [V2.3]|Cable|*OLD*
+0500:00C820|*Senda [V2.3]|Cable|*OLD*
+0500:00C830|*Senda [V2.3]|Cable|*OLD*
+0500:00C840|*Senda [V2.3]|Cable|*OLD*
+0500:00C850|*Senda [V2.3]|Cable|*OLD*
+0500:00C860|*Senda [V2.3]|Cable|*OLD*
+0500:00C870|*Senda [V2.3]|Cable|*OLD*
+0500:00D400|*Reunion [V2.3]|16.0E|*OLD*
+0500:00D540|*TBS [V2.3]|*OLD*
+0500:00D800|*Televisa [V2.3]|43.0W|*OLD*
+0500:00E000|*Pacific Tv EASTERN DTH [V2.3]|122.0E|*OLD*
+0500:00E400|*EuroTV [V2.3]|13.0E|*OLD*
+0500:00E420|*Musicam [V2.3]|13.0E|*OLD*
+0500:00E430|*Euro Tv RCT [V2.3]|13.0E|*OLD*
+0500:00E440|*Canal7 Madrid [V2.3]|30.0W|*OLD*
+0500:00E450|*Retelsat [V2.3]|13.0E|*OLD*
+0500:00E460|*ST Hilo [V2.3]|30.0W|*OLD*
+0500:00E470|*SexView [V2.3]|13.0E|*OLD*
+0500:00E800|*GlobeCast Espana [V2.3]|30.0W|*OLD*
+0500:00E810|*GlobeCast Espana [V2.3]|30.0w|*OLD*
+0500:00F000|*EMI [V2.3]|26.0E|*OLD*
+0500:00F520|*NSAB [V2.3]|4.8E|*OLD*
+0500:00F800|*Cine+ [V2.3]|Cable|*OLD*
+0500:010800|*TNS [V2.3]|180.0E|*OLD*
+0500:010C00|*Viasat [V2.3]|0.8W - 4.8E|*OLD*
+0500:010C10|*Viasat [V2.3]|0.8W - 4.8E|*OLD*
+0500:010C20|*Viasat [V2.3]|0.8W - 4.8E|*OLD*
+0500:010C30|*Viasat [V2.3]|0.8W - 4.8E|*OLD*
+0500:010C40|*Viasat [V2.3]|0.8W - 4.8E|*OLD*
+0500:011000|*Deepam [V2.3]|0.8W - 4.8E|*OLD*
+0500:011400|Taipei Int.Sat.TV [V2.3]|97.0W|Taiwanese
+0500:011C00|*Eurosport [V2.3]|7.E - 13.0E|*OLD*
+0500:012000|*Cine+ [V2.3]|42.0E|*OLD*
+0500:012010|*Cine+ PPV [V2.3]|42.0E|*OLD*
+0500:012800|*MMBN [V2.3]|88.0E|*OLD*
+0500:013000|SIC International [V2.3]|16.0E|Portuguese
+0500:014400|*Channel Sun [V2.3]|13.0E|*OLD*
+0500:014800|*Alpha Digital [V2.3]|13.0E|*OLD*
+0500:014880|*Alpha Digital [V2.3]|13.0E|*OLD*
+0500:014C00|*Television X [V2.3]|13.0E|*OLD*
+0500:015000|*TPS France [V2.3]|13.0E|*OLD*
+0500:016400|*ART Arabesque [V2.3]|13.0E|*OLD*
+0500:016800|*SexView - SexViewPlus [V2.3]|13.0E|*OLD*
+0500:016810|*SCT - UltraPlus - 247Sex - DPTV [V2.3]|13.0E|*OLD*
+0500:016C00|C-Skynet [V2.5]|76.0E|Chinese
+0500:016C10|C-Skynet [V2.5]|76.0E|Chinese
+0500:016C20|C-Skynet [V2.5]|76.0E|Chinese
+0500:017000|*TrueWorld [V2.3]|113.0E|*OLD*
+0500:017010|*TrueWorld [V2.3]|113.0E|*OLD*
+0500:018800|Deepam [V2.3]|13.0E|Tamil
+0500:018810|Deepam [V2.3]|13.0E|Tamil
+0500:018820|Deepam [V2.3]|13.0E|Tamil
+0500:018C00|*Neovisne Tv Hayat [V2.3]|13.0E|*OLD*
+0500:019000|*TVR Cultural [V2.3]|16.0E|*OLD*
+0500:019400|*NSAB [V2.3]|4.8E|*OLD*
+0500:019410|*NSAB [V2.3]|4.8E|*OLD*
+0500:019420|*NSAB [V2.3]|4.8E|*OLD*
+0500:019430|*NSAB [V2.3]|4.8E|*OLD*
+0500:019440|*NSAB [V2.3]|4.8E|*OLD*
+0500:01A400|*NTV Plus [V2.3]|36.0E|*OLD*
+0500:01AC00|*RTV International [V2.3]|13.0E|*OLD*
+0500:020000|*TPS [TPSCrypt2]|13.0E|*OLD*
+0500:020010|*TPS [TPSCrypt2]|13.0E|*OLD*
+0500:020500|Boxer [V2.5]|DTT|Swedish
+0500:020510|Boxer [V2.5]|DTT|Swedish
+0500:020520|Boxer [V2.5]|DTT|Swedish
+0500:020530|Boxer [V2.5]|DTT|Swedish
+0500:020540|Boxer [V2.5]|DTT|Swedish
+0500:020600|*Viasat [2.5]|4.8E|*OLD*
+0500:020610|*Viasat [2.5]|4.8E|*OLD*
+0500:020620|*Viasat [2.5]|4.8E|*OLD*
+0500:020630|*Viasat [2.5]|4.8E|*OLD*
+0500:020640|*Viasat [2.5]|4.8E|*OLD*
+0500:020700|RTV International [V2.5]|13.0E|Russian
+0500:020710|NTV Plus [V2.5]|36.0E|Russian
+0500:020800|*BIS [V2.5]|12.5W - 5.0W - 13.0E - 19.2E|*OLD*
+0500:020810|*BIS [V2.5]|12.5W - 5.0W - 13.0E - 19.2E|*OLD* 
+0500:020820|*BIS Prepaid [V2.5]|5.0W - 13.0E|*OLD*
+0500:020830|*BIS Prepaid [V2.5]|5.0W - 13.0E|*OLD*
+0500:020840|*BIS Prepaid [V2.5]|5.0W - 13.0E|*OLD*
+0500:020850|*BIS Prepaid [V2.5]|5.0W - 13.0E|*OLD*
+0500:020860|*BIS Prepaid [V2.5]|5.0W - 13.0E|*OLD*
+0500:020900|GlobeCast [V2.5]|9.0E - 13.0E|Various 
+0500:020910|GlobeCast [V2.5]|9.0E - 13.0E|Various 
+0500:020A00|HRT TV [V2.5]|13.0E|Croatian
+0500:020A10|HRT TV-Seemore Basic [V2.5]|13.0E|Croatian
+0500:020A20|HRT TV-Seemore HBO [V2.5]|13.0E|Croatian
+0500:020A30|HRT TV-Seemore Private Gold [V2.5]|13.0E|Croatian
+0500:020A40|HRT TV-Seemore CRO Music Ch. [V2.5]|13.0E|Croatian
+0500:020B20|*EMI Special Channel [V2.5]|26.0E|*OLD*
+0500:020C00|*SexView - SexViewPlus [V2.5]|13.0E|*OLD*
+0500:020C10|*SexView - SexViewPlus [V2.5]|13.0E|*OLD*
+0500:020C20|*SexView - SexViewPlus [V2.5]|13.0E|*OLD*
+0500:020C30|*SexView - SexViewPlus [V2.5]|13.0E|*OLD*
+0500:020C40|*SexView - SexViewPlus [V2.5]|13.0E|*OLD*
+0500:021100|ANT1 Europe [V2.5]|39.0E|Greek
+0500:021110|*ART Arabesque [V2.5]|13.0E|*OLD*
+0500:021120|*ART Arabesque [V2.5]|13.0E|*OLD*
+0500:021200|RRSat [V2.5]|9.0E - 13.0E|Various
+0500:021210|RRSat [V2.5]|9.0E - 13.0E|Various
+0500:021220|RRSat [V2.5]|9.0E - 13.0E|Various
+0500:021500|*MCT22 [V2.5]|13.0E|*OLD*
+0500:021510|*247SexTV - DPTV [V2.5]|13.0E|*OLD*
+0500:021520|*Musicam [V2.5]|13.0E|*OLD*
+0500:021530|*SCT - 247SexTV [V2.5]|13.0E|*OLD*
+0500:021540|*SCT - 247SexTV [V2.5]|13.0E|*OLD*
+0500:021550|*SCT - 247SexTV [V2.5]|13.0E|*OLD*
+0500:021560|*SCT - 247SexTV [V2.5]|13.0E|*OLD*
+0500:021570|*SCT - SexViewPlus [V2.5]|13.0E|*OLD*
+0500:021700|Private Spice [V2.5]|13.0E|Porn
+0500:021710|Private Spice [V2.5]|13.0E|Porn
+0500:021800|TNS [V2.5]|180.0E|French
+0500:021900|BHT Bosnia TV [V2.5]|13.0E|Bosnian
+0500:021A10|Overon [V2.5]|12.5W|English - Various
+0500:021B00|DEEPAM TV [V2.5]|13.0E|Tamil
+0500:021B10|DEEPAM TV [V2.5]|13.0E|Tamil
+0500:021C00|*FREE X 1+2 + XDream [V2.5]|13.0E|*OLD*
+0500:021C10|*FREE X 1+2 + XDream [V2.5]|13.0E|*OLD*
+0500:021D00|*Parabole Reunion [V2.5]|16.0E|*OLD*
+0500:022010|C-Sky-Net [V2.5]|76.5.0E|Taiwanese
+0500:022030|C-Sky-Net [V2.5]|76.5.0E|Taiwanese
+0500:022050|C-Sky-Net [V2.5]|76.5.0E|Taiwanese
+0500:022200|Visat [V2.5]|24.5W - 43.0W|Spanish
+0500:022210|Televisia [V2.5]|43.0W|Spanish
+0500:022260|*TPS [TPSCrypt3]|13.0E|*OLD*
+0500:022600|*TPS [TPSCrypt3]|13.0E|*OLD*
+0500:022610|CanalSat [V2.5]|13.0E - 19.2E|French
+0500:022620|*TPS [TPSCrypt3]|13.0E|*OLD*
+0500:022900|*BBC Prime [V2.4]|13.0E|*OLD*
+0500:022A00|Eurosport [V2.5]|7.0E - 13.0E|Various
+0500:022B00|*Poverkhnost TV [V2.5]|36.0E|*OLD*
+0500:022C00|RTVi International [V2.5]|13.0E|Russian
+0500:022D00|NSAB [V2.5]|4.8E|English - German
+0500:022E00|NTV - Hayat [V2.5]|16.0E|Bosnian
+0500:022E10|NTV - Hayat [V2.5]|16.0E|Bosnian
+0500:022F00|Akta - Motors TV - TVR Cultural [V2.5]|4.8E - 13.0E - 16.0E|Romanian - French - Romanian
+0500:022F10|Akta [V2.5]|4.8E|Romanian
+0500:023000|SIC International [V2.6]|16.0E|Portuguese
+0500:023100|NTVi [V2.5]|4.8E|Russian
+0500:023110|NTVi [V2.5]|4.8E|Russian
+0500:023120|NTVi [V2.5]|4.8E|Russian
+0500:023130|NTVi [V2.5]|4.8E|Russian
+0500:023140|NTVi [V2.5]|4.8E|Russian
+0500:023200|Boxer [V2.5]|DTT|Swedish
+0500:023210|Boxer [V2.5]|DTT|Swedish
+0500:023220|Boxer [V2.5]|DTT|Swedish
+0500:023230|Boxer [V2.5]|DTT|Swedish
+0500:023240|Boxer [V2.5]|DTT|Swedish
+0500:023700|NTV Plus HD [V2.6]|36.0E|Russian
+0500:023710|NTV Plus HD [V2.6]|36.0E|Russian
+0500:023800|SGR Suisse [V2.6]|13.0E|Swiss
+0500:023A00|2STV - TraceTV [V2.6]|7.0E - 9.0E|French
+0500:023A10|MyZen.tv [V2.6]|9.0E|Various
+0500:023A20|Fransat [V2.6]|5.0W|French
+0500:023A30|Unknown|Provider|Viaccess
+0500:023A40|Unknown|Provider|Viaccess
+0500:023B00|SCT HQ [V2.6]|13.0E|Porn
+0500:023B10|Telefonica Spain [V2.6]|9.0E|Spanish
+0500:023D00|NTV Plus Vostok [V2.6]|56.0E|Russian
+0500:024300|RRSat - Daring!TV [V2.6]|9.0E - 13.0E|Various - Porn
+0500:024400|*FreeX 5 Channels [V2.5]|13.0E|*OLD*
+0500:024410|*FreeX 5 Channels [V2.5]|13.0E|*OLD*
+0500:024700|ICTV [V2.5]|4.0W|Ukrainian
+0500:024900|CFI PRO [V2.5]|5.0W|Various
+0500:024B00|RTV International [V2.6]|13.0E|Russian
+0500:024F00|Akta - Motors TV - TVR Cultural [V2.6]|4.8E - 13.0E|Romanian - French - Romanian
+0500:024F10|Akta [V2.6]|4.8E|Romanian
+0500:099999|BeeGhepol [V2.6]|4.8E|Angels
+0500:025100|Redlight Premium [V2.6]|13.0E - 5.0W|Porn
+0500:025110|Redlight Premium [V2.6]|13.0E - 5.0W|Porn
+0500:025120|Redlight Premium [V2.6]|13.0E - 5.0W|Porn
+0500:025210|DEEPAM TV [V2.6]|13.0E|Tamil
+0500:025900|TVR Cultural [V2.6]|16.0E|Romanian
+0500:025910|TVR Cultural [V2.6]|16.0E|Romanian
+0500:030100|Eurosport [V3]|7.0E - 13.0E|Various
+0500:030600|NTV Plus [V3]|36.0E|Russian
+0500:030700|*JSC Sport+ [V3]|26.0E - 13.0E - 7.0W|*OLD*
+0500:030A00|HRT - MTV Adria[V3]|13.0E - 4.0W|Croatian 
+0500:030A10|HRT [V3]|13.0E|Croatian 
+0500:030A20|HRT [V3]|13.0E|Croatian 
+0500:030A30|HRT [V3]|13.0E|Croatian 
+0500:030A40|HRT [V3]|13.0E|Croatian 
+0500:030B00|TNTSAT [V3]|19.2E|French
+0500:030C00|Yacht&Sail France [V3]|12.5W|French
+0500:031000|RTV SLO [V3]|13.0E|Slovenian
+0500:031B00|*Club Privé [V3]|13.0E|*OLD*
+0500:031D00|D-Sky [V3]|138.0E|Taiwanese
+0500:032000|*SexView THEME-X 8 [V3]|13.0E|*OLD*
+0500:032010|*SexView THEME-X 8 [V3]|13.0E|*OLD*
+0500:032200|TNtop [V3]|DTT|French
+0500:032210|TNtop [V3]|DTT|French
+0500:032220|TNtop [V3]|DTT|French
+0500:032230|TNtop [V3]|DTT|French
+0500:032300|Motors TV [V3]|13.0E|French
+0500:032500|Private Spice [V3]|13.0E|Porn
+0500:032510|Private Spice [V3]|13.0E|Porn
+0500:032820|CanalSat [V3]|19.2E|French 
+0500:032830|CanalSat [V3]|19.2E|French 
+0500:032840|CanalSat [V3]|19.2E|French 
+0500:032900|Orange France [V3]|13.0E - 5.0W|French
+0500:032910|Orange France [V3]|13.0E - 5.0W|French
+0500:032920|Orange France [V3]|13.0E - 5.0W|French
+0500:032930|Orange France [V3]|13.0E - 5.0W|French
+0500:032940|Orange France [V3]|13.0E - 5.0W|French
+0500:032950|Orange France [V3]|13.0E - 5.0W|French
+0500:032A00|Orange Polska [V3]|13.0E|Polish
+0500:040100|Boxer [V4]|Cable|Swedish
+0500:040110|Boxer [V4]|Cable|Swedish
+0500:040120|Boxer [V4]|Cable|Swedish
+0500:040130|Boxer [V4]|Cable|Swedish
+0500:040210|YouSee - TDC [V4]|Cable|Danish 
+0500:040500|GlobeCast [V4]|9.0E|Various
+0500:040600|NTV Plus [V4]|36.0E|Russian
+0500:040810|SGR Suisse [V4]|13.0E|Swiss
+0500:040820|SGR Suisse [V4]|13.0E|Swiss
+0500:040830|SGR Suisse [V4]|13.0E|Swiss
+0500:040A00|BBC Ent. Europe [V4]|9.0E|English
+0500:041100|Le Bouquet de C+ Maghreb [V4]|26.0E|French
+0500:041140|Le Bouquet de C+ Maghreb [V4]|26.0E|French 
+0500:041500|JSC Sport+ [V4]|7.0W|Sport
+0500:041510|JSC Sport+ [V4]|7.0W|Sport
+0500:041520|JSC Sport+ [V4]|7.0W|Sport
+0500:041530|JSC Sport+ [V4]|7.0W|Sport
+0500:041700|Red Hot SexTV+DorcelTV+Daring!TV (OLD ELITE FUSION 7 Channels) [V4]|13.0E|Porn
+0500:041710|Red Hot SexTV+DorcelTV+Daring!TV (OLD ELITE FUSION 7 Channels) [V4]|13.0E|Porn
+0500:041900|Fransat [V4]|5.0W|French
+0500:041950|Fransat [V4]|5.0W|French
+0500:0419A0|Fransat [V4]|5.0W|French
+0500:041F00|Eurosport [V4]|7.0E - 13.0E|Various
+0500:042200|Red Hot SexTV [V4]|13.0E|Porn
+0500:042210|Red Hot SexTV [V4]|13.0E|Porn
+0500:042300|RTV International [V4]|13.0E|Russian
+0500:042400|JSC Sport+ [V4]|26.0E - 13.0E - 7.0W|Sport
+0500:042410|JSC Sport+ [V4]|26.0E - 13.0E - 7.0W|Sport
+0500:042500|Canal Digitaal [V4]|19.2E - 23.5E|Dutch
+0500:042510|Canal Digitaal [V4]|19.2E - 23.5E|Dutch
+0500:042520|Canal Digitaal [V4]|19.2E - 23.5E|Dutch
+0500:042530|Canal Digitaal [V4]|19.2E - 23.5E|Dutch
+0500:042600|Arqiva [V4]|9.0E|Various
+0500:042610|Arqiva [V4]|9.0E|Various
+0500:042700|SCT - D-XTV - Penthouse HD [V4]|13.0E - 9.0E|Porn
+0500:042710|SCT - D-XTV - Penthouse HD [V4]|13.0E - 9.0E|Porn
+0500:042730|Sundance Channel [V4]|9.0E|English
+0500:042740|Penthouse HD [V4]|9.0E|Porn
+0500:042800|BIS [V4]|19.2E - 13.0E - 5.0W - 12.5W|French
+0500:042810|BIS [V4]|19.2E - 13.0E - 5.0W - 12.5W|French
+0500:042900|*THEME-X [V4]|13.0E|*OLD*
+0500:042A00|CanalSat [V4]|19.2E|French 
+0500:042A10|CanalSat [V4]|19.2E|French
+0500:042C00|RRSat [V4]|9.0E|Various
+0500:043200|TNT France [V4]|5.0W - DTT|French
+0500:043300|CanalSat [V4]|19.2E|French
+0500:043330|CanalSat [V4]|19.2E|French
+0500:043800|ELITE Fusion HD 7 Channels [V4]|13.0E|Porn
+0500:FFF200|Viaccess|Issuer|GC-ART-BiS-TNT-CSAT-BBC
+0500:FFF300|Viaccess|Issuer|GC-ART-BiS-TNT-CSAT-BBC
+0500:FFF320|Viaccess|Issuer|NSAB
+0500:FFF400|Viaccess|Issuer|GC-ART-BiS-TNT-CSAT-BBC
+0500:FFF420|Viaccess|Issuer|
+0500:FFF430|Viaccess|Issuer|SRG Suisse
+0500:FFF450|Viaccess|Issuer|SVT
+0500:FFF460|Viaccess|Issuer|BBC Prime
+0500:FFF4A0|Viaccess|Issuer|HRT
+0500:FFF4F0|Viaccess|Issuer|Pacific
+0500:FFF500|Viaccess|Issuer|NTV Plus
+0500:FFF510|Viaccess|Issuer|Boxer Cable
+0500:FFF530|Viaccess|Issuer|Televisa
+0500:FFF560|Viaccess|Issuer|Localia
+0500:FFF5B0|Viaccess|Issuer|
+0500:FFF5F0|Viaccess|Issuer|Deepam
+0500:FFF610|Viaccess|Issuer|
+0500:FFF710|Viaccess|Issuer|Hayat
+0500:FFF720|Viaccess|Issuer|TVR Cultural
+0500:FFF780|Viaccess|Issuer|RTVi
+0500:FFF7A0|Viaccess|Issuer|Redlight
+0500:FFF820|Viaccess|Issuer|BHT - MAX TV
+0500:FFF830|Viaccess|Issuer|Dorcel - FreeX TV
+0500:FFF840|Viaccess|Issuer|Pacific
+0500:FFF860|Viaccess|Issuer|
+0500:FFF890|Viaccess|Issuer|Poverkhnost
+0500:FFF8A0|Viaccess|Issuer|AKTA
+0500:FFF8F0|Viaccess|Issuer|Redlight
+0500:FFF920|Viaccess|Issuer|JSC Sport+
+0500:FFFA30|Viaccess|Issuer|STAR TV
+0500:FFFA40|Viaccess|Issuer|ART
+0500:FFFA50|Viaccess|Issuer|ARY
+0500:FFFAA0|Viaccess|Issuer|RedHotSex
+0500:FFFD00|Viaccess|Issuer|DP - ST-Hilo
+
+############################################################
+######################### Irdeto ###########################
+############################################################
+
+0602:000000|Optus Aurora - Orion Express - KontinentTV [I2]|156.0E - 140.0E - 85.2E|English - Russian
+0602:000001|Orion Express - Kontinent TV [I2]|140.0E - 85.2E|Russian
+0602:000002|Orion Express - Kontinent TV [I2]|140.0E - 85.2E|Russian
+0602:000003|Orion Express - Kontinent TV [I2]|140.0E - 85.2E|Russian
+0602:000004|Kontinent TV [I2]|85.2E|Russian
+0602:000032|Kontinent TV [I2]|85.2E|Russian
+0602:000043|Kontinent TV [I2]|85.2E|Russian
+0603:000000|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:000001|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:000002|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:000003|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:000004|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:000600|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:000700|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:000800|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:0403AE|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0603:088124|JSC Sport+ [I2]|26.0E - 13.0E - 7.0W|Sport
+0604:000000|Austar-TrueVisions-Bulsatcom-Nova-SCT-ABS/CBN-Showtime [I2]|156.0E-78.5E-39.0E-13.0E-5.0W-7.0W|Various
+0604:000001|Bulsatcom - Nova - Showtime [I2]|39.0E - 13.0E - 7.0W|Various
+0604:000002|Bulsatcom - Nova - Showtime [I2]|39.0E - 13.0E - 7.0W|Various
+0604:000002|Bulsatcom - Nova - Showtime [I2]|39.0E - 13.0E - 7.0W|Various
+0604:000003|Bulsatcom - Nova - Showtime [I2]|39.0E - 13.0E - 7.0W|Various
+0604:000004|Bulsatcom - Nova - TVB Classic - Showtime [I2]|39.0E - 13.0E - 9.0E - 7.0W|Various
+0604:000005|Bulsatcom - Nova - TVB LifeStyle - Showtime [I2]|39.0E - 13.0E - 9.0E - 7.0W|Various
+0604:000006|Bulsatcom - Nova - TVB - Showtime [I2]|39.0E - 13.0E - 9.0E - 7.0W|Various
+0604:000007|Bulsatcom - Nova - TVB - Showtime [I2]|39.0E - 13.0E - 9.0E - 7.0W|Various
+0604:000010|Bulsatcom - Nova - Showtime [I2]|39.0E - 13.0E - 7.0W|Various
+0604:00000E|Bulsatcom [I2]|39.0E|Bulgarian
+0604:000100|Orbit Showtime Network [I2]|7.0W|Arabic
+0604:002800|Orbit Showtime Network [I2]|7.0W|Arabic
+0604:010CB1|Bulsatcom [I2]|39.0E|Bulgarian
+0604:06070D|Unknown|Provider|Irdeto|
+0604:14583C|Nova Greece [I2]|13.0E|Greek 
+0604:5FECB7|Orbit Showtime Network [I2]|7.0W|Arabic
+0605:000000|Unknown|Provider|Irdeto|
+0606:000000|AlbanicaSat [I2]|0.8W|Albanian
+0606:000001|*SexView247 [I2]|13.0E|*OLD*
+0606:000002|*SexView247 [I2]|13.0E|*OLD
+0606:000003|*SexView247 [I2]|13.0E|*OLD
+0608:000000|ZEE TV [I2]|9.0E - 13.0E|Hindi
+0608:000001|ZEE TV [I2]|9.0E - 13.0E|Hindi
+0608:000002|ZEE TV [I2]|9.0E - 13.0E|Hindi
+0608:000003|ZEE TV [I2]|9.0E - 13.0E|Hindi
+0610:000000|Smile [I2]|75.0E|Russian
+0611:000000|Unknown|Provider|Irdeto|
+0614:000000|Globecast UK [I2]|9.0E|Various
+0615:000000|SkyLogic [I2]|33.0E|Various
+0616:000000|NiteGate - ITM Macedonia [I2]|24.5W - Italian DTT - 16.0E|Porn - Macedonian
+0616:000001|NiteGate [I2]|24.5W - Italian DTT|Porn
+0616:000002|NiteGate [I2]|24.5W - Italian DTT|Porn
+0616:000003|NiteGate [I2]|24.5W - Italian DTT|Porn
+0616:000004|NiteGate [I2]|24.5W - Italian DTT|Porn
+0616:000005|NiteGate [I2]|24.5W - Italian DTT|Porn
+0616:000006|NiteGate [I2]|24.5W - Italian DTT|Porn
+0616:000007|NiteGate [I2]|24.5W - Italian DTT|Porn
+0616:031B00|*Club Privé [I2]|13.0E|*OLD*
+0618:000000|*IN-X TV/XPlus TV [I2]|13.0E|*OLD*
+0619:000000|Select TV [I2]|166.0E|Australian
+0620:000000|*LA7 Sport [I2]|12.5W|*OLD*
+0622:000000|WDS - Digitalb - Canal+ NL [I2]|10.0E - 16.0E - 19.2E|Various
+0622:000001|Digitalb - Canal Digitaal [I2]|16.0E - 19.2E|Various
+0622:000002|Digitalb - Canal Digitaal [I2]|16.0E - 19.2E|Various
+0622:000003|Digitalb - Canal Digitaal [I2]|16.0E - 19.2E|Various
+0624:000000|WDS - SkyLink [I2]|10.0E - 23.5E|English - Czech
+0624:000001|*Euro1080HD [I2]|9.0E|*OLD*
+0624:000002|*Euro1080HD [I2]|9.0E|*OLD*
+0624:000003|*Euro1080HD [I2]|9.0E|*OLD*
+0625:000000|RRSat [I2]|10.0E - 16.0E|Various
+0626:000000|Optus Aurora [I2]|156.0E|Australian
+0627:000000|JSC Sport+ [I2]|7.0W|Sport
+0627:000001|JSC Sport+ [I2]|7.0W|Sport
+0627:000002|JSC Sport+ [I2]|7.0W|Sport
+0627:000003|JSC Sport+ [I2]|7.0W|Sport
+0628:000000|SCT - D-XTV - ELITE FUSION HD 7 Channels [I2]|13.0E|Porn
+0628:000001|SCT - D-XTV [I2]|13.0E|Porn
+0628:000002|SCT - D-XTV [I2]|13.0E|Porn
+0628:000003|SCT - D-XTV [I2]|13.0E|Porn
+0629:000000|UBI World TV [I2]|152.0E|Various
+0630:000000|FreeX 5 Channels [I2]|13.0E|Porn
+0632:000000|Teuve [I2]|24.5W|Spanish
+0640:000000|Globecast UK - SUN TV [I2]|9.0E|Tamil
+0648:000000|ORF Digital [I2]|19.2E|German
+0652:000000|Raduga TV [I2]|75.0E|Russian
+0652:000015|Raduga TV [I2]|75.0E|Russian
+0652:00FFFF|Raduga TV [I2]|75.0E|Russian
+0654:000000|*Poverkhnost TV [I2]|36.0E|*OLD*
+0654:000001|*Poverkhnost TV [I2]|36.0E|*OLD*
+0654:000002|*Poverkhnost TV [I2]|36.0E|*OLD*
+0654:000003|*Poverkhnost TV [I2]|36.0E|*OLD*
+0654:000004|*Poverkhnost TV [I2]|36.0E|*OLD*
+0654:000005|*Poverkhnost TV [I2]|36.0E|*OLD*
+0662:000000|Dahlia TV [I2]|12.5W - DTT|Italian
+0662:000001|Dahlia TV [I2]|12.5W - DTT|Italian
+0662:000002|Dahlia TV [I2]|12.5W - DTT|Italian
+0662:000003|Dahlia TV [I2]|12.5W - DTT|Italian
+0662:000004|Dahlia TV [I2]|12.5W - DTT|Italian
+0664:000000|Digitürk [I2]|7.0E|Turkish
+0664:000001|Digitürk [I2]|7.0E|Turkish
+0664:000002|Digitürk [I2]|7.0E|Turkish
+0664:000003|Digitürk [I2]|7.0E|Turkish
+0668:000000|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+0668:000001|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+0668:000002|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+0668:000003|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+0668:000100|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+0668:000200|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+0668:000300|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+0668:000400|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+0668:043F6D|Orbit Showtime Network [I2]|25.5E - 7.0W|Arabic
+
+############################################################
+##################### NDS Videoguard #######################
+############################################################
+
+0900:000000|*RAI - SKY Italia [NDS]|13.0E|*OLD*
+0907:000000|Sky Brazil [NDS]|43.1W|Portuguese
+090B:000000|Foxtel Australia Blue [NDS]|156.0E|Australian
+090C:000000|Yes [NDS]|4.0W|Arabic
+090D:000000|Yes HD [NDS]|4.0W|Arabic
+090F:000000|Viasat [NDS]|4.8E - 75.0E|Swedish
+0915:000000|Ono Cable Spain [NDS]|Cable|Spanish
+0917:000000|Cable Shenzhen [NDS]|Cable|Chinese
+0918:000000|*SKY Italia [NDS]|13.0E|*OLD*
+0919:000000|SKY Italia [NDS2]|13.0E|Italian
+091C:000000|Cable Canton [NDS2]|Cable|Chinese
+091F:000000|Total TV - Pink International [NDS]|16.0E|Bulgarian - Serbian
+0924:000000|Star TV [NDS]|105.5E|Hindi
+0926:000000|GET [NDS3]|Cable|Norwegian
+0929:000000|BOOM [NDS3]|4.0W|Romanian
+092B:000000|D-Smart [NDS3]|42.0E|Turkish
+092D:000000|Cable Shangai [NDS3]|Cable|Chinese
+092F:000000|Dolce TV [NDS3]|39.0E|Romanian 
+0931:000000|Viasat Ukraine [NDS3]|4.8E|Ukrainian
+0939:000000|Cable Chongqing [NDS3]|Cable|Chinese
+093A:000000|Ono Cable Spain [NDS3]|Cable|Spanish
+093B:000000|SKY Italia [NDS3]|13.0E|Italian
+093E:000000|Viasat [NDS3]|4.8E|Swedish
+0942:000000|Sky Brazil [NDS3]|43.1W|Portuguese
+0943:000000|GregtissaTV [NDS]||
+0944:000000|Tata Sky [NDS3]|83.0E|Hindi
+0945:000000|Sky México [NDS3]|58.0W|Spanish
+0946:000000|Sky Brazil [NDS3]|43.1W|Portuguese
+0947:000000|Cable Tianjin [NDS3]|Cable|Philippine
+0960:000000|SKY UK [NDS3]|28.5E|English
+0961:000000|SKY UK [NDS3]|28.5E|English
+0962:000000|DTH Group [NDS3]|28.5E|Romanian
+0963:000000|SKY UK [NDS3]|28.5E|English
+0967:000000|Reuters [NDS3]|22.0W|English
+0969:000000|SKY New Zeland [NDS]|160.0E|English
+096A:000000|SKY New Zeland [NDS2]|160.0E|English
+096C:000000|Foxtel Australia IQ [NDS3]|156.0E|Australian
+0974:000000|TVSA [NDS3]|43.0W|Spanish
+0979:000000|Tellytrack [NDS3]|45.0E|English - Italian
+0981:000000|NBA TV [NDS3]|18.0W|English
+0983:000000|TVSA [NDS3]|43.0W|Spanish
+0988:000000|TVB Pay Vision [NDS3]|108.2E|Chinese
+098E:000000|Kabel BW [NDS3]|Cable|German
+099E:000000|OTE [NDS3]|39.0E|Greek
+09A0:000000|Star TV [NDS3]|105.5°E|Hindi
+09AA:000000|Airtel [NDS3]|74.0°E|Hindi
+09AC:000000|Astro TV [NDS3]|91.5°E|Malaysian
+09AF:000000|KabelKiosk - RTVi [NDS3]|9.0E - 13.0E|German - Russian
+09B6:000000|TeleClub [NDS3]|Cable|Swiss
+09B8:000000|TopTV [NDS3]|4.8E|English
+09B9:000000|MyTV Ukraine [NDS3]0.8W|Russian - Ukrainian
+09BD:000000|Vivacom [NDS3]|45.0E|Bulgarian
+09BE:000000|OTE [NDS3]|39.0E|Greek
+09C4:000000|SKY Germany [NDS4]|19.2E|German
+09C7:000000|SKY Germany - Kabel Deutschland [NDS4]|19.2E - 23.5E|German
+09CC:000000|Cable Shenzhen [NDS4]|Cable|Chinese
+09CD:000000|SKY Italia [NDS4]|13.0E|Italian
+09D0:000000|TVP - MIR [NDS4]|7.0E - 19.2E - 75.0E|Polish
+
+############################################################
+#######################  Conax  ############################
+############################################################
+
+0B00:000000|C+Nordic - Magio Sat - Akta - MTV - KabelKiosk - Hello HD - Digitalb - Rikor [CX]|0.8W-4.0W-4.8E-9.0E-16.0E-60.0E|Various
+0B00:00267A|KabelKiosk PPV [CX]|9.0E|German
+0B00:004010|Bulgarian Mux [CX]|0.8W|Bulgarian
+0B00:006010|Canal+ Nordic [CX]|0.8W|Swedish
+0B00:006020|Nordic 1 [CX]|0.8W|Swedish
+0B00:006030|Nordic 2 [CX]|0.8W|Swedish
+0B00:006040|Nordic 3 [CX]|0.8W|Swedish
+0B00:006050|TSS [CX]|0.8W|Swedish
+0B00:006060|Nordic 4 [CX]|0.8W|Swedish
+0B00:006070|Nordic 5 [CX]|0.8W|Swedish
+0B00:007501|Private Gold [CX]|0.8W|Porn
+0B01:000000|ContoTV - N TV [CX]|13.0E|Porn - Polish
+0B01:0000C0|N TV [CX]|13.0E|Polish
+0B02:000000|RedLight 5 Channels [CX]|13.0E - 5.0W|Porn
+0B02:0000C0|Focus Sat [CX]|0.8W|Romanian
+0BAA:000000|Hello HD - Tring Digital [CX]|9.0E - 16.0E|Hungarian - Albanian
+0BAA:0000C0|Tring Digital [CX]|16.0E|Albanian
+
+############################################################
+####################### Cryptoworks ########################
+############################################################
+
+0D00:000000|Digitürk - MTV Networks [CW]|7.0E - 13.0E - 19.2E|Various
+0D00:000004|MTV - Nickelodeon NL [CW]|13.0E - 19.2E|Music/Dutch
+0D00:000008|MTV [CW]|13.0E - 19.2E|Music
+0D00:00000C|MTV Channels [CW]|13.0E - 19.2E|Music
+0D00:000010|MTV Channels [CW]|9.0E - 13.0E - 19.2E|Music
+0D00:000020|MTVPolska - MTVClassic - AXN - Arqiva [CW]|13.0E - 23.5E - 4.8E|Various
+0D00:000030|Slovaklink & Kingstone Imedia [CW]|4.8E|Various
+0D00:000064|*BFBS [CW]|7.0E|*OLD*
+0D00:000065|*BFBS [CW]|7.0E|*OLD*
+0D00:000068|*BFBS [CW]|7.0E|*OLD*
+0D00:00006C|CNN [CW]||English
+0D00:00006D|Nilesat [CW]|7.0W|Arabic
+0D00:000080|UPC Direkt [CW]|0.8W|Hungarian
+0D00:0000B0|*Xtra Music [CW]|19.2E|*OLD*
+0D00:0000C0|Digitürk [CW]|7.0E|Turkish
+0D00:0000C1|*Digitürk [CW]|7.0E|*OLD*
+0D00:0000C2|*Digitürk [CW]|7.0E|*OLD*
+0D00:0000C4|Digitürk [CW]|7.0E|Turkish
+0D00:0000C8|Digitürk [CW]|7.0E|Turkish
+0D00:0000CC|Digitürk [CW]|7.0E|Turkish
+0D00:0000D0|*Telespazio [CW]|36.0E|*OLD*
+0D00:0000E0|*JSTV [CW]|13.0E|*OLD*
+0D01:000000|JSTV [CW]|13.0E|Japanese
+0D01:000050|CS Link [CW]|23.5E|Czech
+0D01:000055|CS Link [CW]|23.5E|Czech
+0D01:000080|Telespazio [CW]||
+0D01:000084|*CryptTV [CW]|13.0E|*OLD*
+0D01:0000E0|JSTV [CW]|13.0E|Japanese
+0D01:0000E4|JSTV [CW]|13.0E|Japanese
+0D01:0000E8|CS Link [CW]|23.5E|Czech
+0D01:0000EC|CS Link [CW]|23.5E|Czech
+0D01:0000EF|CS Link [CW]|23.5E|Czech
+0D02:000000|UPC Direkt [CW]|0.8W|Hungarian
+0D02:000058|RTL [CW]|13.0E - 19.2E|German
+0D02:000000|*UPC Direkt [CW]|0.8W - 19.2E|*OLD*
+0D02:000008|*UPC Direkt [CW]|0.8W - 19.2E|*OLD*
+0D02:000080|*UPC Direkt [CW]|0.8W - 19.2E|*OLD*
+0D02:000088|*UPC Direkt [CW]|0.8W - 19.2E|*OLD*
+0D02:00008C|UPC Direkt [CW2]|0.8W|Hungarian
+0D02:0000A0|UPC Direkt [CW2]|0.8W|Hungarian
+0D02:0000A4|UPC Direkt [CW2]|0.8W|Hungarian
+0D02:0000A8|UPC Direkt [CW2]|0.8W|Hungarian
+0D02:00A800|UPC Direkt [CW2]|0.8W|Hungarian
+0D03:000000|Kingstone (Hustler - Blue) [CW]|4.8E|Porn 
+0D03:000004|SkyLink [CW]|23.5E|Czech - Slovakian
+0D03:000008|SkyLink [CW]|23.5E|Czech - Slovakian
+0D03:00000C|*SkyLogic [CW]|7.0E|*OLD*
+0D03:000010|*SkyLogic [CW]|7.0E|*OLD*
+0D03:000018|SkyLink [CW]|23.5E|Czech - Slovakian
+0D03:00001C|SkyLink [CW]|23.5E|Czech - Slovakian
+0D03:000020|SkyLink [CW]|23.5E|Czech - Slovakian
+0D03:000024|SkyLink [CW]|23.5E|Czech - Slovakian
+0D03:000028|SkyLink [CW]|23.5E|Czech - Slovakian
+0D03:000050|*Globecast [CW]|13.0E - 19.2E|*OLD*
+0D03:00005C|*Globecast [CW]|13.0E - 19.2E|*OLD*
+0D03:000060|*Globecast [CW]|13.0E - 19.2E|*OLD*
+0D03:0000A0|JSTV [CW]|13.0E|Japanese
+0D03:0000A4|*E! - Fox Kids [CW]|13.0E|*OLD*
+0D03:0000A8|*E! - Fox Kids [CW]|13.0E|*OLD*
+0D03:0000AC|*E! - Fox Kids [CW]|13.0E|*OLD*
+0D03:0000B0|*XtraMusic [CW]|19.2E|*OLD*
+0D03:0000B1|*XtraMusic [CW]|19.2E|*OLD*
+0D03:0000C0|*Digitürk [CW]|7.0E|*OLD*
+0D03:0000C1|*Digitürk [CW]|7.0E|*OLD*
+0D03:0000C4|*Lig TV [CW]|7.0E|*OLD*
+0D03:0000C8|*Digitürk [CW]|7.0E|*OLD*
+0D04:000000|*Kabelvision [CW]|8.0W|*OLD*
+0D04:000004|DMC [CW]|15.0W|Various
+0D04:000008|DMC [CW]|15.0W|Various
+0D04:00000C|DMC [CW]|15.0W|Various
+0D04:000010|DMC [CW]|15.0W|Various
+0D04:000014|*Kabelvision [CW]|8.0W|*OLD*
+0D05:000000|ORF Digital [CW2]|19.2E|German
+0D05:000004|ORF Digital [CW2]|19.2E|German
+0D05:000008|ORF Digital [CW2]|19.2E|German
+0D05:00000C|ORF Digital [CW2]|19.2E|German
+0D05:000010|ORF Digital [CW2]|19.2E|German
+0D05:000040|ORF Digital [CW2]|19.2E|German
+0D05:000080|ORF Digital [CW2]|19.2E|German
+0D05:0000A0|ORF Digital [CW2]|19.2E|German
+0D05:0000C0|ORF Digital [CW2]|19.2E|German
+0D06:000000|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D06:000004|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D06:000008|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D06:00000C|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D06:000010|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D06:0000C0|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D06:0000C4|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D06:0000C8|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D06:0000CC|Total TV Bulgaria [CW2]|16.0E|Bulgarian
+0D07:000000|BFBS [CW]|7.0E|English
+0D07:000004|Antena Hungaria [CW]||Hungarian
+0D07:000008|Antena Hungaria [CW]||Hungarian
+0D07:00000C|Antena Hungaria [CW]||Hungarian
+0D07:000010|Antena Hungaria [CW]||Hungarian
+0D07:000014|BFBS [CW]|7.0E|English
+0D07:000018|BFBS [CW]|7.0E|English
+0D07:00001C|BFBS [CW]|7.0E|English
+0D08:000000|AlMajd [CW]|30.0E|Arabic
+0D08:000001|AlMajd [CW]|30.0E|Arabic
+0D08:000002|AlMajd [CW]|30.0E|Arabic
+0D08:000003|AlMajd [CW]|30.0E|Arabic
+0D08:000004|AlMajd [CW]|30.0E|Arabic
+0D08:000014|AlMajd [CW]|30.0E|Arabic
+0D08:000018|AlMajd [CW]|30.0E|Arabic
+0D08:000020|AlMajd [CW]|30.0E|Arabic
+0D08:00001C|AlMajd [CW]|30.0E|Arabic
+0D0C:000000|*Easy TV [CW]|19.2E|*OLD*
+0D0C:00000C|*Easy TV [CW]|19.2E|*OLD*
+0D0C:000010|*Easy TV [CW]|19.2E|*OLD*
+0D0C:000014|*Easy TV [CW]|19.2E|*OLD*
+0D0C:000018|*Easy TV [CW]|19.2E|*OLD*
+0D0F:000000|CS Link [CW]|23.5E|Czech
+0D22:000000|ArenaSAT [CW2]|19.2E|German
+0D22:000008|ArenaSAT [CW2]|19.2E|German
+0D22:00000C|ArenaSAT [CW2]|19.2E|German
+0D22:000010|ArenaSAT [CW2]|19.2E|German
+0D70:000004|SkyLink [CW]|23.5E|Slovakian
+0D70:000008|SkyLink [CW]|23.5E|Slovakian
+0D70:00000C|SkyLink [CW]|23.5E|Slovakian
+0D70:000010|SkyLink [CW]|23.5E|Slovakian
+0D95:000000|ORF Digital [CW ICE]|19.2E|German
+0D96:000000|SkyLink [CW ICE]|23.5E|Slovakian
+0D96:000004|SkyLink [CW ICE]|23.5E|Slovakian
+0D96:000008|SkyLink [CW ICE]|23.5E|Slovakian
+0D96:00000C|SkyLink [CW ICE]|23.5E|Slovakian
+0D96:000010|SkyLink [CW ICE]|23.5E|Slovakian
+
+############################################################
+################# Betacrypt - Nagravision ##################
+############################################################
+
+1702:000000|SKY Germany [B]|19.2E|German
+1702:000001|SKY Germany [B]|19.2E|German
+1702:000002|SKY Germany [B]|19.2E|German
+1702:000003|SKY Germany [B]|19.2E|German
+1702:000004|SKY Germany [B]|19.2E|German
+1708:000000|Orbit Showtime Network [B]|7.0W|Arabic - English
+1711:000000|APTN London [B]|10.0E|English
+1722:000000|UnityMedia [B]|Cable|German
+1722:000001|UnityMedia [B]|Cable|German
+1722:000002|UnityMedia [B]|Cable|German
+1722:000003|UnityMedia [B]|Cable|German
+1762:000000|*Premiere Austria [B]|19.2E|*OLD*
+1762:000001|*Premiere Austria [B]|19.2E|*OLD*
+1762:000002|*Premiere Austria [B]|19.2E|*OLD*
+1762:000003|*Premiere Austria [B]|19.2E|*OLD*
+1800:000001|*Dish Network USA [N]|61.5W - 72.7W - 77.0W - 110W - 119W - 121W|*OLD*
+1800:000101|*Dish Network USA [N]|61.5W - 72.7W - 77.0W - 110W - 119W - 121W|*OLD*
+1800:000801|*Bell ExpressVu USA [N]|82.0W - 91.W|*OLD*
+1800:000901|*Bell ExpressVu USA [N]|82.0W - 91.W|*OLD*
+1800:001001|DigiKabel [N]|Cable|Hungarian
+1800:001201|*Americas [N]|15.0W|*OLD*
+1800:001301|*Americas [N]|15.0W|*OLD*
+1800:001811|*Mediapark (Teuve) [N]|30.0W|*OLD*
+1800:001911|*Mediapark (Teuve) [N]|30.0W|*OLD*
+1800:001D01|*MultiChoice TV Barbados [N]|Cable|*OLD*
+1800:002201|Multicanal [N]|30.0W|Portuguese
+1800:002301|Multicanal [N]|30.0W|Portuguese
+1800:002C01|SABC [N]|68.5E|English
+1800:002D01|SABC [N]|68.5E|English
+1800:003001|*ORF Digital [N]|19.2E|*OLD*
+1800:003101|*ORF Digital [N]|19.2E|*OLD*
+1800:003801|*DCG Swiss [N]|Cable|*OLD*
+1800:003901|*DCG Swiss [N]|Cable|*OLD*
+1800:003A01|TeleClub [N]|Cable|Swiss
+1800:003B01|TeleClub [N]|Cable|Swiss
+1800:003C01|*Visavision [N]|8.0W|*OLD*
+1800:003D01|*Visavision [N]|8.0W|*OLD*
+1800:004001|*Digital+ [N]|19.2E - 30.0W|*OLD*
+1800:004101|*Digital+ [N]|19.2E - 30.0W|*OLD
+1800:004201|*RTVE [N]|30.0W|*OLD*
+1800:004301|*RTVE [N]|30.0W|*OLD*
+1800:004601|Euskaltel [N]|Cable|Spanish
+1800:004701|Euskaltel [N]|Cable|Spanish
+1800:004801|*TV Cabo [N]|30.0W|*OLD*
+1800:004901|*TV Cabo [N]|30.0W|*OLD*
+1800:004A01|*TBL TV [N]|88.0E|*OLD*
+1800:004B01|*TBL TV [N]|88.0E|*OLD*
+1800:004E01|Dream TV [N]|146.0E|Philippine 
+1800:004F01|Dream TV [N]|146.0E|Philippine 
+1800:005401|NTL [N]|Cable|English
+1800:005501|NTL [N]|Cable|English
+1800:005601|Quiero Tv [N]|DTT|Spanish
+1800:005701|Quiero Tv [N]|DTT|Spanish
+1800:005A01|TeleWest [N]|Cable|English
+1800:005B01|TeleWest [N]|Cable|English
+1800:005C01|C+ W - NTL [N]|Cable|English
+1800:005D01|C+ W - NTL [N]|Cable|English
+1800:005E01|Chorus Cable [N]|Cable|English
+1800:005F01|Chorus Cable [N]|Cable|English
+1800:006801|Fantasma Cable [N]|Cable|??
+1800:006901|Fantasma Cable [N]|Cable|??
+1800:007001|*Cyfrowy Polsat [N]|13.0E|*OLD*
+1800:007101|*Cyfrowy Polsat [N]|13.0E|*OLD*
+1800:007301|Cablecom [N]|Cable|Swiss
+1800:007401|*Star Digital - Digi Fun [N]|4.0W - 42.0E|*OLD*
+1800:007501|*Star Digital - Digi Fun [N]|4.0W - 42.0E|*OLD*
+1800:008C11|*Mediaset Premium [N]|DTT|*OLD*
+1800:008D11|*Mediaset Premium [N]|DTT|*OLD*
+1800:009801|Shanghai [N]|Cable|Chinese
+1800:009901|Shanghai [N]|Cable|Chinese
+1800:00A001|OMNE UK [N]|Cable|English
+1800:00A101|OMNE UK [N]|Cable|English
+1800:00A401|Antenna Hungaria [N]|4.0W|Hungarian
+1800:00A501|Antenna Hungaria [N]|4.0W|Hungarian
+1800:00C001|*Globo TV [N]|13.0E|*OLD*
+1800:00C101|*Globo TV [N]|13.0E|*OLD*
+1800:00D001|*Cyberstar [N]|15.0W|*OLD*
+1800:00D101|*Cyberstar [N]|15.0W|*OLD*
+1800:00EE01|*B4U Movie [N]|68.5E|*OLD*
+1800:00EF01|*B4U Movie [N]|68.5E|*OLD*
+1800:FFFFFF|Nagravision|Caid|
+1801:000000|*Cyfrowy Polsat - Digital+ [N]|13.0E - 19.2E|*OLD*
+1801:000101|Dish Network USA [N2]|61.5W - 72.7W - 77.0W - 110W - 119W - 121W|English
+1801:000401|*Premiere [N2]|19.2E|*OLD*
+1801:000501|*Premiere [N2]|19.2E|*OLD*
+1801:000901|Bell ExpressVu [N2]|82.0W - 91.0W|English
+1801:000905|Bell ExpressVu PB [N2]|82.0W - 91.0W|English
+1801:000906|Bell ExpressVu HD [N2]|82.0W - 91.0W|English
+1801:001001|Kabel Deutschland [N2]|23.5E|German
+1801:001101|Kabel Deutschland [N2]|23.5E|German
+1801:001102|Kabel Deutschland [N2]|23.5E|German
+1801:002011|*RCS DiGiTV [N2]|0.8W|*OLD*
+1801:002111|*RCS DiGiTV [N2]|0.8W|*OLD*
+1801:002601|Cablecom [N2]|Cable|Swiss
+1801:002701|Cablecom [N2]|Cable|Swiss
+1801:003001|*ORF Digital [N2]|19.2E|*OLD*
+1801:003101|*ORF Digital [N2]|19.2E|*OLD*
+1801:004001|*Digital+ [N2]|19.2E - 30.0W|*OLD*
+1801:004101|*Digital+ [N2]|19.2E - 30.0W|*OLD*
+1801:004201|*Digital+ [N2]|19.2E - 30.0W|*OLD*
+1801:004601|Euskaltel [N2]|Cable|Spanish
+1801:004701|Euskaltel [N2]|Cable|Spanish
+1801:004801|*TV Cabo [N2]|30.0W|*OLD*
+1801:004901|*TV Cabo [N2]|30.0W|*OLD*
+1801:004A11|Mundo-R Galicia [N2]|Cable|Spanish
+1801:004B11|Mundo-R Galicia [N2]|Cable|Spanish
+1801:004E01|Dream TV [N3]|146.0E|Philippine
+1801:005601|Onda Digital [N2]|DTT|Spanish
+1801:005701|Onda Digital [N2]|DTT|Spanish
+1801:007001|*Cyfrowy Polsat [N2]|13.0E|*OLD*
+1801:007101|*Cyfrowy Polsat [N2]|13.0E|*OLD*
+1801:007201|Cablecom [N2]|Cable|Swiss
+1801:007211|Telefónica TV [N2]|61.0W|Spanish
+1801:007301|Cablecom [N2]|Cable|Swiss
+1801:007311|Telefónica TV [N2]|61.0W|Spanish
+1801:009401|HKC [N2]|138.0E|Chinese
+1801:009501|HKC [N2]|138.0E|Chinese
+1801:00C002|Globo TV [N2]|13.0E|Portuguese
+1801:00C101|Globo TV [N2]|13.0E|Portuguese
+1801:00C102|Globo TV [N2]|13.0E|Portuguese
+1802:000000|Via Embratel - Telefónica TV - TV Cabo - Multicanal [N3]|70.0W - 61.0W - 30.0W|Spanish - Portuguese
+1802:004801|Zon TV Cabo [N3]|30.0W|Portuguese
+1802:004901|Zon TV Cabo [N3]|30.0W|Portuguese
+1802:002011|RCS DiGiTV [N3]|0.8W|Romanian
+1802:002111|RCS DiGiTV [N3]|0.8W|Romanian
+1802:008C11|*Mediaset Premium [N3]|DTT|*OLD*
+1802:008D11|*Mediaset Premium [N3]|DTT|*OLD*
+1803:000000|Cyfrowy Polsat [N3]|13.0E|Polish
+1803:007001|Cyfrowy Polsat [N3]|13.0E|Polish
+1803:007101|Cyfrowy Polsat [N3]|13.0E|Polish
+1803:008C11|Mediaset Premium [N3]|DTT|Italian
+1803:008D11|Mediaset Premium [N3]|DTT|Italian
+1804:008C11|Mediaset Premium [N3]|DTT|Italian
+1804:008D11|Mediaset Premium [N3]|DTT|Italian
+1805:000000|Mediaset Premium [N3]|DTT|Italian
+1805:008C11|Mediaset Premium [N3]|DTT|Italian
+1805:008D11|Mediaset Premium [N3]|DTT|Italian
+1807:007911|Glamour Plus [N3]|24.5W - Italian DTT|Porn
+1807:007A11|Glamour Plus [N3]|24.5W - Italian DTT|Porn
+1810:000000|Digital+ [N3]|19.2E - 30.0W|Spanish
+1810:004001|Digital+ HD [N3 Rom180]|19.2E - 30.0W|Spanish
+1810:004101|Digital+ [N3]|19.2E - 30.0W|Spanish
+1811:000000|CanalSat HD [N3]|19.2E|French
+1811:023311|CanalSat HD [N3]|19.2E|French
+1811:023315|CanalSat HD [N3]|19.2E|French
+1812:000000|GOL Television [N2]|DTT|Spanish
+1812:006E11|GOL Television [N2]|DTT|Spanish
+1815:000801|Bell ExpressVu [N3]|82.0W - 91.0W|English
+1815:000901|Bell ExpressVu [N3]|82.0W - 91.0W|English
+1815:00B801|UPC Direkt [N3]|0.8W - Cable|Hungarian
+1815:00B901|UPC Direkt [N3]|0.8W - Cable|Hungarian
+1816:000101|Dish Network [N3]|61.5W - 72.7W - 77.0W - 110W - 119W - 121W|English
+1830:000000|Max TV - HD+ Germany [N3]|16.0E - 19.2E|Croatian - German
+1830:003404|Entavio Start [N3]|19.2E|German
+1830:003411|HD+ Germany [N3]|19.2E|German
+1830:003504|Entavio Start [N3]|19.2E|German
+1830:003511|Entavio Start [N3]|19.2E|German
+1830:008011|HD+ Germany [N3 ROM142]|19.2E|German
+1831:000000|UnityMedia [N3]|Cable|German
+1831:001003|Sky Germany HD [N3]|Cable|German
+1831:001103|Sky Germany HD [N3]|Cable|German
+1833:000000|Sky Germany [N3]|19.2E|German
+1834:000000|Sky Germany - Kabel Deutschland [N3]|Cable|German
+1836:000000|Sky Germany [BLUE MOVIE] [N3]|19.2E|Porn
+1837:000000|Sportdigital.tv - TOPP [N3]|19.2E - 23.5E|German
+1838:000401|UnityMedia [N3 ROM142]|Cable|German
+1838:001103|UnityMedia [N3 ROM142]|Cable|German
+183D:000000|TivùSat [N3 Tiger]|13.0E|Italian
+183D:005411|TivùSat [N3 Tiger]|13.0E|Italian
+1841:000000|Virgin Media [N3]|Cable|English
+1843:000000|HD+ Germany [N3]|19.2E|German
+1843:003411|HD+ Germany [N3]|19.2E|German
+1880:000000|RCS DiGiTV [N4 ROM180]|0.8W|Romanian
+1880:002011|RCS DiGiTV [N4 ROM180]|0.8W|Romanian
+1880:002111|RCS DiGiTV [N4 ROM180]|0.8W|Romanian
+1880:002113|RCS DiGiTV [N4 ROM180]|0.8W|Romanian
+
+############################################################
+######################### PowerVU ##########################
+############################################################
+
+0E00:000000|Fox-Retevision-NBATV-ESPN-HBO [PV]|Various|Various
+0E00:000001|Fox-Retevision-NBATV-ESPN-HBO [PV]|Various|Various
+0E00:000002|Fox-Retevision-NBATV-ESPN-HBO [PV]|Various|Various
+0E00:000003|Fox-Retevision-NBATV-ESPN-HBO [PV]|Various|Various
+
+############################################################
+######################## CodiCrypt #########################
+############################################################
+
+223B:000000|Bundestag [CODICRYPT]|23.5E|German
+22E2:000000|National TV [CODICRYPT]|16.0E|Romanian
+22F0:000000|*TV B92 [CODICRYPT]|16.0E|*OLD*
+
+############################################################
+####################### Neotion SHL ########################
+############################################################
+
+4A61:000000|*Redlight CAM 5 Channels [Neo]|13.0E - 5.0W|*OLD*
+4A63:000000|*Redlight CAM 5 Channels [Neo]|13.0E - 5.0W|*OLD*
+4A70:000000|*In X Plus [Neo]|13.0E|*OLD*
+4ABF:000000|Redlight CAM 5 Channels [Neo]|13.0E - 5.0W|Porn
+
+############################################################
+########################## KeyFly ##########################
+############################################################
+
+4AA1:000000|JSC Sport+ [KF]|26.0E - 13.0E - 7.0W|Sport
+
+############################################################
+######################## DRE-Crypt #########################
+############################################################
+
+4AE0:000000|Tricolor TV [DRE]|36.0E - 56.0E|Russian
+4AE1:000000|Tricolor TV [DRE]|36.0E|Russian
+4AE1:FFFFFF|Tricolor TV [DRE]|36.0E|Russian
+4AE1:000013|Penthouse HD [DRE]|9.0E|Porn
+4AE1:000014|Platforma HD [DRE]|9.0E|Russian
+4AE1:000015|Platforma HD [DRE]|9.0E|Russian
+4AE5:000014|Platforma HD [DRE]|9.0E|Russian
+
+############################################################
+#################### BulCrypt & Griffin ####################
+############################################################
+
+5501:000000|Bulsatcom [B&G]|39.0E|Bulgarian
+5581:000000|Bulsatcom [B&G]|39.0E|Bulgarian
+
+############################################################
+#######################  BeeGhepol  ########################
+############################################################

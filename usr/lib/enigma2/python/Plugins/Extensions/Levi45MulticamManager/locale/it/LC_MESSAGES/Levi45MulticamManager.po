@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Levi45SoftcamManager\n"
+"POT-Creation-Date: 2021-10-17 18:52+0200\n"
+"PO-Revision-Date: 2021-10-17 18:52+0200\n"
+"Last-Translator: \n"
+"Language-Team: lululla\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-SearchPath-0: plugin.py\n"
+
+#: plugin.py:315
+msgid "Start"
+msgstr "Avvio"
+
+#: plugin.py:317
+msgid "Download"
+msgstr "Download"
+
+#: plugin.py:318
+msgid "Stop"
+msgstr "Stop"
+
+#: plugin.py:319 plugin.py:348
+msgid "Softcam"
+msgstr "Softcam"
+
+#: plugin.py:321
+msgid "Scanning and retrieval list softcam ..."
+msgstr "Scansione e recupero lista softcam"
+
+#: plugin.py:353
+msgid "CCcamInfo"
+msgstr ""
+
+#: plugin.py:356
+msgid "OscamInfo"
+msgstr ""
+
+#: plugin.py:359 plugin.py:362
+msgid "SOFTCAM"
+msgstr ""
+
+#: plugin.py:409
+msgid "No ecm info"
+msgstr ""
+
+#: plugin.py:416
+msgid "Update SoftcamKeys from google search?"
+msgstr "Aggiornamento SoftcamKeys da ricerca google?"
+
+#: plugin.py:430
+#, python-format
+msgid "Update Softcam.key: %s"
+msgstr "Aggiornamento SoftCam.Key: %s"
+
+#: plugin.py:445
+msgid "Select a cam to run ..."
+msgstr "Selezionare una cam da avviare ..."
+
+#: plugin.py:605
+msgid "Autocam assigned to the current channel"
+msgstr "Autocam assegnato al canale corrente"
+
+#: plugin.py:648
+msgid "Getting the list, please wait ..."
+msgstr "Getting the list, please wait ..."
+
+#: plugin.py:649 plugin.py:744 plugin.py:840
+msgid "Back"
+msgstr "Indietro"
+
+#: plugin.py:682
+msgid "Try again later ..."
+msgstr "Riprova piu tardi ..."
+
+#: plugin.py:705
+msgid "PLEASE SELECT..."
+msgstr "SELEZIONA PREGO..."
+
+#: plugin.py:743
+msgid "Select and Install"
+msgstr "Seleziona e Installa"
+
+#: plugin.py:756
+msgid "Do you want to install?"
+msgstr "Vuoi installare?"
+
+#: plugin.py:815
+msgid "Unknow Image!"
+msgstr "Unknow Image!"
+
+#: plugin.py:817
+msgid "Download failur!"
+msgstr ""
+
+#: plugin.py:849
+msgid "Path Configuration Folder"
+msgstr ""
+
+#: plugin.py:986
+msgid "Softcam Manager"
+msgstr ""

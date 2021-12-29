@@ -1,0 +1,41 @@
+##"*************************"
+##"*         levi45        *"
+##"*************************"
+
+SOFTKEY FILE : /etc/tuxbox/config/SoftCam.Key
+### scam host
+/net/ecm_server/homeserver/port=4321
+/net/ecm_server/homeserver/user/client1/pass=test
+
+
+### scam client
+/net/ecm_client/homeserver/host=192.168.0.8
+/net/ecm_client/homeserver/port=4321
+/net/ecm_client/homeserver/user/client1/pass=test
+
+### newcamd connect
+#/net/newcamd/foo/host=192.168.0.xxx
+#/net/newcamd/foo/port=1234
+#/net/newcamd/foo/user=username
+#/net/newcamd/foo/pass=password
+#/net/newcamd/foo/key=1234567890123456789012345678
+
+### serial port smartcard readers (3.51a)
+# device node
+#/sc/serial/<name>/device=<string>
+#<>e.g.: /dev/ttyUSB0
+# type
+#/sc/serial/<name>/type=<string>><><><><>[default: phoenix]
+#<>valid types: mastercrd2, phoenix, smartreader+
+# clock frequency in Hz
+#/sc/serial/<name>/fs=<num><><><><><>[default: 3571200]
+# example
+#/sc/serial/usb0/device=/dev/ttyUSB0
+#/sc/serial/usb0/type=smartreader+
+
+### cccam share (3.52)
+/net/cccam/home/user=scamserver
+/net/cccam/home/pass=scampass
+/net/cccam/home/host=198.168.0.2
+/net/cccam/home/serv=12000
+

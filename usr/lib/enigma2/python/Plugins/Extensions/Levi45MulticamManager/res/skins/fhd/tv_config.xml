@@ -5,7 +5,7 @@
 	<widget name="title" position="230,30" size="729,87" font="Regular;30" halign="left" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
 	<ePixmap position="220,130" size="1030,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager/res/pics/sep.png" zPosition="5" />
 	<!-- Menu List -->
-	<widget name="config" position="220,155" size="1030,597" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" transparent="1" zPosition="5" foregroundColor="#00a0a0a0" foregroundColorSelected="#ffffff" backgroundColor="#20000000" backgroundColorSelected="#0b2049" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager/res/pics/sliderb.png" />
+	<widget name="config" position="220,155" size="1030,597" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="5" foregroundColor="#00a0a0a0" foregroundColorSelected="#ffffff" backgroundColor="#20000000" backgroundColorSelected="#0b2049" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager/res/pics/sliderb.png" />
 	<widget name="info" position="220,753" size="1030,54" font="Regular;30" halign="center" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
 	<widget name="description" position="220,806" size="1030,53" font="Regular;30" halign="center" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
 	<!-- Colors 1220 -->

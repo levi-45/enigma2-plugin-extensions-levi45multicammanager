@@ -5,10 +5,10 @@
 #   skin by MMark    #
 #     update to      #
 #       Levi45       #
-#     02/12/2021     #
+#     23/01/2022     #
 #      No Coppy      #
 #--------------------#
-# from __future__ import print_function
+from __future__ import print_function
 from Components.ActionMap import ActionMap
 from Components.ConfigList import ConfigList, ConfigListScreen
 from Components.Label import Label
@@ -49,27 +49,28 @@ DreamOS()
 
 PY3 = sys.version_info.major >= 3
 if PY3:
-    # Python 3
-    PY3 = True
-    # unicode = str; unichr = chr; long = int
-    # str = unicode = basestring = str
-    unichr = chr; long = int
-    from urllib.parse import quote
-    from urllib.request import urlopen, urlretrieve
-    from urllib.request import Request
-    from urllib.error import HTTPError, URLError
+        import http.client
+        from http.client import HTTPConnection, CannotSendRequest, BadStatusLine, HTTPException
 
+
+
+        from urllib.error import URLError, HTTPError
+        from urllib.request import urlopen, Request
+        from urllib.parse import urlparse
+        from urllib.parse import parse_qs, urlencode, quote
+        unicode = str; unichr = chr; long = int
+        PY3 = True
 else:
-    # Python 2
-    # _str = str
-    # str = unicode
-    # range = xrange
-    # unicode = unicode
-    # basestring = basestring
-    from urllib import quote, urlretrieve
-    from urllib2 import urlopen
-    from urllib2 import Request
-    from urllib2 import HTTPError, URLError   
+# if os.path.exists('/usr/lib/python2.7'):
+        from httplib import HTTPConnection, CannotSendRequest, BadStatusLine, HTTPException
+        from urllib2 import urlopen, Request, URLError, HTTPError
+        from urlparse import urlparse, parse_qs
+        from urllib import urlencode, quote
+
+
+
+        import httplib
+        import six
 
 def b64decoder(s):
     """Add missing padding to string and return the decoded base64 string."""
@@ -79,11 +80,11 @@ def b64decoder(s):
         # return base64.b64decode(s)
         outp = base64.b64decode(s)
         print('outp1 ', outp)
-        if PY3:   
+        if PY3:
             outp = outp.decode('utf-8')
             print('outp2 ', outp)
         return outp
-        
+
     except TypeError:
         padding = len(s) % 4
         if padding == 1:
@@ -95,20 +96,20 @@ def b64decoder(s):
             s += b'='
         outp = base64.b64decode(s)
         print('outp1 ', outp)
-        if PY3:   
+        if PY3:
             outp = outp.decode('utf-8')
             print('outp2 ', outp)
         return outp
 
-    
+
 # plugin_path  = os.path.dirname(sys.modules[__name__].__file__)
-plugin_path = '/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager'
-currversion = '9.1'
+# plugin_path = '/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager'
+plugin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager")
+currversion = '9.3'
 title_plug = 'Levi45 Multicam Manager V. %s' % currversion
 name_plug = 'Levi45 Multicam Manager'
-data_path    = plugin_path + '/data/'
+data_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/data/")
 skin_path    = plugin_path
-# HD           = getDesktop(0).size()
 
 try:
     import http.cookiejar
@@ -134,7 +135,7 @@ def isFHD():
     return desktopSize[0] == 1920
 
 def checkStr(txt):
-    if six.PY3:
+    if PY3:
         if type(txt) == type(bytes()):
             txt = txt.decode('utf-8')
     else:
@@ -200,13 +201,13 @@ ListAgent = [
 def RequestAgent():
     RandomAgent = choice(ListAgent)
     return RandomAgent
-    
+
 def getUrl(url):
     if sys.version_info.major == 3:
          import urllib.request as urllib2
     elif sys.version_info.major == 2:
          import urllib2
-    req = urllib2.Request(url)                      
+    req = urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
     r = urllib2.urlopen(req, None, 15)
     link = r.read()
@@ -214,18 +215,20 @@ def getUrl(url):
     content = link
     if str(type(content)).find('bytes') != -1:
         try:
-            content = content.decode("utf-8")                
-        except Exception as e:                   
-               print("Error: %s." % e)   
+            content = content.decode("utf-8")
+        except Exception as e:
+               print("Error: %s." % str(e))
     return content
 
-    
+
 if isFHD():
-    skin_path = plugin_path + '/res/skins/fhd'
+    # skin_path=res_plugin_path + 'skins/fhd/'
+    skin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/res/skins/fhd/")
 else:
-    skin_path = plugin_path + '/res/skins/hd'
+    # skin_path=res_plugin_path + 'skins/hd/'
+    skin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/res/skins/hd/")
 if DreamOS():
-    skin_path = skin_path + '/dreamOs'
+    skin_path=skin_path + 'dreamOs/'
 
 #============='<h1>C: (.+?) (.+?) (.+?) (.+?)\n'
 Server01 = 'aHR0cDovL2NjY2FtcHJpbWEuY29tL2ZyZWU1L2dldDIucGhw'
@@ -237,11 +240,11 @@ Server05 = 'aHR0cHM6Ly9jY2NhbWlhLmNvbS9mcmVlLWNjY2Ft'
 Server06 = 'aHR0cDovL2NjY2FteC5jb20vdjIvZ2V0Q29kZS5waHA='
 Server07 = 'aHR0cHM6Ly93d3cuY2NjYW1iaXJkLmNvbS9mcmVlY2NjYW0ucGhw'
 Server08 = 'aHR0cHM6Ly9jY2NhbWlwdHYuY2x1Yi9pdC9mcmVlLWNjY2Ft'
-                                                      
+
 Server09 = 'aHR0cHM6Ly93d3cuY2NjYW1pcHR2LmNsdWIvRlJFRU4xMi9uZXcwLnBocA=='
 Server10 = 'aHR0cDovL2NjY2Ftc3RvcmUudHYvZnJlZS1zZXJ2ZXIucGhw'
 Server11 = 'aHR0cHM6Ly9jY2NhbS5uZXQvZnJlZQ=='
-                                               
+
 Server14 = 'aHR0cHM6Ly93d3cucm9nY2FtLmNvbS9uZXdmcmVlLnBocA=='
 Server15 = 'aHR0cHM6Ly9ib3NzY2NjYW0uY28vVGVzdC5waHA='
 Server16 = 'aHR0cHM6Ly9pcHR2LTE1ZGF5cy5ibG9nc3BvdC5jb20='
@@ -261,23 +264,24 @@ Serverlive = [
     (Server08, 'Server08'),
     (Server09, 'Server09'),
     (Server10, 'Server10'),
-    (Server11, 'Server11'), 
+    (Server11, 'Server11'),
     (Server12, 'Server12'),
     (Server13, 'Server13'),
     (Server14, 'Server14'),
-    (Server15, 'Server15'), 
-    (Server16, 'Server16'),  
-    (Server17, 'Server17'),           
+    (Server15, 'Server15'),
+    (Server16, 'Server16'),
+    (Server17, 'Server17'),
 ]
 config.plugins.Levi45MulticamManager = ConfigSubsection()
 config.plugins.Levi45MulticamManager.active = ConfigYesNo(default=False)
+config.plugins.Levi45MulticamManager.link = NoSave(ConfigSelection(choices=Serverlive))
 config.plugins.Levi45MulticamManager.cfgfile = NoSave(ConfigSelection(default='/etc/CCcam.cfg', choices=[('/etc/CCcam.cfg', _('CCcam')), ('/etc/tuxbox/config/oscam.server', _('Oscam')), ('/etc/tuxbox/config/ncam.server', _('Ncam'))]))
 config.plugins.Levi45MulticamManager.hostaddress = NoSave(ConfigText(default='100.200.300.400'))
 config.plugins.Levi45MulticamManager.port = NoSave(ConfigNumber(default=15000))
 config.plugins.Levi45MulticamManager.user = NoSave(ConfigText(default='Enter Username', visible_width=50, fixed_size=False))
 # config.plugins.Levi45MulticamManager.passw = NoSave(ConfigText(default='Enter Password', visible_width=50, fixed_size=False))
 config.plugins.Levi45MulticamManager.passw = NoSave(ConfigPassword(default='******', fixed_size=False, censor='*'))
-config.plugins.Levi45MulticamManager.link = NoSave(ConfigSelection(choices=Serverlive))
+
 #======================================================
 host = str(config.plugins.Levi45MulticamManager.hostaddress.value)
 port = str(config.plugins.Levi45MulticamManager.port.value)
@@ -285,9 +289,7 @@ user = str(config.plugins.Levi45MulticamManager.user.value)
 password = str(config.plugins.Levi45MulticamManager.passw.value)
 
 def putlblcfg():
-    global rstcfg
-    global buttn
-    global putlbl
+    global rstcfg, buttn, putlbl
     putlbl = config.plugins.Levi45MulticamManager.cfgfile.getValue()
     buttn = ''
     if putlbl == '/etc/CCcam.cfg':
@@ -413,12 +415,14 @@ class tv_config(Screen, ConfigListScreen):
         print('current selection:', self['config'].l.getCurrentSelection())
         putlblcfg()
         self.createSetup()
+        self.getcl()
 
     def keyRight(self):
         ConfigListScreen.keyRight(self)
         print('current selection:', self['config'].l.getCurrentSelection())
         putlblcfg()
         self.createSetup()
+        self.getcl()
 
     def VirtualKeyBoardCallback(self, callback = None):
         if callback is not None and len(callback):
@@ -507,17 +511,17 @@ class tv_config(Screen, ConfigListScreen):
 
     def getcl(self):
         data = str(config.plugins.Levi45MulticamManager.link.value)
-        print('data1 ', data)   
+        print('data1 ', data)
         data = b64decoder(data)
-        print('data2 ', data)                   
-        try:            
+        print('data2 ', data)
+        try:
             data = getUrl(data)
-            if six.PY3:
+            if PY3:
                 data = six.ensure_str(data)
             print('=== Lnk ==== ', data)
             self.load_getcl(data)
         except Exception as e:
-            print('getcl error: ', e)
+            print('getcl error: ', str(e))
 
     def load_getcl(self, data):
         try:
@@ -526,64 +530,64 @@ class tv_config(Screen, ConfigListScreen):
             if 'testcline' in data:
                 # <div>C: egygold.co 51002 jsp271 88145</div>
                 url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)</div>', data)
-                
+
             if 'cccamprima.com' in data:
                 # <div>C: egygold.co 51002 jsp271 88145</div>
-                url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.*?)\n', data)                
-                
+                url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.*?)\n', data)
+
             if 'iptvcccam' in data:
                 # <h1>C: egygold.co 51002 jsp271 88145</div>
-                url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (*?).*?<h2>', data)  
-                
+                url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (*?).*?<h2>', data)
+
             if 'premium' in data:
                 #<h3 style="color:red;">
-                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)\n</h3>', data) 
-                
+                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)\n</h3>', data)
+
             if 'cccamia' in data:
                 # <div class="dslc-module-shortcode">
                 # C: free.CCcamia.com 18000 uknrru CCcamia.com
                 # </div>
-                url1 = re.findall('shortcode">\nC: (.+?) (.+?) (.+?) (.*?)\n', data)            
+                url1 = re.findall('shortcode">\nC: (.+?) (.+?) (.+?) (.*?)\n', data)
             if 'cccamx' in data:
                 #">
-                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)\n', data)            
+                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)\n', data)
             if 'cccamiptv.club/it/free-cccam' in data:
                 # <h3 style="color:red;">
                 # C: free.cccamiptv.co 13100 9d0of5 cccamiptv.co
                 # </h3>
-                url1 = re.findall('style="color:red;">\nC: (.+?) (.+?) (.+?) (.*?)\n', data) 
+                url1 = re.findall('style="color:red;">\nC: (.+?) (.+?) (.+?) (.*?)\n', data)
             if 'FREEN12' in data:
                 # <h3 style="color:red;">
                 # C: free.cccamiptv.co 13100 9d0of5 cccamiptv.co
                 # </h3>
-                url1 = re.findall('<h1>\nC: (.+?) (.+?) (.+?) (.*?)\n', data)                 
+                url1 = re.findall('<h1>\nC: (.+?) (.+?) (.+?) (.*?)\n', data)
             if 'history' in data:
-                url1 = re.findall('of the line">C: (.+?) (.+?) (.+?) (.*?)</a>.*?title="CCcam server online and valid"></span>', data)    
+                url1 = re.findall('of the line">C: (.+?) (.+?) (.+?) (.*?)</a>.*?title="CCcam server online and valid"></span>', data)
 
             if 'store' in data:
                 #view-source:http://cccamstore.tv/free-server.php
                 #<center><strong>C: free.cccamstore.tv 12892 93t60rhi cccamstore.tv <br>
-                url1 = re.findall('<center><strong>C: (.+?) (.+?) (.+?) (.*?) <br>', data) 
-                
+                url1 = re.findall('<center><strong>C: (.+?) (.+?) (.+?) (.*?) <br>', data)
+
             if 'cccam.net' in data:
                 #https://cccam.net/free
-                url1 = re.findall('credentials"><span><b>C: (.+?) (.+?) (.+?) (.*?)</b>', data)   
+                url1 = re.findall('credentials"><span><b>C: (.+?) (.+?) (.+?) (.*?)</b>', data)
 
             if 'rogcam' in data:
                 #
-                url1 = re.findall('bg-primary"> C: (.+?) (.+?) (.+?) (.*?) </span>', data)                  
+                url1 = re.findall('bg-primary"> C: (.+?) (.+?) (.+?) (.*?) </span>', data)
 
             if 'cccambird' in data:
                 #class="tg-juwk">
-                url1 = re.findall('class="tg-juwk">C: (.+?) (.+?) (.+?) (.*?)</th>', data)  
+                url1 = re.findall('class="tg-juwk">C: (.+?) (.+?) (.+?) (.*?)</th>', data)
 
             if 'bosscccam' in data:
                 #class="tg-juwk">
-                url1 = re.findall('line : <strong>C: (.+?) (.+?) (.+?) (.*?)</strong></p', data)  
+                url1 = re.findall('line : <strong>C: (.+?) (.+?) (.+?) (.*?)</strong></p', data)
 
             if '15days' in data:
                 #class="tg-juwk">
-                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)</th></tr>', data)  
+                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)</th></tr>', data)
 
             print('===========data=========', url1)
             if url1 != '':
@@ -603,7 +607,7 @@ class tv_config(Screen, ConfigListScreen):
             else:
                 return
         except Exception as e:
-            print('error on string cline', e)
+            print('error on string cline', str(e))
 
 
 

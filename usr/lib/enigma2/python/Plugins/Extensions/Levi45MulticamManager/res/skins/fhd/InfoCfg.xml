@@ -5,8 +5,8 @@
 	<widget name="title" position="230,30" size="729,87" font="Regular;30" halign="left" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
 	<ePixmap position="220,130" size="1030,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager/res/pics/sep.png" zPosition="5" />
 	<!-- Menu List -->
-	<widget name="text" position="220,180" size="1030,660" font="Regular;36" halign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" zPosition="5" /> 
-	<widget name="desc" position="265,876" size="0,0" font="Regular;30" halign="center" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
+	<widget name="text" position="220,151" size="1030,703" font="Regular; 32" halign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" zPosition="5" /> 
+	<widget name="desc" position="265,881" size="0,0" font="Regular;30" halign="center" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
 	<!-- Colors 1220 -->
 	<ePixmap position="220,910" size="1030,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager/res/pics/sep.png" zPosition="5" />
 	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager/res/pics/key_red.png" position="220,945" size="30,30" alphatest="on" zPosition="5" />

@@ -9,7 +9,7 @@ import os
 import sys
 plugin_foo = os.path.dirname(sys.modules[__name__].__file__)
 emu_plugin = plugin_foo + '/emu/'
-name_plugemu = 'Levi45 Emu Keys V.9.2'
+name_plugemu = 'Levi45 Emu Keys V.9.3'
 
 class Levi45EmuKeysUpdater(Screen):
     if os.path.exists('/var/lib/dpkg/status'):

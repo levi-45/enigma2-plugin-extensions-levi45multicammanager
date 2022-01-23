@@ -5,7 +5,7 @@
 #   skin by MMark    #
 #     update to      #
 #       Levi45       #
-#     12/12/2021     #
+#     23/01/2022     #
 #      No Coppy      #
 #--------------------#
 from __future__ import print_function
@@ -58,13 +58,35 @@ try:
     from Plugins.Extensions.Levi45MulticamManager.Utils import *
 except:
     from . import Utils
-from six.moves.urllib.request import urlopen
-from six.moves.urllib.request import Request
-from six.moves.urllib.error import HTTPError, URLError
-from six.moves.urllib.request import urlretrieve
+# from six.moves.urllib.request import urlopen
+# from six.moves.urllib.request import Request
+# from six.moves.urllib.error import HTTPError, URLError
+# from six.moves.urllib.request import urlretrieve
+
+
+PY3 = sys.version_info.major >= 3
+if PY3:
+        import http.client
+        from http.client import HTTPConnection, CannotSendRequest, BadStatusLine, HTTPException
+        from urllib.error import URLError, HTTPError
+        from urllib.request import urlopen, Request
+        from urllib.parse import urlparse
+        from urllib.parse import parse_qs, urlencode, quote
+        unicode = str; unichr = chr; long = int
+        PY3 = True
+else:
+# if os.path.exists('/usr/lib/python2.7'):
+        from httplib import HTTPConnection, CannotSendRequest, BadStatusLine, HTTPException
+        from urllib2 import urlopen, Request, URLError, HTTPError
+        from urlparse import urlparse, parse_qs
+        from urllib import urlencode, quote
+        import httplib
+        import six
+
+
 global active, MYFTP
 
-currversion = '9.2'
+currversion = '9.3'
 title_plug = 'Levi45 Multicam Manager V. %s' % currversion
 name_plug = 'Levi45 Multicam Manager'
 name_plugemu = 'Levi45 Emu Keys'
@@ -128,12 +150,25 @@ def readCurrent_1():
         clist.close()
     return currCam
 
+skin_path = res_plugin_foo + 'skins/hd/'                                                                                
 if isFHD():
     skin_path = res_plugin_foo + 'skins/fhd/'
-else:
-    skin_path = res_plugin_foo + 'skins/hd/'
+   
 if DreamOS():
     skin_path = skin_path + 'dreamOs/'
+
+
+class m2list(MenuList):
+    def __init__(self, list):
+        MenuList.__init__(self, list, True, eListboxPythonMultiContent)
+        self.l.setItemHeight(45)
+        textfont=int(24)
+        self.l.setFont(0, gFont('Regular', textfont))        
+                                
+        if isFHD():
+            self.l.setItemHeight(50)
+            textfont=int(34)
+            self.l.setFont(0, gFont('Regular', textfont))
 
 def show_list(h):
     png1 = plugin_foo + '/res/img/actcam.png'
@@ -144,22 +179,21 @@ def show_list(h):
         if cond == h:
             active = True
             res.append(MultiContentEntryPixmapAlphaTest(pos=(10, 12), size=(43, 24), png=loadPNG(png1)))
-            res.append(MultiContentEntryText(pos=(70, 3), size=(800, 48), font=8, text=h + ' (Active)', color=11403008, flags=RT_HALIGN_LEFT))
+            res.append(MultiContentEntryText(pos=(70, 0), size=(800, 50), font=0, text=h + ' (Active)', color=11403008, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
         else:
             res.append(MultiContentEntryPixmapAlphaTest(pos=(10, 12), size=(43, 24), png=loadPNG(png2)))
-            res.append(MultiContentEntryText(pos=(70, 3), size=(800, 48), font=8, text=h, flags=RT_HALIGN_LEFT))
+            res.append(MultiContentEntryText(pos=(70, 0), size=(800, 50), font=0, text=h, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
         return res
     else:
         res = [h]
         if cond == h:
             active = True
-            res.append(MultiContentEntryText(pos=(70, 4), size=(406, 40), font=4, text=h + ' (Active)', color=11403008, flags=RT_HALIGN_LEFT))
+            res.append(MultiContentEntryText(pos=(70, 0), size=(406, 40), font=0, text=h + ' (Active)', color=11403008, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
             res.append(MultiContentEntryPixmapAlphaTest(pos=(2, 8), size=(43, 24), png=loadPNG(png1)))
         else:
-            res.append(MultiContentEntryText(pos=(70, 4), size=(406, 40), font=4, text=h, flags=RT_HALIGN_LEFT))
+            res.append(MultiContentEntryText(pos=(70, 0), size=(406, 40), font=0, text=h, flags=RT_HALIGN_LEFT))
             res.append(MultiContentEntryPixmapAlphaTest(pos=(2, 8), size=(43, 24), png=loadPNG(png2)))
         return res
-
 
 def showlist(datal, list):
     icount = 0
@@ -170,38 +204,15 @@ def showlist(datal, list):
         icount = icount + 1
         list.setList(plist)
 
-
 def show_list_1(h):
+    res = [h]
+    res.append(MultiContentEntryText(pos=(2, 0), size=(800, 40), font=0, text=h, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
     if isFHD():
         res = [h]
-        res.append(MultiContentEntryText(pos=(2, 2), size=(1000, 40), font=8, text=h, flags=RT_HALIGN_LEFT))
-    else:
-        res = [h]
-        res.append(MultiContentEntryText(pos=(2, 2), size=(800, 30), font=3, text=h, flags=RT_HALIGN_LEFT))
+        res.append(MultiContentEntryText(pos=(2, 0), size=(1000, 50), font=0, text=h, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
     return res
 
-
-class m2list(MenuList):
-
-    def __init__(self, list):
-        MenuList.__init__(self, list, False, eListboxPythonMultiContent)
-        self.l.setFont(0, gFont('Regular', 16))
-        self.l.setFont(1, gFont('Regular', 20))
-        self.l.setFont(2, gFont('Regular', 22))
-        self.l.setFont(3, gFont('Regular', 24))
-        self.l.setFont(4, gFont('Regular', 26))
-        self.l.setFont(5, gFont('Regular', 28))
-        self.l.setFont(6, gFont('Regular', 30))
-        self.l.setFont(7, gFont('Regular', 32))
-        self.l.setFont(8, gFont('Regular', 34))
-        if isFHD():
-            self.l.setItemHeight(50)
-        else:
-            self.l.setItemHeight(45)
-
-
 class Levi45MulticamManager(Screen):
-
     def __init__(self, session, args = False):
         self.session = session
         skin = skin_path + '/Levi45MulticamManager.xml'
@@ -224,7 +235,7 @@ class Levi45MulticamManager(Screen):
          'SetupActions',
          'MenuActions',
          'NumberActions'], {'ok': self.action,
-         'cancel': self.close,
+         'cancel': self.cancel,
          '0': self.openemu,
          '1': self.cccam,
          '2': self.oscam,
@@ -429,6 +440,7 @@ class Levi45MulticamManager(Screen):
 
         self.EcmInfoPollTimer.start(200)
         self.readScripts()
+        return      
 
     def writeFile(self):
         if self.currCam is not None:
@@ -460,6 +472,7 @@ class Levi45MulticamManager(Screen):
 
         self.session.nav.stopService()
         self.readScripts()
+        return      
 
     def readScripts(self):
         self.index = 0
@@ -567,6 +580,9 @@ class Levi45MulticamManager(Screen):
         os.system('rm /etc/autocam.txt')
         os.system('cp /etc/autocam2.txt /etc/autocam.txt')
 
+    def cancel(self):
+        deletetmp()
+        self.close()                     
 
 class GetipklistTv(Screen):
 
@@ -753,6 +769,7 @@ class GetipkTv(Screen):
                     os.remove(f)
                 except OSError as e:
                     print('Error: %s : %s' % (f, e.strerror))
+            self.mbox = self.session.open(MessageBox, _('All file Download are removed!'), MessageBox.TYPE_INFO, timeout=5)
 
         except Exception as e:
             print(e)
@@ -1005,9 +1022,9 @@ def Plugins(**kwargs):
         iconpic = plugin_foo + '/res/pics/logo.png'
         iconpic2 = plugin_foo + '/res/pics/logoemu.png'
     return [PluginDescriptor(name=_(name_plug), where=[PluginDescriptor.WHERE_MENU], fnc=mainmenu),
-     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.2', where=[PluginDescriptor.WHERE_PLUGINMENU], icon=iconpic2, fnc=main2),
-     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.2', where=[PluginDescriptor.WHERE_EXTENSIONSMENU], icon=iconpic2, fnc=main2),
-     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.2', where=[PluginDescriptor.WHERE_MENU], icon=iconpic2, fnc=menuemu),
+     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.3', where=[PluginDescriptor.WHERE_PLUGINMENU], icon=iconpic2, fnc=main2),
+     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.3', where=[PluginDescriptor.WHERE_EXTENSIONSMENU], icon=iconpic2, fnc=main2),
+     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.3', where=[PluginDescriptor.WHERE_MENU], icon=iconpic2, fnc=menuemu),
      PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_AUTOSTART, PluginDescriptor.WHERE_SESSIONSTART], needsRestart=True, fnc=autostart),
      PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_MENU], icon=iconpic, fnc=StartSetup),
      PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_PLUGINMENU], icon=iconpic, fnc=main),

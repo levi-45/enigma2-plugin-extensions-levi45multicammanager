@@ -625,7 +625,8 @@ class GetipklistTv(Screen):
         # FTP_XML= b64decoder(FTP_XML)
         url = str(FTP_XML)
         if six.PY3:
-            url = six.binary_type(url, encoding='utf-8')
+            # url = six.binary_type(url, encoding='utf-8')
+            url = url.encode()
         print('url softcam: ', url)
         getPage(url).addCallback(self._gotPageLoad).addErrback(self.errorLoad)
 

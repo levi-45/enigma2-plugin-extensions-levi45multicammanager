@@ -5,7 +5,7 @@
 #   skin by MMark    #
 #     update to      #
 #       Levi45       #
-#     23/01/2022     #
+#     30/01/2022     #
 #      No Coppy      #
 #--------------------#
 from __future__ import print_function
@@ -26,7 +26,6 @@ from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.Directories import fileExists, copyfile
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 from enigma import *
-# from enigma import getDesktop
 from os import path, listdir, remove, mkdir, chmod, sys, walk
 import base64
 import os, gettext
@@ -45,15 +44,11 @@ def DreamOS():
     if os.path.exists('/var/lib/dpkg/status'):
         DreamOS = True
         return DreamOS
-DreamOS()
 
 PY3 = sys.version_info.major >= 3
 if PY3:
         import http.client
         from http.client import HTTPConnection, CannotSendRequest, BadStatusLine, HTTPException
-
-
-
         from urllib.error import URLError, HTTPError
         from urllib.request import urlopen, Request
         from urllib.parse import urlparse
@@ -66,9 +61,6 @@ else:
         from urllib2 import urlopen, Request, URLError, HTTPError
         from urlparse import urlparse, parse_qs
         from urllib import urlencode, quote
-
-
-
         import httplib
         import six
 
@@ -101,29 +93,21 @@ def b64decoder(s):
             print('outp2 ', outp)
         return outp
 
-
-# plugin_path  = os.path.dirname(sys.modules[__name__].__file__)
-# plugin_path = '/usr/lib/enigma2/python/Plugins/Extensions/Levi45MulticamManager'
-plugin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager")
-currversion = '9.3'
-title_plug = 'Levi45 Multicam Manager V. %s' % currversion
-name_plug = 'Levi45 Multicam Manager'
-data_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/data/")
-skin_path    = plugin_path
+name_plug = 'Levi45 Softcam Manager'
+plugin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/")
+data_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/data")
+# skin_path = plugin_path
 
 try:
     import http.cookiejar
 except:
     import cookielib
-
-
 try:
     _create_unverified_https_context = ssl._create_unverified_context
 except AttributeError:
     pass
 else:
     ssl._create_default_https_context = _create_unverified_https_context
-
 
 def getDesktopSize():
     from enigma import getDesktop
@@ -141,7 +125,6 @@ def checkStr(txt):
     else:
         if type(txt) == type(unicode()):
             txt = txt.encode('utf-8')
-
     return txt
 
 ListAgent = [
@@ -220,13 +203,9 @@ def getUrl(url):
                print("Error: %s." % str(e))
     return content
 
-
+skin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/res/skins/hd/")
 if isFHD():
-    # skin_path=res_plugin_path + 'skins/fhd/'
     skin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/res/skins/fhd/")
-else:
-    # skin_path=res_plugin_path + 'skins/hd/'
-    skin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Levi45MulticamManager/res/skins/hd/")
 if DreamOS():
     skin_path=skin_path + 'dreamOs/'
 
@@ -234,7 +213,8 @@ if DreamOS():
 Server01 = 'aHR0cDovL2NjY2FtcHJpbWEuY29tL2ZyZWU1L2dldDIucGhw'
 Server02 = 'aHR0cHM6Ly9jY2NhbWFzLmNvbS9mcmVlL2dldC5waHA='
 Server03 = 'aHR0cHM6Ly9jY2NhbWF6b24uY29tL2ZyZWUvZ2V0LnBocA=='
-Server04 = 'aHR0cHM6Ly9jY2NhbWZyZWkuY29tL2ZyZWUvZ2V0LnBocA=='
+# Server04 = 'aHR0cHM6Ly9jY2NhbXByaW1lLmNvbS9jY2NhbTQ4aC5waHA='
+Server04 = 'aHR0cHM6Ly9jY2NhbS1wcmVtaXVtLmNvbS9mcmVlLWNjY2FtLw=='
 #=============
 Server05 = 'aHR0cHM6Ly9jY2NhbWlhLmNvbS9mcmVlLWNjY2Ft'
 Server06 = 'aHR0cDovL2NjY2FteC5jb20vdjIvZ2V0Q29kZS5waHA='
@@ -250,8 +230,14 @@ Server15 = 'aHR0cHM6Ly9ib3NzY2NjYW0uY28vVGVzdC5waHA='
 Server16 = 'aHR0cHM6Ly9pcHR2LTE1ZGF5cy5ibG9nc3BvdC5jb20='
 
 Server12 = 'aHR0cDovL2lwdHZjY2NhbS5jby9jY2NhbWZyZWUvZ2V0LnBocA=='
-Server13 = 'aHR0cHM6Ly90ZXN0Y2xpbmUuY29tL2ZyZWUtY2NjYW0tc2VydmVyLnBocA=='
 Server17 = 'aHR0cHM6Ly9jY2NhbWZyZWkuY29tL2ZyZWUvZ2V0LnBocA=='
+
+Server13 = 'aHR0cHM6Ly90ZXN0Y2xpbmUuY29tL2ZyZWUtY2NjYW0tc2VydmVyLnBocA=='
+#https://cccamprime.com/cccam48h.php
+#https://cccam-premium.com/free-cccam/
+#https://cccam.net/free
+#http://cccamprima.com/free5/get2.php
+
 
 Serverlive = [
     (Server01, 'Server01'),
@@ -274,15 +260,14 @@ Serverlive = [
 ]
 config.plugins.Levi45MulticamManager = ConfigSubsection()
 config.plugins.Levi45MulticamManager.active = ConfigYesNo(default=False)
-config.plugins.Levi45MulticamManager.link = NoSave(ConfigSelection(choices=Serverlive))
+config.plugins.Levi45MulticamManager.Server = NoSave(ConfigSelection(choices=Serverlive))
 config.plugins.Levi45MulticamManager.cfgfile = NoSave(ConfigSelection(default='/etc/CCcam.cfg', choices=[('/etc/CCcam.cfg', _('CCcam')), ('/etc/tuxbox/config/oscam.server', _('Oscam')), ('/etc/tuxbox/config/ncam.server', _('Ncam'))]))
 config.plugins.Levi45MulticamManager.hostaddress = NoSave(ConfigText(default='100.200.300.400'))
 config.plugins.Levi45MulticamManager.port = NoSave(ConfigNumber(default=15000))
 config.plugins.Levi45MulticamManager.user = NoSave(ConfigText(default='Enter Username', visible_width=50, fixed_size=False))
-# config.plugins.Levi45MulticamManager.passw = NoSave(ConfigText(default='Enter Password', visible_width=50, fixed_size=False))
 config.plugins.Levi45MulticamManager.passw = NoSave(ConfigPassword(default='******', fixed_size=False, censor='*'))
 
-#======================================================
+#===================================================
 host = str(config.plugins.Levi45MulticamManager.hostaddress.value)
 port = str(config.plugins.Levi45MulticamManager.port.value)
 user = str(config.plugins.Levi45MulticamManager.user.value)
@@ -311,7 +296,7 @@ class tv_config(Screen, ConfigListScreen):
         self.skin = f.read()
         f.close()
         Screen.__init__(self, session)
-        self.setup_title = _(name_plug)
+        self.setup_title = (name_plug)
         self.onChangedEntry = []
         self.list = []
         ConfigListScreen.__init__(self, self.list, session=self.session, on_change=self.changedEntry)
@@ -344,6 +329,7 @@ class tv_config(Screen, ConfigListScreen):
         self.createSetup()
         # self.onLayoutFinish.append(self.layoutFinished)
         self.onShown.append(self.layoutFinished)
+        # self.onFirstExecBegin.append(self.layoutFinished)
 
     def closex(self):
         self.close()
@@ -359,7 +345,7 @@ class tv_config(Screen, ConfigListScreen):
         if config.plugins.Levi45MulticamManager.active.getValue():
             self['key_green'].setText(buttn)
             self['key_green'].show()
-            self['key_yellow'].setText(_('Get Link'))
+            self['key_yellow'].setText(_('Get Server'))
             self['key_yellow'].show()
             self['key_blue'].setText(_('Reset'))
             self['key_blue'].show()
@@ -381,11 +367,6 @@ class tv_config(Screen, ConfigListScreen):
                 self.Ncam()
 
     def layoutFinished(self):
-        # config.plugins.Levi45MulticamManager.hostaddress.setValue('100.200.300.400')
-        # config.plugins.Levi45MulticamManager.port.setValue(str('15000'))
-        # config.plugins.Levi45MulticamManager.user.setValue('Enter Username')
-        # config.plugins.Levi45MulticamManager.passw.setValue('Enter Password')
-        # config.plugins.Levi45MulticamManager.link.setValue('Server01')
         self.setTitle(self.setup_title)
 
     def createSetup(self):
@@ -394,12 +375,11 @@ class tv_config(Screen, ConfigListScreen):
         self.list.append(getConfigListEntry(_('Activate Insert line in Config File:'), config.plugins.Levi45MulticamManager.active, _('If Active: Download/Reset Server Config')))
         if config.plugins.Levi45MulticamManager.active.getValue():
             self.list.append(getConfigListEntry(_('Server Config'), config.plugins.Levi45MulticamManager.cfgfile, putlbl))
-            self.list.append(getConfigListEntry(_('Server Link'), config.plugins.Levi45MulticamManager.link, _('Select Get Link')))
+            self.list.append(getConfigListEntry(_('Server Link'), config.plugins.Levi45MulticamManager.Server, _('Select Get Link')))
             self.list.append(getConfigListEntry(_('Server URL'), config.plugins.Levi45MulticamManager.hostaddress, _('Server Url i.e. 012.345.678.900')))
             self.list.append(getConfigListEntry(_('Server Port'), config.plugins.Levi45MulticamManager.port, _('Port')))
             self.list.append(getConfigListEntry(_('Server Username'), config.plugins.Levi45MulticamManager.user, _('Username')))
             self.list.append(getConfigListEntry(_('Server Password'), config.plugins.Levi45MulticamManager.passw, _('Password')))
-
         self['config'].list = self.list
         self['config'].setList(self.list)
         self.showhide()
@@ -510,7 +490,7 @@ class tv_config(Screen, ConfigListScreen):
         self.session.open(MessageBox, _('Server Copy in ') + dest, type=MessageBox.TYPE_INFO, timeout=8)
 
     def getcl(self):
-        data = str(config.plugins.Levi45MulticamManager.link.value)
+        data = str(config.plugins.Levi45MulticamManager.Server.value)
         print('data1 ', data)
         data = b64decoder(data)
         print('data2 ', data)
@@ -531,6 +511,10 @@ class tv_config(Screen, ConfigListScreen):
                 # <div>C: egygold.co 51002 jsp271 88145</div>
                 url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)</div>', data)
 
+            if 'cccamprime' in data:
+                # Cline : C: s2.cccamprime.com 13303 39911015 cccamprime<br>
+                url1 = re.findall('Cline : C: (.+?) (.+?) (.+?) (.*?)<br>', data)
+
             if 'cccamprima.com' in data:
                 # <div>C: egygold.co 51002 jsp271 88145</div>
                 url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.*?)\n', data)
@@ -539,10 +523,9 @@ class tv_config(Screen, ConfigListScreen):
                 # <h1>C: egygold.co 51002 jsp271 88145</div>
                 url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (*?).*?<h2>', data)
 
-            if 'premium' in data:
-                #<h3 style="color:red;">
-                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)\n</h3>', data)
-
+            if 'cccam-premium' in data:
+                #<C: free.cccam-premium.co 15014 is9y9c cccam-premium.co
+                url1 = re.findall('\nC: (.+?) (.+?) (.+?) (.*?)\n', data)
             if 'cccamia' in data:
                 # <div class="dslc-module-shortcode">
                 # C: free.CCcamia.com 18000 uknrru CCcamia.com
@@ -566,8 +549,8 @@ class tv_config(Screen, ConfigListScreen):
 
             if 'store' in data:
                 #view-source:http://cccamstore.tv/free-server.php
-                #<center><strong>C: free.cccamstore.tv 12892 93t60rhi cccamstore.tv <br>
-                url1 = re.findall('<center><strong>C: (.+?) (.+?) (.+?) (.*?) <br>', data)
+                #<strong>C: free.cccamstore.tv 13921 k3xlsgct WWW.cccamstore.TV <br>
+                url1 = re.findall('<strong>C: (.+?) (.+?) (.+?) (.*?) <br>', data)
 
             if 'cccam.net' in data:
                 #https://cccam.net/free
@@ -583,13 +566,14 @@ class tv_config(Screen, ConfigListScreen):
 
             if 'bosscccam' in data:
                 #class="tg-juwk">
-                url1 = re.findall('line : <strong>C: (.+?) (.+?) (.+?) (.*?)</strong></p', data)
+                url1 = re.findall('<strong>C: (.+?) (.+?) (.+?) (.*?)</strong>', data)
 
             if '15days' in data:
-                #class="tg-juwk">
-                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)</th></tr>', data)
+                #>C: s2.cccambird.com 11700 49611257 cccambird</th>
+                url1 = re.findall('>C: (.+?) (.+?) (.+?) (.*?)</th>', data)
 
             print('===========data=========', url1)
+
             if url1 != '':
                 for h, p, u, pw in url1:
                     print(h, p, u, pw)
@@ -608,6 +592,7 @@ class tv_config(Screen, ConfigListScreen):
                 return
         except Exception as e:
             print('error on string cline', str(e))
+
 
 
 

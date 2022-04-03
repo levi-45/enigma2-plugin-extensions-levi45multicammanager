@@ -5,7 +5,7 @@
 #   skin by MMark    #
 #     update to      #
 #       Levi45       #
-#     23/01/2022     #
+#     29/03/2022     #
 #      No Coppy      #
 #--------------------#
 from __future__ import print_function
@@ -52,17 +52,13 @@ import time
 import re
 import six
 import ssl
+
 from Plugins.Extensions.Levi45MulticamManager.data.GetEcmInfo import GetEcmInfo
 from sys import version_info
 try:
     from Plugins.Extensions.Levi45MulticamManager.Utils import *
 except:
     from . import Utils
-# from six.moves.urllib.request import urlopen
-# from six.moves.urllib.request import Request
-# from six.moves.urllib.error import HTTPError, URLError
-# from six.moves.urllib.request import urlretrieve
-
 
 PY3 = sys.version_info.major >= 3
 if PY3:
@@ -75,7 +71,6 @@ if PY3:
         unicode = str; unichr = chr; long = int
         PY3 = True
 else:
-# if os.path.exists('/usr/lib/python2.7'):
         from httplib import HTTPConnection, CannotSendRequest, BadStatusLine, HTTPException
         from urllib2 import urlopen, Request, URLError, HTTPError
         from urlparse import urlparse, parse_qs
@@ -83,23 +78,26 @@ else:
         import httplib
         import six
 
-
+              
 global active, MYFTP
 
-currversion = '9.3'
+currversion = '9.4'
+
 title_plug = 'Levi45 Multicam Manager V. %s' % currversion
+title_emu = 'Levi45 Emu Keys V. %s' % currversion
 name_plug = 'Levi45 Multicam Manager'
 name_plugemu = 'Levi45 Emu Keys'
 plugin_foo = os.path.dirname(sys.modules[__name__].__file__)
 res_plugin_foo = plugin_foo + '/res/'
 MYFTP = 'aHR0cDovL2+xldmk0NS5zcGRu+cy5ldS9-BZGRv+bnMvTXVsdGljYW+0vYW-Rkb25z+Ln-htbA=='
-MYFTP = MYFTP.replace('+', '').replace('-', '')
-FTP_XML= b64decoder(MYFTP)
-iconpic = plugin_foo + '/logo.png'
+logo = 'logo.png'
+logoemu = 'logoemu.png'
 keys = '/usr/keys'
 camscript = '/usr/camscript'
 data_path = plugin_foo + '/data'
 ECM_INFO = '/tmp/ecm.info'
+ereral = MYFTP.replace('+', '').replace('-', '')
+FTP_XML= b64decoder(ereral)
 EMPTY_ECM_INFO = ('',
  '0',
  '0',
@@ -110,6 +108,7 @@ ecm = ''
 data = EMPTY_ECM_INFO
 active = False
 SOFTCAM = 0
+EMUKEY = 0
 CCCAMINFO = 1
 OSCAMINFO = 2
 
@@ -130,7 +129,6 @@ def checkdir():
         __createdir('/usr/camscript')
 checkdir()
 
-
 def readCurrent_1():
     currCam = ''
     FilCurr = ''
@@ -150,10 +148,10 @@ def readCurrent_1():
         clist.close()
     return currCam
 
-skin_path = res_plugin_foo + 'skins/hd/'                                                                                
+skin_path = res_plugin_foo + 'skins/hd/'
 if isFHD():
     skin_path = res_plugin_foo + 'skins/fhd/'
-   
+
 if DreamOS():
     skin_path = skin_path + 'dreamOs/'
 
@@ -161,21 +159,21 @@ if DreamOS():
 class m2list(MenuList):
     def __init__(self, list):
         MenuList.__init__(self, list, True, eListboxPythonMultiContent)
-        self.l.setItemHeight(45)
-        textfont=int(24)
-        self.l.setFont(0, gFont('Regular', textfont))        
-                                
         if isFHD():
             self.l.setItemHeight(50)
             textfont=int(34)
+            self.l.setFont(0, gFont('Regular', textfont))
+        else:
+            self.l.setItemHeight(45)
+            textfont=int(24)
             self.l.setFont(0, gFont('Regular', textfont))
 
 def show_list(h):
     png1 = plugin_foo + '/res/img/actcam.png'
     png2 = plugin_foo + '/res/img/defcam.png'
     cond = readCurrent_1()
+    res = [h]
     if isFHD():
-        res = [h]
         if cond == h:
             active = True
             res.append(MultiContentEntryPixmapAlphaTest(pos=(10, 12), size=(43, 24), png=loadPNG(png1)))
@@ -185,7 +183,6 @@ def show_list(h):
             res.append(MultiContentEntryText(pos=(70, 0), size=(800, 50), font=0, text=h, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
         return res
     else:
-        res = [h]
         if cond == h:
             active = True
             res.append(MultiContentEntryText(pos=(70, 0), size=(406, 40), font=0, text=h + ' (Active)', color=11403008, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
@@ -206,10 +203,10 @@ def showlist(datal, list):
 
 def show_list_1(h):
     res = [h]
-    res.append(MultiContentEntryText(pos=(2, 0), size=(800, 40), font=0, text=h, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
     if isFHD():
-        res = [h]
         res.append(MultiContentEntryText(pos=(2, 0), size=(1000, 50), font=0, text=h, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
+    else:
+        res.append(MultiContentEntryText(pos=(2, 0), size=(800, 40), font=0, text=h, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
     return res
 
 class Levi45MulticamManager(Screen):
@@ -221,7 +218,7 @@ class Levi45MulticamManager(Screen):
         f.close()
         Screen.__init__(self, session)
         self.index = 0
-        self.emulist = []
+        # self.emulist = []
         self.namelist = []
         self.softcamslist = []
         self.ecminfo = GetEcmInfo()
@@ -239,7 +236,9 @@ class Levi45MulticamManager(Screen):
          '0': self.openemu,
          '1': self.cccam,
          '2': self.oscam,
+         '8': self.messagekd,
          'menu': self.configtv,
+         # 'blue': self.OpenEmuKey,
          'blue': self.Blue,
          'yellow': self.download,
          'green': self.action,
@@ -248,9 +247,9 @@ class Levi45MulticamManager(Screen):
         self.setTitle(_(title_plug))
         self['title'] = Label(_(title_plug))
         self['key_green'] = Button(_('Start'))
-        self['key_yellow'] = Button(_('Download'))
+        self['key_yellow'] = Button(_('Addons Panel'))
         self['key_red'] = Button(_('Stop'))
-        self['key_blue'] = Button(_('Softcam'))
+        self['key_blue'] = Button(_('EmuKeys Updater'))
         self['desc'] = Label()
         self['desc'].setText(_('Scanning and retrieval list softcam ...'))
         self['info'] = Label('')
@@ -269,11 +268,16 @@ class Levi45MulticamManager(Screen):
             self.EcmInfoPollTimer_conn = self.EcmInfoPollTimer.timeout.connect(self.setEcmInfo)
         except:
             self.EcmInfoPollTimer.callback.append(self.setEcmInfo)
-
         self.EcmInfoPollTimer.start(200)
         self.onShown.append(self.ecm)
-        self.onShown.append(self.setBlueKey)
+        # self.onShown.append(self.setBlueKey)
         self.onHide.append(self.stopEcmInfoPollTimer)
+
+
+    def OpenEmuKey(self):
+        from Plugins.Extensions.Levi45MulticamManager.levisemu import Levi45EmuKeysUpdater
+        self.session.open(Levi45EmuKeysUpdater)
+
 
     def setBlueKey(self):
         if self.currCam == 'no':
@@ -292,8 +296,8 @@ class Levi45MulticamManager(Screen):
                 self.BlueAction = SOFTCAM
                 self['key_blue'].setText(_('SOFTCAM'))
         else:
-            self.BlueAction = SOFTCAM
-            self['key_blue'].setText(_('SOFTCAM'))
+            self.BlueAction = EMUKEY
+            self['key_blue'].setText(_('EmuKeys Updater'))
         return
 
     def ShowSoftcamCallback(self):
@@ -308,6 +312,10 @@ class Levi45MulticamManager(Screen):
             if os.path.exists(resolveFilename(SCOPE_PLUGINS, 'Extensions/OscamStatus')):
                 from Plugins.Extensions.OscamStatus.plugin import OscamStatus
                 self.session.openWithCallback(self.ShowSoftcamCallback, OscamStatus)
+        elif self.BlueAction == EMUKEY:
+            from Plugins.Extensions.Levi45MulticamManager.levisemu import Levi45EmuKeysUpdater
+            self.session.open(Levi45EmuKeysUpdater)
+
         else:
             self.BlueAction == SOFTCAM
             self.messagekd()
@@ -333,15 +341,15 @@ class Levi45MulticamManager(Screen):
             self.ecm()
 
     def ecm(self):
-        ecmf = ''
+        ecmf = 'No ecm info'
         if os.path.isfile('/tmp/ecm.info'):
             myfile = open('/tmp/ecm.info')
             for line in myfile.readlines():
                 print('line: ', line)
-                ecmf = ecmf + line
+                # ecmf = ecmf + line
+                ecmf = line
                 print('ecmf + line: ', ecmf)
                 self['info'].setText(ecmf)
-
         else:
             self['info'].setText(ecmf)
 
@@ -440,7 +448,7 @@ class Levi45MulticamManager(Screen):
 
         self.EcmInfoPollTimer.start(200)
         self.readScripts()
-        return      
+        return
 
     def writeFile(self):
         if self.currCam is not None:
@@ -472,11 +480,11 @@ class Levi45MulticamManager(Screen):
 
         self.session.nav.stopService()
         self.readScripts()
-        return      
+        return
 
     def readScripts(self):
         self.index = 0
-        self.indexto = ''
+        # self.indexto = ''
         scriptlist = []
         pliste = []
         path = '/usr/camscript/'
@@ -484,7 +492,7 @@ class Levi45MulticamManager(Screen):
             for name in files:
                 scriptlist.append(name)
 
-        self.emulist = scriptlist
+        # self.emulist = scriptlist
         i = len(self.softcamslist)
         del self.softcamslist[0:i]
         for lines in scriptlist:
@@ -582,7 +590,7 @@ class Levi45MulticamManager(Screen):
 
     def cancel(self):
         deletetmp()
-        self.close()                     
+        self.close()
 
 class GetipklistTv(Screen):
 
@@ -621,17 +629,14 @@ class GetipklistTv(Screen):
         # self.onShown.append(self.get_list)
 
     def downloadxmlpage(self):
-        # MYFTP = MYFTP.replace('+', '').replace('-', '')
-        # FTP_XML= b64decoder(FTP_XML)
         url = str(FTP_XML)
         if six.PY3:
-            # url = six.binary_type(url, encoding='utf-8')
             url = url.encode()
-        print('url softcam: ', url)
+        # print('url softcam: ', url)
         getPage(url).addCallback(self._gotPageLoad).addErrback(self.errorLoad)
 
     def errorLoad(self, error):
-        print(str(error))
+        # print(str(error))
         self['desc2'].setText(_('Try again later ...'))
         self.downloading = False
 
@@ -698,7 +703,7 @@ class GetipkTv(Screen):
         self.urls = []
         items = []
         regex = '<plugin name="(.*?)".*?url>(.*?)</url'
-        # regex = '<plugin name = "(.*?)".*?url>(.*?)</url'
+        # regex = '<plugin name="(.*?)".*?url>"(.*?)"</url'
         match = re.compile(regex,re.DOTALL).findall(data1)
         for name, url in match:
             name = name.replace('_',' ').replace('-',' ')
@@ -728,14 +733,14 @@ class GetipkTv(Screen):
             useragent = "--header='User-Agent: QuickTime/7.6.2 (qtver=7.6.2;os=Windows NT 5.1Service Pack 3)'"
             self.com = str(com)
             self.dom = str(dom)
-            print('self.com---------------', self.com)
-            print('self.dom---------------', self.dom)
+            # print('self.com---------------', self.com)
+            # print('self.dom---------------', self.dom)
             ipkpth = '/var/volatile/tmp'
             destipk = ipkpth + '/download.ipk'
             desttar = ipkpth + '/download.tar.gz'
             destdeb = ipkpth + '/download.deb'
             self.timer = eTimer()
-            self.timer.start(1500, 1)
+            
             if self.com.find('.ipk') != -1:
                 if fileExists(destipk):
                     os.remove(destipk)
@@ -757,6 +762,7 @@ class GetipkTv(Screen):
                     self.session.open(Console, title='DEB Installation', cmdlist=[cmd0, 'sleep 5'])
                 else:
                     self.mbox = self.session.open(MessageBox, _('Unknow Image!'), MessageBox.TYPE_INFO, timeout=5)
+            self.timer.start(1500, 1)
         except:
             self.mbox = self.session.open(MessageBox, _('Download failur!'), MessageBox.TYPE_INFO, timeout=5)
             # self.addondel()
@@ -774,12 +780,8 @@ class GetipkTv(Screen):
 
         except Exception as e:
             print(e)
-        # return
-        # self.mbox = self.session.open(MessageBox, _('All file Download are removed!'), MessageBox.TYPE_INFO, timeout=5)
-
 
 class InfoCfg(Screen):
-
     def __init__(self, session):
         self.session = session
         skin = skin_path + '/InfoCfg.xml'
@@ -880,9 +882,9 @@ class Ipkremove(Screen):
             nos = len
             emuname = ''
             ipkname = returnValue[0]
-            print('ipkname =', ipkname)
+            # print('ipkname =', ipkname)
             cmd = 'ipkg remove ' + ipkname[:-1] + ' >/var/volatile/tmp/ipk.log'
-            print(cmd)
+            # print(cmd)
             os.system(cmd)
             cmd = 'touch /etc/tmpfile'
             os.system(cmd)
@@ -891,17 +893,16 @@ class Ipkremove(Screen):
             icount = 0
             for line in myfile:
                 if line != ipkname:
-                    print('myfile line=', line)
+                    # print('myfile line=', line)
                     f.write(line)
-
             f.close()
             f = open('/etc/tmpfile', 'r+')
             f2 = f.readlines()
-            print('/etc/tmpfile', f2)
+            # print('/etc/tmpfile', f2)
             f.close()
             f = open('/var/lib/opkg/status', 'r+')
             f2 = f.readlines()
-            print('/var/lib/opkg/status', f2)
+            # print('/var/lib/opkg/status', f2)
             f.close()
             cmd = 'rm /var/lib/opkg/status'
             os.system(cmd)
@@ -909,9 +910,8 @@ class Ipkremove(Screen):
             os.system(cmd)
             f = open('/var/lib/opkg/status', 'r+')
             f2 = f.readlines()
-            print('/var/lib/opkg/status 2', f2)
+            # print('/var/lib/opkg/status 2', f2)
             f.close()
-            return
             return
 
     def callback(self, answer):
@@ -938,7 +938,6 @@ class Ipkremove(Screen):
 def startConfig(session, **kwargs):
     session.open(Levi45MulticamManager)
 
-
 def autostart(reason, session = None, **kwargs):
     """called with reason=1 to during shutdown, with reason=0 at startup?"""
     print('[Softcam] Started')
@@ -952,17 +951,17 @@ def autostart(reason, session = None, **kwargs):
                 os.system('ln -sf /usr/keys /var/keys')
                 os.system('ln -sf /usr/scce /var/scce')
                 os.system('ln -sf /usr/camscript /var/camscript')
+                                    
+                                               
                 os.system('sleep 2')
                 os.system('/etc/startcam.sh &')
                 os.system('sleep 2')
                 print('ok started autostart')
             except:
                 print('except autostart')
-
         else:
             print('pass autostart')
     return
-
 
 def menu(menuid, **kwargs):
     if menuid == 'cam':
@@ -971,7 +970,6 @@ def menu(menuid, **kwargs):
           'Levi45 Softcam Manager',
           -1)]
     return []
-
 
 def main(session, **kwargs):
     try:
@@ -985,7 +983,6 @@ def main2(session, **kwargs):
     from Plugins.Extensions.Levi45MulticamManager.levisemu import Levi45EmuKeysUpdater
     session.open(Levi45EmuKeysUpdater)
 
-
 def mainmenu(menuid):
     if menuid != 'setup':
         return []
@@ -994,8 +991,6 @@ def mainmenu(menuid):
           startConfig,
           'Levi45 Softcam Manager',
           None)]
-        # return None
-
 
 def menuemu(menuid):
     if menuid == 'mainmenu':
@@ -1004,7 +999,6 @@ def menuemu(menuid):
           'Levi45 Emu Keys Updater',
           45)]
     return []
-
 
 def StartSetup(menuid):
     if menuid == 'mainmenu':
@@ -1015,20 +1009,28 @@ def StartSetup(menuid):
     else:
         return []
 
+#plugin
+mainDescriptor = PluginDescriptor(name=_(name_plug), where=[PluginDescriptor.WHERE_MENU], fnc=mainmenu)
+extDescriptor = PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], icon=logo, fnc=main)
+plugDescriptor = PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_PLUGINMENU], icon=logo, fnc=main)
+menuDescriptor = PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_MENU], icon=logo, fnc=StartSetup)
+startDescriptor = PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_AUTOSTART, PluginDescriptor.WHERE_SESSIONSTART], needsRestart=True, fnc=autostart)
+#emu
+mainemuDescriptor = PluginDescriptor(name=_(name_plugemu), description=_(title_emu), where=[PluginDescriptor.WHERE_MENU], icon=logoemu, fnc=menuemu)
+plugemuDescriptor = PluginDescriptor(name=_(name_plugemu), description=_(title_emu), where=[PluginDescriptor.WHERE_PLUGINMENU], icon=logoemu, fnc=main2)
+extemuDescriptor = PluginDescriptor(name=_(name_plugemu), description=_(title_emu), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], icon=logoemu, fnc=main2)
 
 def Plugins(**kwargs):
-    iconpic = 'logo.png'
-    iconpic2 = 'logoemu.png'
+    logo = 'logo.png'
+    logoemu = 'logoemu.png'
     if isFHD():
-        iconpic = plugin_foo + '/res/pics/logo.png'
-        iconpic2 = plugin_foo + '/res/pics/logoemu.png'
-    return [PluginDescriptor(name=_(name_plug), where=[PluginDescriptor.WHERE_MENU], fnc=mainmenu),
-     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.3', where=[PluginDescriptor.WHERE_PLUGINMENU], icon=iconpic2, fnc=main2),
-     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.3', where=[PluginDescriptor.WHERE_EXTENSIONSMENU], icon=iconpic2, fnc=main2),
-     PluginDescriptor(name=_(name_plugemu), description='Levi45 Emu Keys Updater V.9.3', where=[PluginDescriptor.WHERE_MENU], icon=iconpic2, fnc=menuemu),
-     PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_AUTOSTART, PluginDescriptor.WHERE_SESSIONSTART], needsRestart=True, fnc=autostart),
-     PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_MENU], icon=iconpic, fnc=StartSetup),
-     PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_PLUGINMENU], icon=iconpic, fnc=main),
-     PluginDescriptor(name=_(name_plug), description=_(title_plug), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], icon=iconpic2, fnc=main)]
+        logo = plugin_foo + '/res/pics/logo.png'
+        logoemu = plugin_foo + '/res/pics/logoemu.png'
+    result = []
 
-
+    result.append(mainDescriptor)
+    result.append(extDescriptor)
+    result.append(plugDescriptor)
+    result.append(startDescriptor)
+    result.append(menuDescriptor)
+    return result

@@ -3,9 +3,7 @@
 #--------------------#
 #  coded by Lululla  #
 #   skin by MMark    #
-#     update to      #
-#       Levi45       #
-#     30/01/2022     #
+#     04/03/2022     #
 #      No Coppy      #
 #--------------------#
 from __future__ import print_function
@@ -216,27 +214,21 @@ Server03 = 'aHR0cHM6Ly9jY2NhbWF6b24uY29tL2ZyZWUvZ2V0LnBocA=='
 # Server04 = 'aHR0cHM6Ly9jY2NhbXByaW1lLmNvbS9jY2NhbTQ4aC5waHA='
 Server04 = 'aHR0cHM6Ly9jY2NhbS1wcmVtaXVtLmNvbS9mcmVlLWNjY2FtLw=='
 #=============
-Server05 = 'aHR0cHM6Ly9jY2NhbWlhLmNvbS9mcmVlLWNjY2Ft'
-Server06 = 'aHR0cDovL2NjY2FteC5jb20vdjIvZ2V0Q29kZS5waHA='
+Server05 = 'aHR0cHM6Ly9jY2NhbWlhLmNvbS9mcmVlLWNjY2FtLw=='
+Server06 = 'aHR0cDovL2NjY2FtZXVyb3AuY29tL2ZyZWV0ZXN0LnBocA=='
 Server07 = 'aHR0cHM6Ly93d3cuY2NjYW1iaXJkLmNvbS9mcmVlY2NjYW0ucGhw'
 Server08 = 'aHR0cHM6Ly9jY2NhbWlwdHYuY2x1Yi9pdC9mcmVlLWNjY2Ft'
-
 Server09 = 'aHR0cHM6Ly93d3cuY2NjYW1pcHR2LmNsdWIvRlJFRU4xMi9uZXcwLnBocA=='
 Server10 = 'aHR0cDovL2NjY2Ftc3RvcmUudHYvZnJlZS1zZXJ2ZXIucGhw'
 Server11 = 'aHR0cHM6Ly9jY2NhbS5uZXQvZnJlZQ=='
-
+Server12 = 'aHR0cDovL2lwdHZjY2NhbS5jby9jY2NhbWZyZWUvZ2V0LnBocA=='
+Server13 = 'aHR0cHM6Ly90ZXN0Y2xpbmUuY29tL2ZyZWUtY2NjYW0tc2VydmVyLnBocA=='
 Server14 = 'aHR0cHM6Ly93d3cucm9nY2FtLmNvbS9uZXdmcmVlLnBocA=='
 Server15 = 'aHR0cHM6Ly9ib3NzY2NjYW0uY28vVGVzdC5waHA='
 Server16 = 'aHR0cHM6Ly9pcHR2LTE1ZGF5cy5ibG9nc3BvdC5jb20='
-
-Server12 = 'aHR0cDovL2lwdHZjY2NhbS5jby9jY2NhbWZyZWUvZ2V0LnBocA=='
 Server17 = 'aHR0cHM6Ly9jY2NhbWZyZWkuY29tL2ZyZWUvZ2V0LnBocA=='
 
-Server13 = 'aHR0cHM6Ly90ZXN0Y2xpbmUuY29tL2ZyZWUtY2NjYW0tc2VydmVyLnBocA=='
-#https://cccamprime.com/cccam48h.php
-#https://cccam-premium.com/free-cccam/
-#https://cccam.net/free
-#http://cccamprima.com/free5/get2.php
+
 
 
 Serverlive = [
@@ -526,11 +518,17 @@ class tv_config(Screen, ConfigListScreen):
             if 'cccam-premium' in data:
                 #<C: free.cccam-premium.co 15014 is9y9c cccam-premium.co
                 url1 = re.findall('\nC: (.+?) (.+?) (.+?) (.*?)\n', data)
-            if 'cccamia' in data:
+            if 'cccamia' in data.lower():
                 # <div class="dslc-module-shortcode">
                 # C: free.CCcamia.com 18000 uknrru CCcamia.com
                 # </div>
-                url1 = re.findall('shortcode">\nC: (.+?) (.+?) (.+?) (.*?)\n', data)
+                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)\n', data)
+            if 'cccameurop' in data:
+                # <div class="dslc-module-shortcode">
+                # C: free.CCcamia.com 18000 uknrru CCcamia.com
+                # </div>
+                url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)</', data)                
+                
             if 'cccamx' in data:
                 #">
                 url1 = re.findall('C: (.+?) (.+?) (.+?) (.*?)\n', data)

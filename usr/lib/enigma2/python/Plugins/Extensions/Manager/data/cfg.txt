@@ -1,0 +1,25 @@
+Config Softcams Manager :
+
+oscampowervu_svn_yy.xx
+/usr/cfmngr/oscam/oscam.server
+
+oscamymod_yy.xx
+/usr/cfmngr/oscamymod/oscam.server
+
+doscam_0.25
+/usr/cfmngr/doscam/doscam.cfg
+
+doscam_0.30
+/usr/cfmngr/doscam/doscam.cfg
+
+wicardd_19
+/usr/cfmngr/wicardd/wicardd.conf
+
+cccam_230
+/usr/cfmngr/cccam/cccam.cfg
+
+cccam_221
+/etc/cccam.cfg
+
+mgcamd_1.38d
+/usr/keys/cccamd.list 

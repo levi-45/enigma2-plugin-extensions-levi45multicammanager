@@ -77,7 +77,7 @@ else:
 
 global active, MYFTP
 
-currversion = '9.6-r2'
+currversion = '9.6-r3'
 
 title_plug = 'Satellite-Forum.Com V. %s' % currversion
 title_emu = 'Levi45 Emu Keys V. %s' % currversion

@@ -1,6 +1,6 @@
 #!/bin/sh
 ##DESCRIPTION=This script downloads latest CCcam keys & provider info.
-softcam="http://raw.githubusercontent.com/pablitodrito/prova-pablito/master/SoftCam.Key"
+softcam="https://raw.githubusercontent.com/pablitodrito/prova-pablito/master/SoftCam.Key"
 #wicard="http://onlinecolor.ml/keys/SoftCam.Key"
 #ee="http://onlinecolor.ml/center/ee.bin"
 #ee36="http://onlinecolor.ml/center/ee.bin"
@@ -12,7 +12,7 @@ softcam="http://raw.githubusercontent.com/pablitodrito/prova-pablito/master/Soft
 echo ""
 echo ""
 echo "Downloading ${softcam}"
-wget ${softcam} -O /etc/tuxbox/config/SoftCam.Key || echo "Error: Couldn't connect to ${softcam}"
+#wget ${softcam} -O /etc/tuxbox/config/SoftCam.Key || echo "Error: Couldn't connect to ${softcam}"
 wget ${softcam} -O /usr/keys/SoftCam.Key || echo "Error: Couldn't connect to ${softcam}"
 echo ""
 
@@ -21,6 +21,8 @@ echo "* Installed Successfully *"
 echo "* E2 Restart Is Required *"
 KeyDate=`/bin/date -r /usr/keys/SoftCam.Key +%d.%m.%y-%H:%M:%S`
 	echo ""
-	echo "DATA E ORA AGGIORNAMENTO: $KeyDate"
+	echo "UPDATE DATE AND TIME: $KeyDate"
 	echo ""
 exit 0
+
+wget https://raw.githubusercontent.com/pablitodrito/prova-pablito/master/SoftCam.Key -O /usr/keys/SoftCam.Key																											 

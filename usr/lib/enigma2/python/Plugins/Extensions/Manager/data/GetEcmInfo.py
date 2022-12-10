@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
+
 import os
 import time
 
 ECM_INFO = '/tmp/ecm.info'
-EMPTY_ECM_INFO = '','0','0','0'
+EMPTY_ECM_INFO = '', '0', '0', '0'
 old_ecm_time = time.time()
 info = {}
 ecm = ''
 data = EMPTY_ECM_INFO
+
 
 class GetEcmInfo:
     def pollEcmData(self):
@@ -24,8 +26,8 @@ class GetEcmInfo:
             info = {}
             ecm = ''
         if ecm_time != old_ecm_time:
-            oecmi1 = info.get('ecminterval1','')
-            oecmi0 = info.get('ecminterval0','')
+            oecmi1 = info.get('ecminterval1', '')
+            oecmi0 = info.get('ecminterval0', '')
             info = {}
             info['ecminterval2'] = oecmi1
             info['ecminterval1'] = oecmi0
@@ -51,7 +53,7 @@ class GetEcmInfo:
         self.pollEcmData()
         return data
 
-    def getInfo(self, member, ifempty = ''):
+    def getInfo(self, member, ifempty=''):
         self.pollEcmData()
         return str(info.get(member, ifempty))
 
@@ -95,8 +97,8 @@ class GetEcmInfo:
                         info['prov'] = ecm[1].strip()[6:]
                     if info['response'] and 'CaID 0x' in ecm[0] and 'pid 0x' in ecm[0]:
                         self.textvalue += " (0.%ss)" % info['response']
-                        info['caid'] = ecm[0][ecm[0].find('CaID 0x')+7:ecm[0].find(',')]
-                        info['pid'] = ecm[0][ecm[0].find('pid 0x')+6:ecm[0].find(' =')]
+                        info['caid'] = ecm[0][ecm[0].find('CaID 0x') + 7:ecm[0].find(',')]
+                        info['pid'] = ecm[0][ecm[0].find('pid 0x') + 6:ecm[0].find(' =')]
                         info['provid'] = info.get('prov', '0')[:4]
                 else:
                     source = info.get('source', None)
@@ -138,7 +140,7 @@ class GetEcmInfo:
         except:
             ecm = ''
             self.textvalue = ""
-            decCI='0'
-            provid='0'
-            ecmpid='0'
-        return self.textvalue,decCI,provid,ecmpid
+            decCI = '0'
+            provid = '0'
+            ecmpid = '0'
+        return self.textvalue, decCI, provid, ecmpid

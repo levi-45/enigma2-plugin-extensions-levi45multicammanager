@@ -42,7 +42,9 @@ P: 09c4:000000    # prioritise CAID 0100 with provider 123456
 #I: 0                 # ignore every CAID that was not handled before
 
 #L: 0700 8e           # ECM length for CAID 0700 to 8e (hexadecimal)
-
+I: 098C: 000000
+I: 09C4: 000000
+P: 098D: 000000
 A: ::000A 2600:000000:1FFF ; ert1
 A: ::0014 2600:000000:1FFF ; ert2
 A: ::0028 2600:000000:1FFF ; ert1HD

@@ -1,25 +1,25 @@
 #!/bin/sh
 #DESCRIPTION=This script created by Levi45
 ###############################################################################
-rm -R /usr/bin/oscampw64
-rm -R /usr/camscript/OSCamPw64-Arm_*.sh
+rm -R /usr/bin/oscampw
+rm -R /usr/camscript/OSicamPy2-Mips_*.sh
 ###############################################################################
-# Download and install OscamPw64
+# Download and install OSicamPy2
 cd /tmp 
 set -e
-wget "http://levi45.spdns.eu/Addons/Multicam/Arm/oscampw64.tar.gz"
+wget "http://levi45.spdns.eu/Addons/Multicam/Mips/oscampw.tar.gz"
 
-tar -xzf oscampw64.tar.gz -C /
+tar -xzf oscampw.tar.gz -C /
 set +e
-chmod 777 -R /usr/camscript/OSCamPw64-Arm_*.sh
-rm -f oscampw64.tar.gz
+rm -f oscampw.tar.gz
+chmod 777 -R /usr/camscript/OSicamPy2-Mips_*.sh
 cd ..
 
 sync
 echo "#########################################################"
-echo "#                           Levi45                      #"
+echo "#                             Levi45                    #"
 echo "#########################################################"
-echo "#             OscamPw64 INSTALLED SUCCESSFULLY          #"
+echo "#              OSicamPy2 INSTALLED SUCCESSFULLY         #"
 echo "#########################################################"
 echo "#                    SATELLITE-FORUM.COM                #"
 echo "#########################################################"

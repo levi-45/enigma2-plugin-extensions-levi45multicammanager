@@ -1,25 +1,25 @@
 #!/bin/sh
 #DESCRIPTION=This script created by Levi45
 ###############################################################################
-rm -R /usr/bin/oscamotr
-rm -R /usr/camscript/OSCamOTR-Mips_*.sh
+rm -R /usr/bin/oscam64
+rm -R /usr/camscript/OSicam64-Arm_*.sh
 ###############################################################################
-# Download and install OSCamOTR
+# Download and install OSicam64
 cd /tmp 
 set -e
-wget "http://levi45.spdns.eu/Addons/Multicam/Mips/oscamotr.tar.gz"
+wget "http://levi45.spdns.eu/Addons/Multicam/Arm/oscam64.tar.gz"
 
-tar -xzf oscamotr.tar.gz -C /
+tar -xzf oscam64.tar.gz -C /
 set +e
-rm -f oscamotr.tar.gz
-chmod 777 -R /usr/camscript/OSCamOTR-Mips_*.sh
+chmod 777 -R /usr/camscript/OSicam64-Arm_*.sh
+rm -f oscam64.tar.gz
 cd ..
 
 sync
 echo "#########################################################"
-echo "#                             Levi45                    #"
+echo "#                           Levi45                      #"
 echo "#########################################################"
-echo "#              OSCamOTR INSTALLED SUCCESSFULLY          #"
+echo "#               OSicam64 INSTALLED SUCCESSFULLY         #"
 echo "#########################################################"
 echo "#                    SATELLITE-FORUM.COM                #"
 echo "#########################################################"

@@ -1,7 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# lululla 08/11/2022
+# -------------------#
+#  coded by Lululla  #
+#   skin by MMark    #
+#     update to      #
+#       Levi45       #
+#     29/01/2023     #
+#      No Coppy      #
+# -------------------#
 from Components.ActionMap import ActionMap
 from Components.MenuList import MenuList
 from Plugins.Plugin import PluginDescriptor
@@ -15,7 +22,7 @@ import sys
 
 plugin_foo = os.path.dirname(sys.modules[__name__].__file__)
 emu_plugin = plugin_foo + '/emu/'
-name_plugemu = 'Levi45 Emu Keys V.9.6-r11'
+name_plugemu = 'Levi45 Emu Keys V.9.6-r13'
 
 
 def getDesktopSize():

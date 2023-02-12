@@ -6,7 +6,7 @@
 #   skin by MMark    #
 #     update to      #
 #       Levi45       #
-#     25/11/2022     #
+#     29/01/2023     #
 #      No Coppy      #
 # -------------------#
 from __future__ import print_function
@@ -61,10 +61,10 @@ else:
 
 global active, MYFTP
 
-currversion = '9.6-r11'
+currversion = 'V.9.6-r13'
 
-title_plug = 'Satellite-Forum.Com V. %s' % currversion
-title_emu = 'Levi45 Emu Keys V. %s' % currversion
+title_plug = 'Satellite-Forum.Com %s' % currversion
+title_emu = 'Levi45 Emu Keys %s' % currversion
 name_plug = 'Levi45 Multicam Manager'
 name_plugemu = 'Levi45 Emu Keys'
 plugin_foo = os.path.dirname(sys.modules[__name__].__file__)

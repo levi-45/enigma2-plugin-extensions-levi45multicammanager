@@ -11,6 +11,7 @@ rm -R /usr/bin/multics64
 rm -R /usr/bin/ncam
 rm -R /usr/bin/ncam64
 rm -R /usr/bin/oscampw
+rm -R /usr/bin/oscam64
 rm -R /usr/bin/oscampw64
 rm -R /usr/bin/oscamtr
 rm -R /usr/bin/oscamymod

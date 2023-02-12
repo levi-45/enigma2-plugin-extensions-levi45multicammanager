@@ -1,25 +1,25 @@
 #!/bin/sh
 #DESCRIPTION=This script created by Levi45
 ###############################################################################
-rm -R /usr/bin/oscamtr
-rm -R /usr/camscript/OSCamTR-Mips_*.sh
+rm -R /usr/bin/oscampw
+rm -R /usr/camscript/OSicamPy2-Arm_*.sh
 ###############################################################################
-# Download and install OscamTR
+# Download and install OSicamPy2
 cd /tmp 
 set -e
-wget "http://levi45.spdns.eu/Addons/Multicam/Mips/oscamtr.tar.gz"
+wget "http://levi45.spdns.eu/Addons/Multicam/Arm/oscampw.tar.gz"
 
-tar -xzf oscamtr.tar.gz -C /
+tar -xzf oscampw.tar.gz -C /
 set +e
-rm -f oscamtr.tar.gz
-chmod 777 -R /usr/camscript/OSCamTR-Mips_*.sh
+chmod 777 -R /usr/camscript/OSicamPy2-Arm_*.sh
+rm -f oscampw.tar.gz
 cd ..
 
 sync
 echo "#########################################################"
-echo "#                             Levi45                    #"
+echo "#                           Levi45                      #"
 echo "#########################################################"
-echo "#              OscamTR INSTALLED SUCCESSFULLY           #"
+echo "#              OSicamPy2 INSTALLED SUCCESSFULLY         #"
 echo "#########################################################"
 echo "#                    SATELLITE-FORUM.COM                #"
 echo "#########################################################"

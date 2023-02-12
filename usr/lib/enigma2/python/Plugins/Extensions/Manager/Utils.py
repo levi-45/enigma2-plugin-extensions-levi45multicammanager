@@ -1,9 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# 01.10.2022
-# a common tips used from Lululla
-#
+# -------------------#
+#  coded by Lululla  #
+#   skin by MMark    #
+#     update to      #
+#       Levi45       #
+#     29/01/2023     #
+#      No Coppy      #
+# -------------------#
 import sys
 import datetime
 import os

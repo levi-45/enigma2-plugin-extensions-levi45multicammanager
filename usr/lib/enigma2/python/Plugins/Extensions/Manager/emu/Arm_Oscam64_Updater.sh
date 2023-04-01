@@ -1,34 +1,25 @@
 #!/bin/sh
 #DESCRIPTION=This script created by Levi45
 ###############################################################################
-rm -R /usr/bin/btkcam
-rm -R /usr/bin/cccam
-rm -R /usr/bin/doscam
-rm -R /usr/bin/gcam
-rm -R /usr/bin/mgcamd
-rm -R /usr/bin/multics
-rm -R /usr/bin/multics64
-rm -R /usr/bin/ncam
-rm -R /usr/bin/ncam64
-rm -R /usr/bin/oscamde
-rm -R /usr/bin/oscamde64
-rm -R /usr/bin/oscampw
-rm -R /usr/bin/oscampw64
-rm -R /usr/bin/oscamtr
-rm -R /usr/bin/oscamotr
-rm -R /usr/bin/oscamymod
-rm -R /usr/bin/revcam
-rm -R /usr/bin/scam
-rm -R /usr/bin/suposcam
-rm -R /usr/bin/tntoscam
-rm -R /usr/bin/wicardd
-rm -R /usr/camscript/*.sh
-
+rm -R /usr/bin/oscam64
+rm -R /usr/camscript/OSCam64-Arm_*.sh
 ###############################################################################
+# Download and install OSCam64
+cd /tmp 
+set -e
+wget "http://levi45.spdns.eu/Addons/Multicam/Arm/oscam64.tar.gz"
+
+tar -xzf oscam64.tar.gz -C /
+set +e
+chmod 777 -R /usr/camscript/OSCam64-Arm_*.sh
+rm -f oscam64.tar.gz
+cd ..
+
+sync
 echo "#########################################################"
 echo "#                           Levi45                      #"
 echo "#########################################################"
-echo "#            All Emu's Deleted SUCCESSFULLY             #"
+echo "#               OSCam64 INSTALLED SUCCESSFULLY          #"
 echo "#########################################################"
 echo "#                    SATELLITE-FORUM.COM                #"
 echo "#########################################################"

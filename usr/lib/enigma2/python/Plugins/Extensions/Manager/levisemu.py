@@ -22,7 +22,7 @@ import sys
 
 plugin_foo = os.path.dirname(sys.modules[__name__].__file__)
 emu_plugin = plugin_foo + '/emu/'
-name_plugemu = 'Levi45 Emu Keys V.9.6-r13'
+name_plugemu = 'Levi45 Emu Keys V.9.6-r14'
 
 
 def getDesktopSize():

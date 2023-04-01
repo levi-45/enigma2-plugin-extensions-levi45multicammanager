@@ -1,16 +1,24 @@
 #!/bin/sh
 #DESCRIPTION=This script created by Levi45
 ###############################################################################
-rm -R /etc/tuxbox/config/ncam.*
+rm -R /etc/tuxbox/config
+rm -R /etc/scam
+rm -R /etc/CCcam.channelinfo
+rm -R /etc/CCcam.providers
+rm -R /etc/cs378x.cfg
+rm -R /etc/ip2country.csv
+rm -R /etc/multics.cfg
+rm -R /etc/multics_bianca.css
+rm -R /usr/keys
 ###############################################################################
 # Download and install Config
 cd /tmp 
 set -e
-wget "http://levi45.spdns.eu/Addons/Multicam/Arm/ncamicamconfig.tar.gz"
+wget "http://levi45.spdns.eu/Addons/Multicam/config.tar.gz"
 
-tar -xzf ncamicamconfig.tar.gz -C /
+tar -xzf config.tar.gz -C /
 set +e
-rm -f ncamicamconfig.tar.gz
+rm -f config.tar.gz
 cd ..
 
 sync

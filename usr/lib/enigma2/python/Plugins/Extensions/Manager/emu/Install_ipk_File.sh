@@ -3,7 +3,7 @@
 ###############################################################################
 # Installin File
 cd /tmp 
-opkg install --force-overwrite /tmp/*.ipk
+opkg install --force-overwrite --force-downgrade /tmp/*.ipk
 rm -f *.ipk
 cd ..
 

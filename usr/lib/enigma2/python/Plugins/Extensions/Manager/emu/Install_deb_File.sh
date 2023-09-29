@@ -3,7 +3,7 @@
 ###############################################################################
 # Installin File
 cd /tmp 
-dpkg -i --force-overwrite /tmp/*.deb
+dpkg -i --force-overwrite --force-downgrade /tmp/*.deb
 rm -f *.deb
 cd ..
 

@@ -1,0 +1,21 @@
+<!-- Skin tvCFG 17/08/2020 -->
+<screen name="tvCfg" position="0,0" size="2560,1440" title="..::Levi45 Multicam Manager::.." backgroundColor="transparent" flags="wfNoBorder">
+	<widget name="title" position="292,108" size="1372,87" font="Regular; 34" halign="left" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/main2.png" position="0,0" size="2560,1440" zPosition="1" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/mcmaneger.png" position="1939,384" size="256,256" alphatest="blend" zPosition="4" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sep.png" position="285,280" size="1370,8" alphatest="blend" zPosition="4" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sep.png" position="290,1080" size="1370,8" alphatest="blend" zPosition="4" />
+	<!-- Menu List -->
+	<widget name="info" position="293,1088" size="1363,127" font="Regular;30" halign="center" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
+	<widget name="description" position="290,200" size="1372,70" font="Regular; 32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="5" />    
+	<widget name="config" position="292,292" size="1372,773" itemHeight="66" scrollbarMode="showOnDemand" transparent="1" zPosition="5" foregroundColor="#00a0a0a0" foregroundColorSelected="#ffffff" backgroundColor="#20000000" backgroundColorSelected="#0b2049" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sliderb.png" />
+	<!-- Colors 1220 -->
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_red.png" position="300,1265" size="30,30" alphatest="blend" zPosition="5" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_green.png" position="298,1345" size="30,30" alphatest="blend" zPosition="5" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_yellow.png" position="1625,1265" size="30,30" alphatest="blend" zPosition="5" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_blue.png" position="1625,1345" size="30,30" alphatest="blend" zPosition="5" />
+	<widget name="key_red" position="360,1252" size="400,52" font="Regular;40" halign="left" valign="center" backgroundColor="#20000000" zPosition="5" transparent="1" />
+	<widget name="key_green" position="360,1332" size="400,52" font="Regular;40" halign="left" valign="center" backgroundColor="#20000000" zPosition="5" transparent="1" />
+	<widget name="key_yellow" position="1206,1252" size="400,52" font="Regular;40" halign="right" valign="center" backgroundColor="#20000000" zPosition="5" transparent="1" />
+	<widget name="key_blue" position="1206,1332" size="400,52" font="Regular;40" halign="right" valign="center" backgroundColor="#20000000" zPosition="5" transparent="1" />
+</screen>

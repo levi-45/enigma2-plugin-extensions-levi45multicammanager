@@ -1,0 +1,41 @@
+<!-- Skin Manager 15/08/2022 -->
+<screen name="Manager" position="0,0" size="2560,1440" title="..::Levi45 Multicam Manager::.." backgroundColor="transparent" flags="wfNoBorder">
+    <widget name="title" position="1246,994" size="1302,74" font="Regular;30" halign="center" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/mcmaneger.png" position="7,1084" size="402,352" alphatest="blend" zPosition="5" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sep.png" position="0,1435" size="2560,8" alphatest="blend" zPosition="5" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sep.png" position="0,1073" size="2560,8" alphatest="blend" zPosition="5" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_info.png" position="2029,1306" size="80,35" alphatest="blend" zPosition="30" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_menu.png" position="2023,1196" size="80,35" alphatest="blend" zPosition="35" />
+    <!-- Menu List -->
+    <widget name="description" position="5,994" size="961,61" font="Regular;30" halign="center" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
+    <widget name="info" position="1249,1092" size="735,329" font="Regular; 28" halign="left" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
+    <widget source="list" render="Listbox" position="418,1090" size="819,323" scrollbarMode="showOnDemand" foregroundColor="#00a0a0a0" backgroundColorSelected="#00000000" enableWrapAround="1" transparent="1" zPosition="5">
+        <convert type="TemplatedMultiContent">
+            {"template": [
+                    MultiContentEntryPixmapAlphaTest(pos=(5, 0), size=(70, 40), png=1), # index 1 is the pixmap   
+                    MultiContentEntryText(pos=(95, 0), size=(460, 45), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0, color=0x72d000, color_sel=0xffffff, backcolor_sel=0x0066cc), # index 0 is the text name,
+                    MultiContentEntryText(pos=(555, 0), size=(134, 45), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2, color=0x72d000, color_sel=0xffffff, backcolor_sel=0x0066cc), # index 0 is the text name,
+                ],
+             "fonts": [gFont("Regular", 34)],
+             "itemHeight": 50
+            }
+        </convert>
+    </widget>
+    <eLabel position="0,988" size="2560,450" backgroundColor="#20000000" zPosition="2" />
+    <!-- Colors -->
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_red.png" position="2130,1164" size="30,30" alphatest="blend" zPosition="5" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_green.png" position="2130,1231" size="30,30" alphatest="blend" zPosition="5" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_yellow.png" position="2130,1289" size="30,30" alphatest="blend" zPosition="5" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_blue.png" position="2130,1346" size="30,30" alphatest="blend" zPosition="5" />
+    <widget name="key_red" position="2200,1149" size="300,60" font="Regular;30" halign="left" valign="center" backgroundColor="black" transparent="1" zPosition="5" />
+    <widget name="key_green" position="2200,1211" size="300,60" font="Regular;30" halign="left" valign="center" backgroundColor="black" transparent="1" zPosition="5" />
+    <widget name="key_yellow" position="2200,1273" size="300,60" font="Regular;30" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1" />
+    <widget name="key_blue" position="2200,1334" size="300,60" font="Regular;30" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1" />
+    
+     <!-- MultiContentEntryText(pos, size, font, flags, text, color, color_sel, backcolor, backcolor_sel, border_width, border_color) -->
+     <!-- backcolor=0x72d000,backcolor=0x72d000, -->
+     <!--
+      border_width=1, border_color=0x00ffff
+      border_width=1, border_color=0x00ffff
+      -->
+</screen>

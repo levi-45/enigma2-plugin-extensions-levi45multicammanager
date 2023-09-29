@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
+
 # CCam Organizer by fsenes 2011
 from Screens.Screen import Screen
 from Components.MenuList import MenuList
@@ -7,11 +8,13 @@ from Components.ActionMap import ActionMap
 from Screens.MessageBox import MessageBox
 from Tools.Directories import fileExists
 
+
 class OrganizerMenu(Screen):
     skin = """
         <screen position="center,center" size="460,400" title="CCcam Organizer" >
             <widget name="myMenu" position="10,10" size="420,380" scrollbarMode="showOnDemand" />
         </screen>"""
+
     def __init__(self, session):
         self.session = session
         list = []
@@ -25,11 +28,7 @@ class OrganizerMenu(Screen):
         Screen.__init__(self, session)
         self.setTitle(_("CCcam Organizer"))
         self["myMenu"] = MenuList(list)
-        self["myActionMap"] = ActionMap(["SetupActions"],
-        {
-            "ok": self.go,
-            "cancel": self.cancel
-        }, -2)
+        self["myActionMap"] = ActionMap(["SetupActions"], {"ok": self.go, "cancel": self.cancel}, -2)
 
     def go(self):
         if not fileExists("/etc/CCcam.cfg"):
@@ -53,14 +52,15 @@ class OrganizerMenu(Screen):
         f = open("/etc/CCcam.cfg", 'r')
         for line in f:
             if line.startswith('#FC:'):
-                line = line.replace('#FC:','C:')
+                line = line.replace('#FC:', 'C:')
             lines.append(line)
         f.close()
         f = open("/etc/CCcam.cfg", 'w')
         for i in lines:
             f.write(i)
         f.close()
-        self.session.open(MessageBox,_("\nSTOPPED FINDING FAKES \n\nREVERTED BACK TO INITIAL STATUS"), MessageBox.TYPE_INFO)
+        self.session.open(MessageBox, _("\nSTOPPED FINDING FAKES \n\nREVERTED BACK TO INITIAL STATUS"), MessageBox.TYPE_INFO)
+
 
 class OrganizerNewmenu(Screen):
     skin = """
@@ -101,36 +101,26 @@ class OrganizerNewmenu(Screen):
         self["Newmenu"] = MenuList(menu_list)
         # if returnValue is "two":
         if returnValue == "two":
-            self["Actions"] = ActionMap(["SetupActions"],
-            {
-            "ok": self.delete,
-            "cancel": self.close
-            }, -2)
+            self["Actions"] = ActionMap(["SetupActions"], {"ok": self.delete, "cancel": self.close}, -2)
         # elif returnValue is "tree":
         elif returnValue == "tree":
-            self["Actions"] = ActionMap(["SetupActions"],
-            {
-            "ok": self.undelete,
-            "cancel": self.close
-            }, -2)
+            self["Actions"] = ActionMap(["SetupActions"], {"ok": self.undelete, "cancel": self.close}, -2)
         # elif returnValue is "four":
         elif returnValue == "four":
-            self["Actions"] = ActionMap(["SetupActions"],
-            {
-            "ok": self.FindFakes,
-            "cancel": self.close
-            }, -2)
+            self["Actions"] = ActionMap(["SetupActions"], {"ok": self.FindFakes, "cancel": self.close}, -2)
 
     def delete(self):
         self.selected = self["Newmenu"].l.getCurrentSelection() and self["Newmenu"].l.getCurrentSelection()[1]
-        if not self.selected: return
+        if not self.selected:
+            return
         self.findReplace("C:", "#!C:", self.selected)
         self.message(self.selected, _("Temporarely DELETED"))
 
     def undelete(self):
         if self["Newmenu"].l.getCurrentSelection() is not None:
             self.selected = self["Newmenu"].l.getCurrentSelection() and self["Newmenu"].l.getCurrentSelection()[1]
-            if not self.selected: return
+            if not self.selected:
+                return
             self.findReplace("#!C:", "C:", self.selected)
             self.message(self.selected, _("UNDELETED"))
         else:
@@ -139,7 +129,8 @@ class OrganizerNewmenu(Screen):
 
     def FindFakes(self):
         self.selected = self["Newmenu"].l.getCurrentSelection() and self["Newmenu"].l.getCurrentSelection()[1]
-        if not self.selected: return
+        if not self.selected:
+            return
         lines = []
         f = open(self.CFG, 'r')
         for line in f:
@@ -166,7 +157,7 @@ class OrganizerNewmenu(Screen):
             f.write(i)
         f.close()
 
-    def message(self,selected, text):
+    def message(self, selected, text):
         try:
             msg = selected.split()[1]
             self.session.open(MessageBox, "\n%s \n\n%s" % (msg, text), MessageBox.TYPE_INFO)

@@ -1,5 +1,5 @@
-<!-- Skin GetIPK 15/08/2020 -->
-<screen name="GetipkTv" position="0,0" size="1920,1080" title="..::Levi45 Multicam Manager::.." backgroundColor="transparent" flags="wfNoBorder">
+<!-- Skin tvCFG 17/08/2020 -->
+<screen name="tvCfg" position="0,0" size="1920,1080" title="..::Levi45 Multicam Manager::.." backgroundColor="transparent" flags="wfNoBorder">
 	<widget name="title" position="230,30" size="950,87" font="Regular; 54" halign="center" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
 	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/main2.png" position="0,0" size="1920,1080" zPosition="1" />
 	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/mcmaneger.png" position="1359,784" size="256,256" alphatest="blend" zPosition="5" />
@@ -7,8 +7,9 @@
 	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sep.png" position="220,912" size="955,6" alphatest="blend" zPosition="5" />
 	<!-- Menu List -->
 	<widget name="description" position="220,155" size="956,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="5" />
-	<widget name="text" position="222,211" size="959,703" scrollbarMode="showOnDemand" transparent="1" zPosition="5" foregroundColor="#00a0a0a0" foregroundColorSelected="#ffffff" backgroundColor="#20000000" backgroundColorSelected="#0b2049" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sliderb.png" />
-	<!-- Colors 1220 -->
+	<widget name="config" position="222,211" size="959,580" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="5" foregroundColor="#00a0a0a0" foregroundColorSelected="#ffffff" backgroundColor="#20000000" backgroundColorSelected="#0b2049" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sliderb.png" />
+	<widget name="info" position="220,816" size="951,86" font="Regular;30" halign="center" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
+    <!-- Colors 1220 -->
     <eLabel position="1357,779" size="265,264" backgroundColor="#80000000" zPosition="1" cornerRadius="30" />
 	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_red.png" position="220,945" size="30,30" alphatest="blend" zPosition="5" />
 	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_green.png" position="220,1005" size="30,30" alphatest="blend" zPosition="5" />

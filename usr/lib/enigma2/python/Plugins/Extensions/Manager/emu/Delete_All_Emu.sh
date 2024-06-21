@@ -1,5 +1,5 @@
 #!/bin/sh
-#DESCRIPTION=This script created by Levi45
+#DESCRIPTION=This script created by Levi45\nRemove all Emu files
 ###############################################################################
 rm -R /usr/bin/btkcam
 rm -R /usr/bin/cccam

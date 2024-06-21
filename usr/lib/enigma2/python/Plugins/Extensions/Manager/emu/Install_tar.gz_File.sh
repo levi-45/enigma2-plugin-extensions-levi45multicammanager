@@ -1,5 +1,5 @@
 #!/bin/sh
-#DESCRIPTION=This script created by Levi45
+#DESCRIPTION=This script created by Levi45\nInstall *.tar - *.gz from /tmp
 ###############################################################################
 # Installin File
 cd /tmp 

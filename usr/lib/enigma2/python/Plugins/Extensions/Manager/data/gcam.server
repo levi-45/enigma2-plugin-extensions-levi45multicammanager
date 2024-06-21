@@ -1,87 +1,107 @@
-##"*************************"
-##"*         levi45        *"
-##"*************************"
+#### "*******************************************"
+#### "*          ..:: A U T H O R ::..           *"
+#### "*             << MOHAMED_OS >>             *"
+#### "*           ..:: El Eulma ::..             *"
+#### "*******************************************"
 
-####################### SoftCams ############################
+################# Enable Reader #############
+# To enable Reader Using : enable       = 1
+# To Disable Reader Using : enable      = 0
+
+
+
 [reader]
-label                         = constant.cw
-protocol                      = constcw
-device                        = /etc/tuxbox/config/constant.cw
-caid                          = 2600,0B00,0B02,0500,0963,06AD,0940
+label                         = MymGcAmD
+enable                        = 0
+protocol                      = newcamd
+device                        = Host,Port
+key                           = 0102030405060708091011121314
+user                          = User
+password                      = Passwd
+services                      = !PowerVU,!Tandberg,!Biss,!Afn
+inactivitytimeout             = -1
+disableserverfilter           = 1
+connectoninit                 = 1
 group                         = 1
-disablecrccws_only_for        = 0E00:000000
+audisabled                    = 1
+
+
+[reader]
+label                         = MyCcCam
+enable                        = 0
+protocol                      = cccam
+device                        = Host,Port
+user                          = User
+password                      = Passwd
+services                      = !PowerVU,!Tandberg,!Biss,!Afn
+inactivitytimeout             = -1
+reconnecttimeout              = 10
+cacheex_block_fakecws         = 1
+group                         = 2
+cccversion                    = 2.0.11
+cccmaxhops                    = 1 # dont use higher than 3 !!!
+dropbadcws                    = 1
+ccckeepalive                  = 1
+cccwantemu                    = 1
+
+
+[reader]
+label                         = MyCcCam_2
+enable                        = 0
+protocol                      = cccam
+device                        = Host,Port
+user                          = User
+password                      = Passwd
+services                      = !PowerVU,!Tandberg,!Biss,!Afn
+inactivitytimeout             = -1
+reconnecttimeout              = 10
+cacheex_block_fakecws         = 1
+group                         = 3
+cccversion                    = 2.1.1
+cccmaxhops                    = 1 # dont use higher than 3 !!!
+dropbadcws                    = 1
+ccckeepalive                  = 1
+cccwantemu                    = 1
+
+
+[reader]
+label                         = MyCcCam_3
+enable                        = 0
+protocol                      = cccam
+device                        = Host,Port
+user                          = User
+password                      = Passwd
+services                      = !PowerVU,!Tandberg,!Biss,!Afn
+inactivitytimeout             = -1
+reconnecttimeout              = 10
+cacheex_block_fakecws         = 1
+group                         = 4
+cccversion                    = 2.1.1
+cccmaxhops                    = 1 # dont use higher than 3 !!!
+dropbadcws                    = 1
+ccckeepalive                  = 1
+cccwantemu                    = 1
 
 [reader]
 label                         = emulator
-protocol                      = emu
-device                        = /etc/tuxbox/config/SoftCam.key
-services                      = !afn
-disablecrccws_only_for        = 0E00:000000
-caid                          = 0500,0604,090F,0E00,1010,1801,2600,2602,2610,4AE1
-detect                        = cd
-ident                         = 0500:000000,007400,007800,021110,023800;0604:000000;090F:000000;0E00:000000;1010:000000;1801:000000,001101,002111,007301;2600:000000;2602:000000;2610:000000;4AE1:000011,000014,0000FE
-group                         = 1
-emmcache                      = 2,1,2,1
-emu_auproviders               = 0604:010200;0E00:000000;1010:000000;2610:000000;4AE1:000011,000014,0000FE
-
-####################### AFN Config settings ############################
-
-[reader]
-label                         = Internet_SoftCam
-protocol                      = emu
-device                        = https://raw.githubusercontent.com/MOHAMED19OS/SoftCam_Emu/main/Enigma2/SoftCam.Key
-disablecrccws_only_for        = 0E00:000000
-caid                          = 0E00,0500,0604,090F,1010,1801,2600,4AE1
-detect                        = cd
-ident                         = 0500:000000,007400,007800,021110,023800;0604:000000;090F:000000;0E00:000000;1010:000000;1801:000000,001101,002111,007301;2600:000000;4AE1:000011,000014,0000FE
-group                         = 1
-emmcache                      = 2,1,2,1
-emu_auproviders               = 0604:010200;0E00:000000;1010:000000;4AE1:000011,000014,0000FE
-
-[reader]
-label                         = Emulator AFN
 enable                        = 1
 protocol                      = emu
 device                        = emulator
-device                        = https://raw.githubusercontent.com/smcam/s/main/SoftCam.Key
+#device                        = https://raw.githubusercontent.com/MOHAMED19OS/SoftCam_Emu/main/SoftCam.Key
 caid                          = 0500,0604,090F,0E00,1010,1801,2600,2602,2610,4AE1
 detect                        = cd
-ident                         = 0500:000000,007400,007800,021110,023800;0604:000000;090F:000000;0E00:000000;1010:000000;1801:000000,001101,002111,007301;2602:000000;2610:000000;4AE1:000011,000014,0000FE
+ident                         = 0500:000000,007400,007800,021110,023800;0604:000000;090F:000000;0E00:000000;1010:000000;1801:000000,001101,002111,007301;2600:000000;2602:000000;2610:000000;4AE1:000011,000014,0000FE
 group                         = 5
 emmcache                      = 2,1,2,1
 emu_auproviders               = 0604:010200;0E00:000000;1010:000000;2610:000000;4AE1:000011,000014,0000FE
 
-[reader]
-label                         = Emulator_AFN2
-protocol                      = emu
-device                        = https://raw.githubusercontent.com/JetCamFastCam/JetFastCamRza/main/SoftCam.Key
-caid                          = 0500,0604,090F,0E00,1010,1801,2600,2602,2610,4AE1
-detect                        = cd
-ident                         = 0500:000000,007400,007800,021110,023800;0604:000000;090F:000000;0E00:000000;1010:000000;1801:000000,001101,002111,007301;2602:000000;2610:000000;4AE1:000011,000014,0000FE
-group                         = 5
-emmcache                      = 2,1,2,1
-emu_auproviders               = 0604:010200;0E00:000000;1010:000000;2610:000000;4AE1:000011,000014,0000FE:000000;1801:000000,001101,002111,007301;2602:000000;2610:000000;4AE1:000011,000014,0000FE
-group                         = 5
-emmcache                      = 2,1,2,1
-emu_auproviders               = 0604:010200;0E00:000000;1010:000000;2610:000000;4AE1:000011,000014,0000FE
-
-####################### Card ############################
 
 [reader]
-label                         = Card_Blanca
+label                         = SmartCard
 enable                        = 0
 protocol                      = internal
 device                        = /dev/sci0
-services                      = canal+ esp
-caid                          = 1810
-ecmwhitelist                  = 1810@1F1F1F:89
+pincode                       = 0000
+caid                          = 0B00
 detect                        = cd
-nagra_read                    = 2
-mhz                           = 500
-cardmhz                       = 368
-ident                         = 1810:000000,004001,004101
-group                         = 3
-emmcache                      = 1,3,2,0
-
-####################### CCcam ############################
-
+group                         = 6

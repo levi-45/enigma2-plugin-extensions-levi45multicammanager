@@ -1,5 +1,5 @@
 #!/bin/sh
-#DESCRIPTION=This script will create symlink
+#DESCRIPTION=This script created by Levi45\nThis script will create symlink
 ###############################################################################
 if [ -f /lib/ld-2.32.so ]; then
 	ln -s /lib/ld-2.32.so /lib/ld-linux.so.3

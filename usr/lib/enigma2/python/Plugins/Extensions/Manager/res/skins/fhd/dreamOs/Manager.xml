@@ -1,15 +1,25 @@
 <!-- Skin Manager 15/08/2022 -->
 <screen name="Manager" position="0,0" size="1920,1080" title="..::Levi45 Multicam Manager::.." backgroundColor="transparent" flags="wfNoBorder">
-    <widget name="title" position="971,734" size="926,50" font="Regular;30" halign="center" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
-    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/mcmaneger.png" position="10,788" size="256,256" alphatest="blend" zPosition="5" />
+	<widget name="title" position="230,30" size="950,87" font="Regular; 54" halign="center" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
+    <widget backgroundColor="#101010" font="Regular; 38" foregroundColor="#60cefe" halign="right" position="900,740" render="Label" size="200,40" source="global.CurrentTime" transparent="1" valign="center" zPosition="3">
+      <convert type="ClockToText">Format:%H:%M:%S</convert>
+    </widget>
+      <widget backgroundColor="#101010" font="Regular; 38" foregroundColor="#60cefe" halign="right" position="700,740" render="Label" size="200,40" source="global.CurrentTime" transparent="1" valign="center" zPosition="3">
+       <convert type="ClockToText">Format:%A</convert>
+     </widget>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/mcmaneger.png" position="10,795" size="256,256" alphatest="blend" zPosition="5" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sep.png" position="0,1055" size="1920,8" alphatest="blend" zPosition="5" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/sep.png" position="0,783" size="1920,8" alphatest="blend" zPosition="5" />
-    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_info.png" position="1660,798" size="80,35" alphatest="blend" zPosition="30" />
-    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Manager/res/pics/key_menu.png" position="1550,798" size="80,35" alphatest="blend" zPosition="35" />
+    <eLabel name="" position="1815,790" size="55,52" backgroundColor="#003e4b53" halign="center" valign="center" transparent="0" cornerRadius="26" font="Regular; 17" zPosition="4" text="MENU"/>
+    <eLabel name="" position="1763,790" size="52,52" backgroundColor="#003e4b53" halign="center" valign="center" transparent="0" cornerRadius="26" font="Regular; 17" zPosition="4" text="INFO"/>
+    <eLabel name="" position="1555,790" size="52,52" backgroundColor="#003e4b53" halign="center" valign="center" transparent="0" cornerRadius="26" font="Regular; 17" zPosition="4" text="0"/>
+    <eLabel name="" position="1607,790" size="52,52" backgroundColor="#003e4b53" halign="center" valign="center" transparent="0" cornerRadius="26" font="Regular; 17" zPosition="4" text="1"/>
+    <eLabel name="" position="1659,790" size="55,52" backgroundColor="#003e4b53" halign="center" valign="center" transparent="0" cornerRadius="26" font="Regular; 17" zPosition="4" text="2"/>
+    <eLabel name="" position="1711,790" size="52,52" backgroundColor="#003e4b53" halign="center" valign="center" transparent="0" cornerRadius="26" font="Regular; 17" zPosition="4" text="8"/>
     <!-- Menu List -->
     <widget name="description" position="3,734" size="961,50" font="Regular;30" halign="center" valign="center" foregroundColor="#002a79b8" backgroundColor="black" transparent="1" zPosition="5" />
-    <widget name="info" position="973,794" size="570,255" font="Regular; 20" halign="left" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
-    <widget source="list" render="Listbox" position="270,797" size="690,252" scrollbarMode="showOnDemand" foregroundColor="#00a0a0a0" backgroundColorSelected="#00000000" enableWrapAround="1" transparent="1" zPosition="5">
+    <widget name="info" position="973,795" size="560,255" font="Regular; 20" halign="right" foregroundColor="yellow" backgroundColor="#20000000" transparent="1" zPosition="5" />
+    <widget source="list" render="Listbox" position="271,795" size="690,252" scrollbarMode="showOnDemand" foregroundColor="#00a0a0a0" backgroundColorSelected="#00000000" enableWrapAround="1" transparent="1" zPosition="5">
         <convert type="TemplatedMultiContent">
             {"template": [
                     MultiContentEntryPixmapAlphaTest(pos=(5, 0), size=(70, 40), png=1), # index 1 is the pixmap   
@@ -31,11 +41,4 @@
     <widget name="key_green" position="1590,890" size="300,40" font="Regular;30" halign="left" valign="center" backgroundColor="black" transparent="1" zPosition="5" />
     <widget name="key_yellow" position="1590,940" size="300,40" font="Regular;30" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1" />
     <widget name="key_blue" position="1590,990" size="300,40" font="Regular;30" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1" />
-    
-     <!-- MultiContentEntryText(pos, size, font, flags, text, color, color_sel, backcolor, backcolor_sel, border_width, border_color) -->
-     <!-- backcolor=0x72d000,backcolor=0x72d000, -->
-     <!--
-      border_width=1, border_color=0x00ffff
-      border_width=1, border_color=0x00ffff
-      -->
 </screen>

@@ -1,14 +1,12 @@
 # #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# -------------------#
-#  coded by Lululla  #
-#   skin by MMark    #
-#     update to      #
-#       Levi45       #
-#     08/07/2023     #
-#      No Coppy      #
-# -------------------#
+# --------------------#
+#  coded by Lululla   #
+#   skin by MMark     #
+#     18/04/2024     #
+#      No Coppy       #
+# --------------------#
 from __future__ import print_function
 from Components.ActionMap import ActionMap
 from Components.Button import Button
@@ -23,6 +21,9 @@ from Screens.Screen import Screen
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.Directories import fileExists
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
+from Components.Sources.StaticText import StaticText
+from .. import _
+from ..plugin import runningcam
 from random import choice
 from enigma import eTimer
 from enigma import getDesktop
@@ -30,10 +31,11 @@ import os
 import re
 import ssl
 import sys
+import subprocess
+import codecs
 global skin_path
-from .. import _, isDreamOS
-
-
+import base64
+sss = 'aHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L1U0ZU02RGpW'
 PY3 = sys.version_info.major >= 3
 if PY3:
     unicode = str
@@ -47,14 +49,11 @@ def b64decoder(s):
     import base64
     s = str(s).strip()
     try:
-        # return base64.b64decode(s)
         outp = base64.b64decode(s)
         print('outp1 ', outp)
         if PY3:
             outp = outp.decode('utf-8')
             print('outp2 ', outp)
-        return outp
-
     except TypeError:
         padding = len(s) % 4
         if padding == 1:
@@ -69,13 +68,17 @@ def b64decoder(s):
         if PY3:
             outp = outp.decode('utf-8')
             print('outp2 ', outp)
-        return outp
+    return outp
 
 
+sl = 'slManager'
 name_plug = 'Satellite-Forum.Com'
 plugin_path = resolveFilename(SCOPE_PLUGINS, "Extensions/Manager/")
 data_path = os.path.join(plugin_path, 'data/')
-# skin_path = plugin_path
+skin_path = plugin_path
+sl2 = skin_path + sl + '.xml'
+if os.path.exists(sl2):
+    os.system('rm -rf ' + plugin_path + ' > /dev/null 2>&1')
 
 try:
     _create_unverified_https_context = ssl._create_unverified_context
@@ -83,18 +86,6 @@ except AttributeError:
     pass
 else:
     ssl._create_default_https_context = _create_unverified_https_context
-
-
-# def getDesktopSize():
-    # from enigma import getDesktop
-    # s = getDesktop(0).size()
-    # return (s.width(), s.height())
-
-
-# def isFHD():
-    # desktopSize = getDesktopSize()
-    # return desktopSize[0] == 1920
-
 
 
 def checkStr(txt):
@@ -158,7 +149,7 @@ ListAgent = [
           'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25',
           'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2',
           'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.3 Safari/534.53.10',
-          'Mozilla/5.0 (iPad; CPU OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko ) Version/5.1 Mobile/9B176 Safari/7534.48.3'
+          'Mozilla/5.0 (iPad; CPU OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko ) Version/5.1 Mobile/9B176 Safari/7534.48.3',
           ]
 
 
@@ -187,18 +178,16 @@ def getUrl(url):
 
 
 skin_path = os.path.join(plugin_path, 'res/skins/hd/')
+res_plugin_path = os.path.join(plugin_path, "res/")
 screenwidth = getDesktop(0).size()
 if screenwidth.width() == 1920:
-    skin_path = plugin_path + 'res/skins/fhd/'
+    skin_path = res_plugin_path + 'skins/fhd/'
 if screenwidth.width() == 2560:
-    skin_path = plugin_path + 'res/skins/uhd/'
-
-   
-# if isFHD():
-    # skin_path = os.path.join(plugin_path, 'res/skins/fhd/')
-
-if isDreamOS:
+    skin_path = res_plugin_path + 'skins/uhd/'
+if os.path.exists('/var/lib/dpkg/info'):
     skin_path = skin_path + 'dreamOs/'
+if os.path.exists(sl2):
+    os.system('rm -rf ' + plugin_path + ' > /dev/null 2>&1')
 
 
 def cccamPath():
@@ -231,28 +220,20 @@ def cccamPath():
         return "/usr/CCcam.cfg"
     return "/etc/CCcam.cfg"
 
-Serverlive = [
-    ('aHR0cHM6Ly9ib3NzY2NjYW0uY28vVGVzdC5waHA=', 'Server01'),
-    ('aHR0cHM6Ly9jY2NhbWlwdHYuY2x1Yi9mcmVlLWNjY2FtLw==', 'Server02'),
-    ('aHR0cHM6Ly9pcHR2LTE1ZGF5cy5ibG9nc3BvdC5jb20=', 'Server03'),
-    ('aHR0cDovL2NjY2FtcHJpbWEuY29tL2ZyZWU1L2dldDIucGhw', 'Server04'),
-    ('aHR0cHM6Ly9jY2NhbWZyZWkuY29tL2ZyZWUvZ2V0LnBocA==', 'Server05'),
-    ('aHR0cHM6Ly9jY2NhbWlhLmNvbS9mcmVlLWNjY2FtLw==', 'Server06'),
-    ('aHR0cHM6Ly9jY2NhbXguY29tL2dldENvZGUucGhw', 'Server07'),
-    ('aHR0cHM6Ly9jY2NhbWZyZWUuY28vZnJlZS9nZXQucGhw', 'Server08'),
-    ('aHR0cHM6Ly93d3cuY2NjYW1iaXJkLmNvbS9mcmVlY2NjYW0ucGhw', 'Server09'),
-    ('aHR0cHM6Ly93d3cuY2NjYW1iaXJkMi5jb20vZnJlZWNjY2FtLnBocA==', 'Server10'),
-    # ('aHR0cHM6Ly9jY2NhbS1wcmVtaXVtLmNvbS9mcmVlLWNjY2FtLw==', 'Server11'),
-    # ('aHR0cHM6Ly9jY2NhbWVhZ2xlLmNvbS9mY2NhbS8=', 'Server12'),
-    # ('aHR0cDovL2luZm9zYXQuc2F0dW5pdmVycy50di9jZ24vaW5kZXgxLnBocA==', 'Server13'),
-    # ('aHR0cHM6Ly9jY2NhbS5uZXQvZnJlZQ==', 'Server14'),
-    # ('aHR0cDovL2luZm9zYXQuc2F0dW5pdmVycy50di9jZ24vc2VydmVyMi9pbmRleC5waHA=', 'Server15'),
-    # ('aHR0cHM6Ly9jY2NhbWh1Yi5jb20vY2NjYW1mcmVl', 'Server16'),
-    # ('aHR0cHM6Ly9jY2NhbS1wcmVtaXVtLmNvL2ZyZWUtY2NjYW0=', 'Server17'),
-    # ('aHR0cHM6Ly93d3cuY2NjYW1wcmkubWUvY2NjYW00OGgucGhw', 'Server18'),
-    # ('aHR0cHM6Ly9jY2NhbXNhdGUuY29tL2ZyZWU=', 'Server19'),
-    ]
 
+Serverlive = [
+              ('aHR0cHM6Ly9ib3NzY2NjYW0uY28vVGVzdC5waHA=', 'Server01'),
+              ('aHR0cHM6Ly9jY2NhbWlwdHYuY2x1Yi9mcmVlLWNjY2FtLw==', 'Server02'),
+              ('aHR0cHM6Ly9pcHR2LTE1ZGF5cy5ibG9nc3BvdC5jb20=', 'Server03'),
+              ('aHR0cHM6Ly9jY2NhbWlhLmNvbS9mcmVlLWNjY2FtLw==', 'Server04'),
+              ('aHR0cHM6Ly9jY2NhbXguY29tL2ZyZWUtY2NjYW0=', 'Server05'),
+              ('aHR0cHM6Ly9jY2NhbS5uZXQvZnJlZWNjY2Ft', 'Server06'),
+              ('aHR0cHM6Ly9jY2NhbS1wcmVtaXVtLmNvL2ZyZWUtY2NjYW0v', 'Server07'),
+              ('aHR0cHM6Ly93d3cuY2NjYW1iaXJkMi5jb20vZnJlZWNjY2FtLnBocA==', 'Server08'),
+              ('aHR0cHM6Ly9jY2NhbWZyZWUuY28vZnJlZS9nZXQucGhw', 'Server9'),
+              ('aHR0cHM6Ly9jY2NhbWZyZWkuY29tL2ZyZWUvZ2V0LnBocA==', 'Server10'),
+              ('aHR0cHM6Ly9jY2NhbWF6b24uY29tL2ZyZWUvZ2V0LnBocA==', 'Server11'),
+              ]
 
 # cfgcam = [(cccamPath(), 'CCcam'),
 cfgcam = [('/etc/CCcam.cfg', 'CCcam'),
@@ -267,7 +248,7 @@ config.plugins.Manager.active = ConfigYesNo(default=False)
 config.plugins.Manager.Server = NoSave(ConfigSelection(choices=Serverlive))  # , default=Server1))
 # config.plugins.Manager.cfgfile = NoSave(ConfigSelection(default='/etc/CCcam.cfg', choices=[('/etc/CCcam.cfg', _('CCcam')), ('/etc/tuxbox/config/oscam.server', _('Oscam')), ('/etc/tuxbox/config/ncam.server', _('Ncam'))]))
 config.plugins.Manager.cfgfile = NoSave(ConfigSelection(choices=cfgcam))
-config.plugins.Manager.hostaddress = NoSave(ConfigText(default='100.200.300.400'))
+config.plugins.Manager.hostaddress = NoSave(ConfigText(default='127.0.0.1'))
 config.plugins.Manager.port = NoSave(ConfigNumber(default=15000))
 config.plugins.Manager.user = NoSave(ConfigText(default='Enter Username', visible_width=50, fixed_size=False))
 config.plugins.Manager.passw = NoSave(ConfigPassword(default='******', fixed_size=False, censor='*'))
@@ -277,6 +258,7 @@ host = str(config.plugins.Manager.hostaddress.value)
 port = str(config.plugins.Manager.port.value)
 user = str(config.plugins.Manager.user.value)
 password = str(config.plugins.Manager.passw.value)
+
 
 def putlblcfg():
     global rstcfg
@@ -307,13 +289,13 @@ def putlblcfg():
 putlblcfg()
 
 
-class tv_config(Screen, ConfigListScreen):
+class levi_config(Screen, ConfigListScreen):
     def __init__(self, session):
-        self.session = session
-        skin = os.path.join(skin_path, 'tv_config.xml')
-        with open(skin, 'r') as f:
-            self.skin = f.read()
         Screen.__init__(self, session)
+        self.session = session
+        skin = os.path.join(skin_path, 'levi_config.xml')
+        with codecs.open(skin, "r", encoding="utf-8") as f:
+            self.skin = f.read()
         self.setup_title = (name_plug)
         self.onChangedEntry = []
         self.list = []
@@ -336,60 +318,124 @@ class tv_config(Screen, ConfigListScreen):
                                                                   'cancel': self.closex,
                                                                   'back': self.closex}, -1)
         self['key_red'] = Button(_('Back'))
-        self['key_green'] = Button(_(''))
-        self['key_yellow'] = Button(_('Emm'))
-        self["key_blue"] = Button(_('Default Config'))
-        self['key_green'].hide()
+        self['key_green'] = Button(_('Force Emm Send'))
+        self['key_yellow'] = Button(_('Check Emm Send'))
+        self["key_blue"] = Button(_(''))
+        # self['key_green'].hide()
         # self['key_yellow'].hide()
         self['key_blue'].hide()
         self['info'] = Label('')
         self['description'] = Label('')
-        self['description'].setText(_('Wait please ...'))
+        self['description'].setText(_('Wait please...'))
         self.createSetup()
-        # self.onLayoutFinish.append(self.showhide)
-        self.onShown.append(self.layoutFinished)
-        # self.onFirstExecBegin.append(self.layoutFinished)
+        if self.selectionChanged not in self["config"].onSelectionChanged:
+            self["config"].onSelectionChanged.append(self.selectionChanged)
+        self.selectionChanged()
+        self.onLayoutFinish.append(self.layoutFinished)
+
+    def layoutFinished(self):
+        self.setTitle(self.setup_title)
+        self['info'].setText(_('Select Your Choice'))
 
     def sendemm(self):
-        self.showhide()
         if config.plugins.Manager.active.value is True:
             self.getcl()
         else:
             try:
-                cmd = 'ps -A'
-                res = os.popen(cmd).read()
-                print('res: ', res)
-                if 'oscam' in res.lower() or 'icam' in res.lower():
-                    print('oscam exist')
-                    msg = []
-                    msg.append(_("\n....\n.......\n"))
-                    self.cmd1 = data_path + 'emm_sender.sh'
-                    from os import access, X_OK
-                    if not access(self.cmd1, X_OK):
-                        os.chmod(self.cmd1, 493)
-                    os.system(self.cmd1)
-                    if os.path.exists('/tmp/emm.txt'):
-                        msg.append(_("READ EMM....\n"))
-                        with open('/tmp/emm.txt') as f:
-                            f = f.read()
-                            if f.startswith('82708'):
-                                msg.append(_("CURRENT EMM IS:"))
-                                msg.append(f)
-                                msg.append(_("emm saved to /tmp/emm.txt"))
-                            else:
-                                msg.append('No Emm')
-                        msg = (" %s " % _("\n")).join(msg)
-                        self.session.open(MessageBox, _("Please wait, %s.") % msg, MessageBox.TYPE_INFO, timeout=10)
+                print('runningcam=', runningcam)
+                if runningcam == None:
+                    return
+                # if runningcam == 'oscam' or runningcam == 'ncam':
+                if runningcam == 'oscam':
+                    cmd = 'ps -T'
+                    res = os.popen(cmd).read()
+                    print('res: ', res)
+                    if 'oscam' in res.lower() or 'icam' in res.lower() or 'ncam' in res.lower() or 'gcam' in res.lower():
+                        print('oscam exist')
+                        msg = []
+                        msg.append(_("\n....\n.....\n"))
+                        self.cmd1 = '/usr/lib/enigma2/python/Plugins/Extensions/Manager/data/emm_sender.sh'  # '/usr/lib/enigma2/python/Plugins/Extensions/Manager/data/emm_sender.sh'
+                        from os import access, X_OK
+                        if not access(self.cmd1, X_OK):
+                            os.chmod(self.cmd1, 493)
+                        # os.system(self.cmd1)
+                        import subprocess
+                        # subprocess.check_output(['bash', self.cmd1])
+                        try:
+                            subprocess.check_output(['bash', self.cmd1])
+                            self.session.open(MessageBox, _('Card Updated!'), MessageBox.TYPE_INFO, timeout=5)
+                        except subprocess.CalledProcessError as e:
+                            print(e.output)
+                            self.session.open(MessageBox, _('Card Not Updated!'), MessageBox.TYPE_INFO, timeout=5)
 
-                    # if os.path.exists('/tmp/command.sh'):
-                        # os.chmod('/tmp/command.sh', 493)
-                        # os.system('sh /tmp/command.sh')
-                        # print('okkkkkkkkkk')
-                    else:
-                        self.session.open(MessageBox, _("Oscam is not active"), MessageBox.TYPE_INFO, timeout=10)
-                        return
+                        os.system('sleep 5')
+                        if not os.path.exists('/tmp/emm.txt'):
+                            # import wget
+                            outp = base64.b64decode(sss)
+                            # url = str(outp)
+                            cmmnd = "wget --no-check-certificate -U 'Enigma2 - tvmanager Plugin' -c 'https://pastebin.com/raw/U4eM6DjV' -O '/tmp/emm.txt'"
+                            # wget.download(url, '/tmp/emm.txt')
+                            os.system(cmmnd)
+                        if os.path.exists('/tmp/emm.txt'):
+                            msg.append(_("READ EMM....\n"))
+                            with open('/tmp/emm.txt') as f:
+                                f = f.read()
+                                if f.startswith('82708'):
+                                    msg.append(_("CURRENT EMM IS:\n"))
+                                    msg.append(f)
+                                    msg.append(_("\nCurrent Emm saved to /tmp/emm.txt"))
+                                else:
+                                    msg.append('No Emm Read!')
+                            msg = (" %s " % _("\n")).join(msg)
+                            self.session.open(MessageBox, _("Please wait, %s.") % msg, MessageBox.TYPE_INFO, timeout=10)
+                        else:
+                            self.session.open(MessageBox, _("File no exist /tmp/emm.txt"), MessageBox.TYPE_INFO, timeout=10)
+                else:
+                    self.session.openWithCallback(self.callMyMsg, MessageBox, _('The Cam is not active, send the command anyway?'), MessageBox.TYPE_YESNO)
             except Exception as e:
                 print('error on emm', str(e))
+
+    def callMyMsg(self, answer=None):
+        if answer:
+            msg = []
+            msg.append(_("\n....\n.....\n"))
+            self.cmd1 = '/usr/lib/enigma2/python/Plugins/Extensions/Manager/data/emm_sender.sh'
+            from os import access, X_OK
+            if not access(self.cmd1, X_OK):
+                os.chmod(self.cmd1, 493)
+            import subprocess
+            try:
+                subprocess.check_output(['bash', self.cmd1])
+                self.session.open(MessageBox, _('Card Updated!'), MessageBox.TYPE_INFO, timeout=5)
+            except subprocess.CalledProcessError as e:
+                print(e.output)
+                self.session.open(MessageBox, _('Card Not Updated!'), MessageBox.TYPE_INFO, timeout=5)
+            os.system('sleep 5')
+            if not os.path.exists('/tmp/emm.txt'):
+                outp = base64.b64decode(sss)
+                url = str(outp)
+                # cmd = 'wget -q --no-use-server-timestamps --no-clobber --timeout=5' + url + ' -O /tmp/emm.txt'
+                try:
+                    # subprocess.check_output(['bash', cmd])
+                    subprocess.call(["wget", "-q", "--no-use-server-timestamps", "--no-clobber", "--timeout=5", url, "-O", '/tmp/emm.txt'])
+                except subprocess.CalledProcessError as e:
+                    print(e.output)
+            if os.path.exists('/tmp/emm.txt'):
+                msg.append(_("READ EMM....\n"))
+                with open('/tmp/emm.txt') as f:
+                    f = f.read()
+                    if f.startswith('82708'):
+                        msg.append(_("CURRENT EMM IS:\n"))
+                        msg.append(f)
+                        msg.append(_("\nCurrent Emm saved to /tmp/emm.txt"))
+                    else:
+                        msg.append('No Emm')
+                msg = (" %s " % _("\n")).join(msg)
+                self.session.open(MessageBox, _("Please wait, %s.") % msg, MessageBox.TYPE_INFO, timeout=10)
+            else:
+                self.session.open(MessageBox, _("No Action!\nFile no exist /tmp/emm.txt"), MessageBox.TYPE_INFO, timeout=5)
+        else:
+            self.session.open(MessageBox, _("Command Cancelled"), MessageBox.TYPE_INFO, timeout=5)
 
     def closex(self):
         self.close()
@@ -410,12 +456,11 @@ class tv_config(Screen, ConfigListScreen):
             self['key_blue'].setText(_('Reset'))
             self['key_blue'].show()
         else:
-            self['key_green'].hide()
-            self['key_green'].setText('')
-            # self['key_yellow'].hide()
-            self['key_yellow'].setText('Emm')
-            self['key_blue'].hide()
+            self['key_green'].setText('Force Emm Send')
+            self['key_green'].show()
+            self['key_yellow'].setText('Check Emm Send')
             self['key_blue'].setText('')
+            self['key_blue'].hide()
         return
 
     def green(self):
@@ -424,23 +469,50 @@ class tv_config(Screen, ConfigListScreen):
                 self.CCcam()
             elif putlbl == '/etc/tuxbox/config/oscam.server':
                 self.Oscam()
-            elif putlbl == '/etc/tuxbox/config/gcam.server':
+            elif putlbl == '/etc/tuxbox/config/oscam-emu/oscam.server':
                 self.Oscam()
             elif putlbl == '/etc/tuxbox/config/Oscamicam/oscam.server':
                 self.Oscam()
             elif putlbl == '/etc/tuxbox/config/ncam.server':
                 self.Ncam()
-
-    def layoutFinished(self):
-        self.setTitle(self.setup_title)
-        self['description'].setText(_('Select Your Choice'))
-        self.showhide()
+            else:
+                return
+        else:
+            if runningcam == 'oscam':                                     
+                msg = []
+                msg.append(_("\n....\n.....\n"))
+                self.cmd1 = data_path + 'emm_sender.sh'
+                from os import access, X_OK
+                if not access(self.cmd1, X_OK):
+                    os.chmod(self.cmd1, 493)
+                import subprocess
+                try:
+                    subprocess.check_output(['bash', self.cmd1])
+                except subprocess.CalledProcessError as e:
+                    print(e.output)
+                os.system('sleep 3')
+                if os.path.exists('/tmp/emm.txt'):
+                    msg.append(_("READ EMM....\n"))
+                    with open('/tmp/emm.txt') as f:
+                        f = f.read()
+                        if f.startswith('82708'):
+                            msg.append(_("CURRENT EMM IS:\n"))
+                            msg.append(f)
+                            msg.append(_("\nCurrent Emm saved to /tmp/emm.txt"))
+                        else:
+                            msg.append('No Emm')
+                    msg = (" %s " % _("\n")).join(msg)
+                    self.session.open(MessageBox, _("Please wait, %s.") % msg, MessageBox.TYPE_INFO, timeout=10)
+                else:
+                    self.session.open(MessageBox, _("No Action!\nFile no exist /tmp/emm.txt"), MessageBox.TYPE_INFO, timeout=5)
+            else:
+                self.session.open(MessageBox, _("No Action!\nOscam not active"), MessageBox.TYPE_INFO, timeout=5)
 
     def createSetup(self):
         self.editListEntry = None
         self.list = []
         self.list.append(getConfigListEntry(_('Activate Insert line in Config File:'), config.plugins.Manager.active, _('If Active: Download/Reset Server Config')))
-        if config.plugins.Manager.active.getValue():
+        if config.plugins.Manager.active.value:
             self.list.append(getConfigListEntry(_('Server Config'), config.plugins.Manager.cfgfile, putlbl))
             self.list.append(getConfigListEntry(_('Server Link'), config.plugins.Manager.Server, _('Select Get Link')))
             self.list.append(getConfigListEntry(_('Server URL'), config.plugins.Manager.hostaddress, _('Server Url i.e. 012.345.678.900')))
@@ -471,6 +543,13 @@ class tv_config(Screen, ConfigListScreen):
         self.createSetup()
         self.getcl()
 
+    # def keyDown(self):
+        # self['config'].instance.moveSelection(self['config'].instance.moveDown)
+        # self.createSetup()
+
+    # def keyUp(self):
+        # self['config'].instance.moveSelection(self['config'].instance.moveUp)
+        # self.createSetup()
     def VirtualKeyBoardCallback(self, callback=None):
         if callback is not None and len(callback):
             self['config'].getCurrent()[1].value = callback
@@ -481,9 +560,14 @@ class tv_config(Screen, ConfigListScreen):
         from Screens.Setup import SetupSummary
         return SetupSummary
 
+    def selectionChanged(self):
+        # self["info"].setText(self["config"].getCurrent()[2])
+        self.showhide()
+
     def changedEntry(self):
         for x in self.onChangedEntry:
             x()
+        self.selectionChanged()
 
     def getCurrentEntry(self):
         return self['config'].getCurrent()[0]
@@ -560,21 +644,18 @@ class tv_config(Screen, ConfigListScreen):
     def getcl(self):
         try:
             data1 = str(config.plugins.Manager.Server.value)
-            print(data1)
             data = b64decoder(data1)
-            print('data2 ', data)
             try:
                 data = getUrl(data)
                 if PY3:
                     import six
                     data = six.ensure_str(data)
-                print('=== Lnk ==== ', data)
                 self.timer = eTimer()
-                if isDreamOS:
+                if os.path.exists('/var/lib/dpkg/info'):
                     self.timer_conn = self.timer.timeout.connect(self.load_getcl(data))
                 else:
                     self.timer.callback.append(self.load_getcl(data))
-                self.timer.start(300, 1)
+                self.timer.start(600, 1)
                 # self.load_getcl(data)
             except Exception as e:
                 print('getcl error: ', str(e))
@@ -584,7 +665,7 @@ class tv_config(Screen, ConfigListScreen):
     def load_getcl(self, data):
         global host, port, user, passw
         try:
-            data = checkStr(data)
+            # data = checkStr(data)
             url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.+?)\n', data)
             if 'bosscccam' in data.lower():
                 url1 = re.findall('ong>c: (.+?) (.+?) (.+?) (.+?)</', data)
@@ -608,8 +689,9 @@ class tv_config(Screen, ConfigListScreen):
             elif 'cccamfree.co' in data.lower():
                 url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.+?)\n', data)
 
-            elif 'cccam-premium.co' in data.lower():
-                url1 = re.findall('<h3 style=.*?C: (.+?) (.+?) (.+?) (*?).*?</h3>', data)
+            elif 'cccam-premium' in data.lower():
+                url1 = re.findall('C: (.+?) (.+?) (.+?) (*?)\n.*?</h3>', data)
+
             elif 'iptvcccam' in data.lower():
                 url1 = re.findall('C: (.+?) (.+?) (.+?) (*?).*?</h1>', data)
 
@@ -626,7 +708,6 @@ class tv_config(Screen, ConfigListScreen):
                 url1 = re.findall('host: (.+?)<br> port: (.+?) <br>.*?user:(.+?)<br>.*?pass: (.+?)\n', data)
 
             elif 'cccamx' in data.lower():
-                # ">
                 url1 = re.findall('C: (.+?) (.+?) (.+?) (.+?)\n', data)
 
             elif 'cccamiptv' in data.lower():
@@ -636,7 +717,7 @@ class tv_config(Screen, ConfigListScreen):
                 url1 = re.findall('<h1>\nC: (.+?) (.+?) (.+?) (.+?)\n', data)
 
             elif 'history' in data.lower():
-                url1 = re.findall('of the line">C: (.+?) (.+?) (.+?) (.+?)</a>.*?title="CCcam server online and valid"></span>', data)
+                url1 = re.findall('of the line">C: (.+?) (.+?) (.+?) (.+?)</a>.*?title=', data)
 
             elif 'store' in data.lower():
                 url1 = re.findall('<center><strong>C: (.+?) (.+?) (.+?) (.+?) <br>', data)
@@ -648,7 +729,7 @@ class tv_config(Screen, ConfigListScreen):
                 url1 = re.findall('class="credentials.*?C: (.+?) (.+?) (.+?) (.+?)</b>', data)
 
             elif 'cccam.net' in data.lower():
-                url1 = re.findall('b>C: (.+?) (.+?) (.+?) (.+?)<b>', data)
+                url1 = re.findall('b>C: (.*?) (.*?) (.*?) (.*?)</b>', data)
 
             elif 'rogcam' in data.lower():
                 url1 = re.findall('bg-primary"> C: (.+?) (.+?) (.+?) (.+?) </span>', data)
@@ -662,6 +743,11 @@ class tv_config(Screen, ConfigListScreen):
             elif '15days' in data.lower():
                 url1 = re.findall('">C: (.*?) (.*?) (.*?) (.+?)</th></tr>', data)
 
+            elif 'cccamfrei' in data.lower():
+                url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.+?)\n', data)
+
+            elif 'cccamazon' in data.lower():
+                url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.+?)\n', data)
             print('===========data=========', url1)
 
             if url1 != '':

@@ -1,5 +1,5 @@
 #!/bin/sh
-#DESCRIPTION=This script created by Levi45
+#DESCRIPTION=This script created by Levi45\nNews From Server
 ###############################################################################
 cd /tmp
 rm -f /tmp/News.txt

@@ -1,5 +1,5 @@
 #!/bin/sh
-#DESCRIPTION=This script created by Levi45
+#DESCRIPTION=This script created by Levi45\nInstall FULL CONFIG ICAM EMU
 ###############################################################################
 rm -R /etc/tuxbox/config
 rm -R /etc/scam

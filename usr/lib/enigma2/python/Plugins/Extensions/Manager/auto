@@ -1,6 +1,6 @@
 #!/bin/sh
 ##DESCRIPTION=This script downloads latest CCcam keys & provider info.
-softcam="https://raw.githubusercontent.com/pablitodrito/prova-pablito/master/SoftCam.Key"
+softcam="https://raw.githubusercontent.com/MOHAMED19OS/SoftCam_Emu/main/SoftCam.Key"
 #wicard="http://onlinecolor.ml/keys/SoftCam.Key"
 #ee="http://onlinecolor.ml/center/ee.bin"
 #ee36="http://onlinecolor.ml/center/ee.bin"
@@ -25,4 +25,4 @@ KeyDate=`/bin/date -r /usr/keys/SoftCam.Key +%d.%m.%y-%H:%M:%S`
 	echo ""
 exit 0
 
-wget https://raw.githubusercontent.com/pablitodrito/prova-pablito/master/SoftCam.Key -O /usr/keys/SoftCam.Key																											 
+wget https://raw.githubusercontent.com/MOHAMED19OS/SoftCam_Emu/main/SoftCam.Key -O /usr/keys/SoftCam.Key																											 

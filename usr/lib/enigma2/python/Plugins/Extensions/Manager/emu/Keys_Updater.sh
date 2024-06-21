@@ -1,5 +1,5 @@
 #!/bin/sh
-#DESCRIPTION=This script created by Levi45
+#DESCRIPTION=This script created by Levi45\nKeys Uodater
 ###############################################################################
 KeysUpdater="http://levi45.spdns.eu/Addons/Multicam/Keys_Updater.sh"
 SoftcamKeys="http://levi45.spdns.eu/Addons/SoftCam.Key"

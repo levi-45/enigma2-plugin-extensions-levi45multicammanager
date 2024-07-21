@@ -4,7 +4,7 @@
 # --------------------#
 #  coded by Lululla   #
 #   skin by MMark     #
-#     18/04/2024     #
+#     26/06/2024     #
 #      No Coppy       #
 # --------------------#
 from __future__ import print_function
@@ -223,16 +223,16 @@ def cccamPath():
 
 Serverlive = [
               ('aHR0cHM6Ly9ib3NzY2NjYW0uY28vVGVzdC5waHA=', 'Server01'),
-              ('aHR0cHM6Ly9jY2NhbWlwdHYuY2x1Yi9mcmVlLWNjY2FtLw==', 'Server02'),
-              ('aHR0cHM6Ly9pcHR2LTE1ZGF5cy5ibG9nc3BvdC5jb20=', 'Server03'),
-              ('aHR0cHM6Ly9jY2NhbWlhLmNvbS9mcmVlLWNjY2FtLw==', 'Server04'),
-              ('aHR0cHM6Ly9jY2NhbXguY29tL2ZyZWUtY2NjYW0=', 'Server05'),
-              ('aHR0cHM6Ly9jY2NhbS5uZXQvZnJlZWNjY2Ft', 'Server06'),
+              ('aHR0cHM6Ly9pcHR2LTE1ZGF5cy5ibG9nc3BvdC5jb20=', 'Server02'),
+              ('aHR0cHM6Ly9jY2NhbWlhLmNvbS9mcmVlLWNjY2FtLw==', 'Server03'),
+              ('aHR0cHM6Ly9jY2NhbS5uZXQvZnJlZWNjY2Ft', 'Server04'),
+              ('aHR0cHM6Ly9jY2NhbXNhdGUuY29tL2ZyZWU=', 'Server05'),
+              ('aHR0cHM6Ly9jY2NhbXguY29tL2ZyZWUtY2NjYW0=', 'Server06'),
               ('aHR0cHM6Ly9jY2NhbS1wcmVtaXVtLmNvL2ZyZWUtY2NjYW0v', 'Server07'),
               ('aHR0cHM6Ly93d3cuY2NjYW1iaXJkMi5jb20vZnJlZWNjY2FtLnBocA==', 'Server08'),
               ('aHR0cHM6Ly9jY2NhbWZyZWUuY28vZnJlZS9nZXQucGhw', 'Server9'),
               ('aHR0cHM6Ly9jY2NhbWZyZWkuY29tL2ZyZWUvZ2V0LnBocA==', 'Server10'),
-              ('aHR0cHM6Ly9jY2NhbWF6b24uY29tL2ZyZWUvZ2V0LnBocA==', 'Server11'),
+              ('aHR0cHM6Ly9jY2NhbWlwdHYuY2x1Yi9mcmVlLWNjY2FtLw==', 'Server11'),
               ]
 
 # cfgcam = [(cccamPath(), 'CCcam'),
@@ -665,6 +665,7 @@ class levi_config(Screen, ConfigListScreen):
     def load_getcl(self, data):
         global host, port, user, passw
         try:
+
             # data = checkStr(data)
             url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.+?)\n', data)
             if 'bosscccam' in data.lower():
@@ -672,6 +673,15 @@ class levi_config(Screen, ConfigListScreen):
 
             elif 'testcline' in data.lower():
                 url1 = re.findall('C: (.+?) (.+?) (.+?) (.+?)</d', data)
+
+            elif 'free.cccam.net' in data.lower():
+                url1 = re.findall('<b>C: (.*?) (.*?) (.*?) (.*?)</b>', data)
+
+            elif 'free.cccam-premium' in data.lower():
+                url1 = re.findall('C: (.+?) (.+?) (.+?) (*?).*?</h3>', data)
+
+            elif 'cccamsate' in data.lower():
+                url1 = re.findall('<span><b>C: (.+?) (.+?) (.+?) (.+?)</b>', data)
 
             elif 'cccameagle' in data.lower():
                 url1 = re.findall('>C: (.+?) (.+?) (.+?) (.+?)</h2>', data)
@@ -688,9 +698,6 @@ class levi_config(Screen, ConfigListScreen):
 
             elif 'cccamfree.co' in data.lower():
                 url1 = re.findall('<h1>C: (.+?) (.+?) (.+?) (.+?)\n', data)
-
-            elif 'cccam-premium' in data.lower():
-                url1 = re.findall('C: (.+?) (.+?) (.+?) (*?)\n.*?</h3>', data)
 
             elif 'iptvcccam' in data.lower():
                 url1 = re.findall('C: (.+?) (.+?) (.+?) (*?).*?</h1>', data)
@@ -724,12 +731,6 @@ class levi_config(Screen, ConfigListScreen):
 
             elif 'cccamhub' in data.lower():
                 url1 = re.findall('id="cline">.*?C: (.+?) (.+?) (.+?) (.+?).*?</div>', data)
-
-            elif 'cccamsate' in data.lower():
-                url1 = re.findall('class="credentials.*?C: (.+?) (.+?) (.+?) (.+?)</b>', data)
-
-            elif 'cccam.net' in data.lower():
-                url1 = re.findall('b>C: (.*?) (.*?) (.*?) (.*?)</b>', data)
 
             elif 'rogcam' in data.lower():
                 url1 = re.findall('bg-primary"> C: (.+?) (.+?) (.+?) (.+?) </span>', data)

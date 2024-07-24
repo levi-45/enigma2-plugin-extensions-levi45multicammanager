@@ -1,0 +1,13 @@
+#!/bin/sh
+############################## deb/ipk remove ####################
+echo
+rm -rf /tmp/*.ipk
+rm -rf /tmp/*.deb
+echo
+echo
+echo "*   Levi45 @satellite-forum.com  *"
+echo "*   Installed Successfully *"
+echo "Restarting Enigma2 to load..."
+echo ""
+sleep 2
+exit 0

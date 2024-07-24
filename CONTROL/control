@@ -1,0 +1,11 @@
+Package: enigma2-plugin-extensions-levi45multicammanager
+Version: 10.1-r22
+Description: Addon/Multicam Manager by Levi45
+Section: misc
+Priority: optional
+Maintainer: levi45
+Architecture: all
+Depends: enigma2
+HomePage: satellite-forum.com
+Source: satellite-forum.com
+
